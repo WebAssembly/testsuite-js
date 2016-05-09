@@ -20,9 +20,9 @@ $ git submodule update --init
 First, update the testsuite and sexpr-wasm-prototype submodules:
 
 ```
-$ $(cd external/sexpr-wasm && git fetch origin && git checkout origin/master)
+$ (cd external/sexpr-wasm && git fetch origin && git checkout origin/master)
 ...
-$ $(cd external/testsuite && git fetch origin && git checkout origin/master)
+$ (cd external/testsuite && git fetch origin && git checkout origin/master)
 ...
 ```
 
