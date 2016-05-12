@@ -3,23 +3,21 @@ var failed = 0;
 var quiet = false;
 
 testModule0();
+testModule1();
 end();
 
 function testModule0() {
   var module = createModule([
-      0,  97, 115, 109,  11,   0,   0,   0,   4, 116, 121, 112, 101,   4,   1,  64,
-      0,   0,   8, 102, 117, 110,  99, 116, 105, 111, 110,   6,   5,   0,   0,   0,
-      0,   0,   6, 101, 120, 112, 111, 114, 116,  58,   4,   0,   7, 114, 117, 110,
-     97, 119,  97, 121,   1,  14, 109, 117, 116, 117,  97, 108,  95, 114, 117, 110,
-     97, 119,  97, 121,   3,  14,  36,  97, 115, 115, 101, 114, 116,  95, 116, 114,
-     97, 112,  95,  48,   4,  14,  36,  97, 115, 115, 101, 114, 116,  95, 116, 114,
-     97, 112,  95,  49,   4,  99, 111, 100, 101,  26,   5,   4,   0,  22,   0,   0,
-      4,   0,  22,   0,   2,   4,   0,  22,   0,   1,   4,   0,  22,   0,   0,   4,
-      0,  22,   0,   1,
+      0,  97, 115, 109,  11,   0,   0,   0,
   ]);
 
-  assertTrap(module, '$assert_trap_0', 'external/testsuite/runaway-recursion.wast', 16);
-  assertTrap(module, '$assert_trap_1', 'external/testsuite/runaway-recursion.wast', 17);
+}
+
+function testModule1() {
+  var module = createModule([
+      0,  97, 115, 109,  11,   0,   0,   0,
+  ]);
+
 }
 
 function createModule(data) {
