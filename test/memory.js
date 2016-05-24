@@ -14,6 +14,7 @@ testModule8();
 testModule9();
 testModule10();
 testModule11();
+testModule12();
 end();
 
 function testModule0() {
@@ -42,8 +43,8 @@ function testModule2() {
 
 function testModule3() {
   var module = createModule([
-      0,  97, 115, 109,  11,   0,   0,   0,   6, 109, 101, 109, 111, 114, 121,   3,
-      0,   0,   0,   4, 100,  97, 116,  97,   3,   1,   0,   0,
+      0,  97, 115, 109,  11,   0,   0,   0,   6, 109, 101, 109, 111, 114, 121,   5,
+      0, 255, 255,   3,   0,
   ]);
 
 }
@@ -51,12 +52,20 @@ function testModule3() {
 function testModule4() {
   var module = createModule([
       0,  97, 115, 109,  11,   0,   0,   0,   6, 109, 101, 109, 111, 114, 121,   3,
-      1,   1,   0,   4, 100,  97, 116,  97,   4,   1,   0,   1,  97,
+      0,   0,   0,   4, 100,  97, 116,  97,   3,   1,   0,   0,
   ]);
 
 }
 
 function testModule5() {
+  var module = createModule([
+      0,  97, 115, 109,  11,   0,   0,   0,   6, 109, 101, 109, 111, 114, 121,   3,
+      1,   1,   0,   4, 100,  97, 116,  97,   4,   1,   0,   1,  97,
+  ]);
+
+}
+
+function testModule6() {
   var module = createModule([
       0,  97, 115, 109,  11,   0,   0,   0,   6, 109, 101, 109, 111, 114, 121,   3,
       1,   2,   0,   4, 100,  97, 116,  97,   9,   2,   0,   1,  97, 255, 255,   3,
@@ -65,21 +74,11 @@ function testModule5() {
 
 }
 
-function testModule6() {
+function testModule7() {
   var module = createModule([
       0,  97, 115, 109,  11,   0,   0,   0,   6, 109, 101, 109, 111, 114, 121,   3,
       1,   2,   0,   4, 100,  97, 116,  97,  10,   3,   0,   1,  97,   1,   1,  98,
       2,   1,  99,
-  ]);
-
-}
-
-function testModule7() {
-  var module = createModule([
-      0,  97, 115, 109,  11,   0,   0,   0,   4, 116, 121, 112, 101,   4,   1,  64,
-      0,   0,   8, 102, 117, 110,  99, 116, 105, 111, 110,   2,   1,   0,   6, 109,
-    101, 109, 111, 114, 121,   3,   0,   0,   0,   4,  99, 111, 100, 101,   8,   1,
-      6,   0,  16,   0,  33,   1,   0,
   ]);
 
 }
@@ -89,7 +88,7 @@ function testModule8() {
       0,  97, 115, 109,  11,   0,   0,   0,   4, 116, 121, 112, 101,   4,   1,  64,
       0,   0,   8, 102, 117, 110,  99, 116, 105, 111, 110,   2,   1,   0,   6, 109,
     101, 109, 111, 114, 121,   3,   0,   0,   0,   4,  99, 111, 100, 101,   8,   1,
-      6,   0,  16,   0,  35,   2,   0,
+      6,   0,  16,   0,  33,   1,   0,
   ]);
 
 }
@@ -99,7 +98,7 @@ function testModule9() {
       0,  97, 115, 109,  11,   0,   0,   0,   4, 116, 121, 112, 101,   4,   1,  64,
       0,   0,   8, 102, 117, 110,  99, 116, 105, 111, 110,   2,   1,   0,   6, 109,
     101, 109, 111, 114, 121,   3,   0,   0,   0,   4,  99, 111, 100, 101,   8,   1,
-      6,   0,  16,   0,  42,   3,   0,
+      6,   0,  16,   0,  35,   2,   0,
   ]);
 
 }
@@ -109,12 +108,22 @@ function testModule10() {
       0,  97, 115, 109,  11,   0,   0,   0,   4, 116, 121, 112, 101,   4,   1,  64,
       0,   0,   8, 102, 117, 110,  99, 116, 105, 111, 110,   2,   1,   0,   6, 109,
     101, 109, 111, 114, 121,   3,   0,   0,   0,   4,  99, 111, 100, 101,   8,   1,
-      6,   0,  16,   0,  44,   3,   0,
+      6,   0,  16,   0,  42,   3,   0,
   ]);
 
 }
 
 function testModule11() {
+  var module = createModule([
+      0,  97, 115, 109,  11,   0,   0,   0,   4, 116, 121, 112, 101,   4,   1,  64,
+      0,   0,   8, 102, 117, 110,  99, 116, 105, 111, 110,   2,   1,   0,   6, 109,
+    101, 109, 111, 114, 121,   3,   0,   0,   0,   4,  99, 111, 100, 101,   8,   1,
+      6,   0,  16,   0,  44,   3,   0,
+  ]);
+
+}
+
+function testModule12() {
   var module = createModule([
       0,  97, 115, 109,  11,   0,   0,   0,   4, 116, 121, 112, 101,  19,   4,  64,
       0,   1,   1,  64,   0,   1,   4,  64,   1,   1,   1,   1,  64,   1,   2,   1,
@@ -208,30 +217,30 @@ function testModule11() {
      87,  65,  83,  77,
   ]);
 
-  assertReturn(module, '$assert_return_0', 'external/testsuite/memory.wast', 208);
-  assertReturn(module, '$assert_return_1', 'external/testsuite/memory.wast', 209);
-  assertReturn(module, '$assert_return_2', 'external/testsuite/memory.wast', 210);
-  assertReturn(module, '$assert_return_3', 'external/testsuite/memory.wast', 211);
-  assertReturn(module, '$assert_return_4', 'external/testsuite/memory.wast', 213);
-  assertReturn(module, '$assert_return_5', 'external/testsuite/memory.wast', 214);
-  assertReturn(module, '$assert_return_6', 'external/testsuite/memory.wast', 215);
-  assertReturn(module, '$assert_return_7', 'external/testsuite/memory.wast', 216);
-  assertReturn(module, '$assert_return_8', 'external/testsuite/memory.wast', 218);
-  assertReturn(module, '$assert_return_9', 'external/testsuite/memory.wast', 219);
-  assertReturn(module, '$assert_return_10', 'external/testsuite/memory.wast', 220);
-  assertReturn(module, '$assert_return_11', 'external/testsuite/memory.wast', 221);
-  assertReturn(module, '$assert_return_12', 'external/testsuite/memory.wast', 223);
-  assertReturn(module, '$assert_return_13', 'external/testsuite/memory.wast', 224);
-  assertReturn(module, '$assert_return_14', 'external/testsuite/memory.wast', 225);
-  assertReturn(module, '$assert_return_15', 'external/testsuite/memory.wast', 226);
-  assertReturn(module, '$assert_return_16', 'external/testsuite/memory.wast', 227);
-  assertReturn(module, '$assert_return_17', 'external/testsuite/memory.wast', 228);
-  assertReturn(module, '$assert_return_18', 'external/testsuite/memory.wast', 230);
-  assertReturn(module, '$assert_return_19', 'external/testsuite/memory.wast', 231);
-  assertReturn(module, '$assert_return_20', 'external/testsuite/memory.wast', 232);
-  assertReturn(module, '$assert_return_21', 'external/testsuite/memory.wast', 233);
-  assertReturn(module, '$assert_return_22', 'external/testsuite/memory.wast', 234);
-  assertReturn(module, '$assert_return_23', 'external/testsuite/memory.wast', 235);
+  assertReturn(module, '$assert_return_0', 'external/testsuite/memory.wast', 221);
+  assertReturn(module, '$assert_return_1', 'external/testsuite/memory.wast', 222);
+  assertReturn(module, '$assert_return_2', 'external/testsuite/memory.wast', 223);
+  assertReturn(module, '$assert_return_3', 'external/testsuite/memory.wast', 224);
+  assertReturn(module, '$assert_return_4', 'external/testsuite/memory.wast', 226);
+  assertReturn(module, '$assert_return_5', 'external/testsuite/memory.wast', 227);
+  assertReturn(module, '$assert_return_6', 'external/testsuite/memory.wast', 228);
+  assertReturn(module, '$assert_return_7', 'external/testsuite/memory.wast', 229);
+  assertReturn(module, '$assert_return_8', 'external/testsuite/memory.wast', 231);
+  assertReturn(module, '$assert_return_9', 'external/testsuite/memory.wast', 232);
+  assertReturn(module, '$assert_return_10', 'external/testsuite/memory.wast', 233);
+  assertReturn(module, '$assert_return_11', 'external/testsuite/memory.wast', 234);
+  assertReturn(module, '$assert_return_12', 'external/testsuite/memory.wast', 236);
+  assertReturn(module, '$assert_return_13', 'external/testsuite/memory.wast', 237);
+  assertReturn(module, '$assert_return_14', 'external/testsuite/memory.wast', 238);
+  assertReturn(module, '$assert_return_15', 'external/testsuite/memory.wast', 239);
+  assertReturn(module, '$assert_return_16', 'external/testsuite/memory.wast', 240);
+  assertReturn(module, '$assert_return_17', 'external/testsuite/memory.wast', 241);
+  assertReturn(module, '$assert_return_18', 'external/testsuite/memory.wast', 243);
+  assertReturn(module, '$assert_return_19', 'external/testsuite/memory.wast', 244);
+  assertReturn(module, '$assert_return_20', 'external/testsuite/memory.wast', 245);
+  assertReturn(module, '$assert_return_21', 'external/testsuite/memory.wast', 246);
+  assertReturn(module, '$assert_return_22', 'external/testsuite/memory.wast', 247);
+  assertReturn(module, '$assert_return_23', 'external/testsuite/memory.wast', 248);
 }
 
 function createModule(data) {

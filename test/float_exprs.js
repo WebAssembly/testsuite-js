@@ -72,6 +72,7 @@ testModule66();
 testModule67();
 testModule68();
 testModule69();
+testModule70();
 end();
 
 function testModule0() {
@@ -3702,6 +3703,31 @@ function testModule69() {
   assertReturn(module, '$assert_return_7', 'external/testsuite/float_exprs.wast', 1736);
   assertReturn(module, '$assert_return_8', 'external/testsuite/float_exprs.wast', 1737);
   assertReturn(module, '$assert_return_9', 'external/testsuite/float_exprs.wast', 1738);
+}
+
+function testModule70() {
+  var module = createModule([
+      0,  97, 115, 109,  11,   0,   0,   0,   4, 116, 121, 112, 101,  19,   3,  64,
+      3,   3,   3,   3,   1,   3,  64,   3,   4,   4,   4,   1,   4,  64,   0,   1,
+      1,   8, 102, 117, 110,  99, 116, 105, 111, 110,   5,   4,   0,   1,   2,   2,
+      6, 101, 120, 112, 111, 114, 116, 111,   4,   0,  35, 102,  51,  50,  46, 110,
+    111,  95, 102, 108, 117, 115, 104,  95, 105, 110, 116, 101, 114, 109, 101, 100,
+    105,  97, 116, 101,  95, 115, 117,  98, 110, 111, 114, 109,  97, 108,   1,  35,
+    102,  54,  52,  46, 110, 111,  95, 102, 108, 117, 115, 104,  95, 105, 110, 116,
+    101, 114, 109, 101, 100, 105,  97, 116, 101,  95, 115, 117,  98, 110, 111, 114,
+    109,  97, 108,   2,  16,  36,  97, 115, 115, 101, 114, 116,  95, 114, 101, 116,
+    117, 114, 110,  95,  48,   3,  16,  36,  97, 115, 115, 101, 114, 116,  95, 114,
+    101, 116, 117, 114, 110,  95,  49,   4,  99, 111, 100, 101,  89,   4,   9,   0,
+     20,   0,  20,   1, 119,  20,   2, 119,   9,   0,  20,   0,  20,   1, 139,  20,
+      2, 139,  25,   0,  19,   0,   0, 128,   0,  19,   0,   0,   0,  52,  19,   0,
+      0,   0,  75,  22,   3,   0,  19,   0,   0, 128,   0, 131,  41,   0,  18,   0,
+      0,   0,   0,   0,   0,  16,   0,  18,   0,   0,   0,   0,   0,   0, 176,  60,
+     18,   0,   0,   0,   0,   0,   0,  48,  67,  22,   3,   1,  18,   0,   0,   0,
+      0,   0,   0,  16,   0, 151,
+  ]);
+
+  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 1753);
+  assertReturn(module, '$assert_return_1', 'external/testsuite/float_exprs.wast', 1754);
 }
 
 function createModule(data) {

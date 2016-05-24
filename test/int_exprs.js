@@ -17,6 +17,7 @@ testModule11();
 testModule12();
 testModule13();
 testModule14();
+testModule15();
 end();
 
 function testModule0() {
@@ -248,6 +249,32 @@ function testModule8() {
 
 function testModule9() {
   var module = createModule([
+      0,  97, 115, 109,  11,   0,   0,   0,   4, 116, 121, 112, 101,  19,   4,  64,
+      1,   1,   1,   1,  64,   1,   2,   1,   2,  64,   0,   1,   1,  64,   0,   1,
+      2,   8, 102, 117, 110,  99, 116, 105, 111, 110,   9,   8,   0,   0,   1,   1,
+      2,   2,   3,   3,   6, 101, 120, 112, 111, 114, 116, 117,   8,   0,  11, 105,
+     51,  50,  46, 100, 105, 118,  95, 115,  95,  51,   1,  11, 105,  51,  50,  46,
+    100, 105, 118,  95, 117,  95,  51,   2,  11, 105,  54,  52,  46, 100, 105, 118,
+     95, 115,  95,  51,   3,  11, 105,  54,  52,  46, 100, 105, 118,  95, 117,  95,
+     51,   4,  14,  36,  97, 115, 115, 101, 114, 116,  95, 116, 114,  97, 112,  95,
+     48,   5,  14,  36,  97, 115, 115, 101, 114, 116,  95, 116, 114,  97, 112,  95,
+     49,   6,  14,  36,  97, 115, 115, 101, 114, 116,  95, 116, 114,  97, 112,  95,
+     50,   7,  14,  36,  97, 115, 115, 101, 114, 116,  95, 116, 114,  97, 112,  95,
+     51,   4,  99, 111, 100, 101,  61,   8,   6,   0,  20,   0,  16,   0,  67,   6,
+      0,  20,   0,  16,   0,  68,   6,   0,  20,   0,  17,   0,  94,   6,   0,  20,
+      0,  17,   0,  95,   7,   0,  16, 199,   0,  22,   1,   0,   7,   0,  16, 199,
+      0,  22,   1,   1,   7,   0,  17, 199,   0,  22,   1,   2,   7,   0,  17, 199,
+      0,  22,   1,   3,
+  ]);
+
+  assertTrap(module, '$assert_trap_0', 'external/testsuite/int_exprs.wast', 188);
+  assertTrap(module, '$assert_trap_1', 'external/testsuite/int_exprs.wast', 189);
+  assertTrap(module, '$assert_trap_2', 'external/testsuite/int_exprs.wast', 190);
+  assertTrap(module, '$assert_trap_3', 'external/testsuite/int_exprs.wast', 191);
+}
+
+function testModule10() {
+  var module = createModule([
       0,  97, 115, 109,  11,   0,   0,   0,   4, 116, 121, 112, 101,  15,   3,  64,
       1,   1,   1,   1,  64,   1,   2,   1,   2,  64,   0,   1,   1,   8, 102, 117,
     110,  99, 116, 105, 111, 110,  13,  12,   0,   0,   1,   1,   2,   2,   2,   2,
@@ -277,17 +304,17 @@ function testModule9() {
     128, 128, 128, 128, 128, 128, 128, 128, 192,   0, 104,
   ]);
 
-  assertReturn(module, '$assert_return_0', 'external/testsuite/int_exprs.wast', 188);
-  assertReturn(module, '$assert_return_1', 'external/testsuite/int_exprs.wast', 189);
-  assertReturn(module, '$assert_return_2', 'external/testsuite/int_exprs.wast', 190);
-  assertReturn(module, '$assert_return_3', 'external/testsuite/int_exprs.wast', 191);
-  assertReturn(module, '$assert_return_4', 'external/testsuite/int_exprs.wast', 192);
-  assertReturn(module, '$assert_return_5', 'external/testsuite/int_exprs.wast', 193);
-  assertReturn(module, '$assert_return_6', 'external/testsuite/int_exprs.wast', 194);
-  assertReturn(module, '$assert_return_7', 'external/testsuite/int_exprs.wast', 195);
+  assertReturn(module, '$assert_return_0', 'external/testsuite/int_exprs.wast', 211);
+  assertReturn(module, '$assert_return_1', 'external/testsuite/int_exprs.wast', 212);
+  assertReturn(module, '$assert_return_2', 'external/testsuite/int_exprs.wast', 213);
+  assertReturn(module, '$assert_return_3', 'external/testsuite/int_exprs.wast', 214);
+  assertReturn(module, '$assert_return_4', 'external/testsuite/int_exprs.wast', 215);
+  assertReturn(module, '$assert_return_5', 'external/testsuite/int_exprs.wast', 216);
+  assertReturn(module, '$assert_return_6', 'external/testsuite/int_exprs.wast', 217);
+  assertReturn(module, '$assert_return_7', 'external/testsuite/int_exprs.wast', 218);
 }
 
-function testModule10() {
+function testModule11() {
   var module = createModule([
       0,  97, 115, 109,  11,   0,   0,   0,   4, 116, 121, 112, 101,  15,   3,  64,
       1,   1,   1,   1,  64,   1,   2,   1,   2,  64,   0,   1,   1,   8, 102, 117,
@@ -318,17 +345,17 @@ function testModule10() {
       3,  17, 128, 128, 128, 128, 128, 128, 128, 128,  32, 104,
   ]);
 
-  assertReturn(module, '$assert_return_0', 'external/testsuite/int_exprs.wast', 215);
-  assertReturn(module, '$assert_return_1', 'external/testsuite/int_exprs.wast', 216);
-  assertReturn(module, '$assert_return_2', 'external/testsuite/int_exprs.wast', 217);
-  assertReturn(module, '$assert_return_3', 'external/testsuite/int_exprs.wast', 218);
-  assertReturn(module, '$assert_return_4', 'external/testsuite/int_exprs.wast', 219);
-  assertReturn(module, '$assert_return_5', 'external/testsuite/int_exprs.wast', 220);
-  assertReturn(module, '$assert_return_6', 'external/testsuite/int_exprs.wast', 221);
-  assertReturn(module, '$assert_return_7', 'external/testsuite/int_exprs.wast', 222);
+  assertReturn(module, '$assert_return_0', 'external/testsuite/int_exprs.wast', 238);
+  assertReturn(module, '$assert_return_1', 'external/testsuite/int_exprs.wast', 239);
+  assertReturn(module, '$assert_return_2', 'external/testsuite/int_exprs.wast', 240);
+  assertReturn(module, '$assert_return_3', 'external/testsuite/int_exprs.wast', 241);
+  assertReturn(module, '$assert_return_4', 'external/testsuite/int_exprs.wast', 242);
+  assertReturn(module, '$assert_return_5', 'external/testsuite/int_exprs.wast', 243);
+  assertReturn(module, '$assert_return_6', 'external/testsuite/int_exprs.wast', 244);
+  assertReturn(module, '$assert_return_7', 'external/testsuite/int_exprs.wast', 245);
 }
 
-function testModule11() {
+function testModule12() {
   var module = createModule([
       0,  97, 115, 109,  11,   0,   0,   0,   4, 116, 121, 112, 101,  15,   3,  64,
       1,   1,   1,   1,  64,   1,   2,   1,   2,  64,   0,   1,   1,   8, 102, 117,
@@ -359,17 +386,17 @@ function testModule11() {
      17, 128, 128, 128, 128, 128, 128, 128, 128,  32, 104,
   ]);
 
-  assertReturn(module, '$assert_return_0', 'external/testsuite/int_exprs.wast', 242);
-  assertReturn(module, '$assert_return_1', 'external/testsuite/int_exprs.wast', 243);
-  assertReturn(module, '$assert_return_2', 'external/testsuite/int_exprs.wast', 244);
-  assertReturn(module, '$assert_return_3', 'external/testsuite/int_exprs.wast', 245);
-  assertReturn(module, '$assert_return_4', 'external/testsuite/int_exprs.wast', 246);
-  assertReturn(module, '$assert_return_5', 'external/testsuite/int_exprs.wast', 247);
-  assertReturn(module, '$assert_return_6', 'external/testsuite/int_exprs.wast', 248);
-  assertReturn(module, '$assert_return_7', 'external/testsuite/int_exprs.wast', 249);
+  assertReturn(module, '$assert_return_0', 'external/testsuite/int_exprs.wast', 265);
+  assertReturn(module, '$assert_return_1', 'external/testsuite/int_exprs.wast', 266);
+  assertReturn(module, '$assert_return_2', 'external/testsuite/int_exprs.wast', 267);
+  assertReturn(module, '$assert_return_3', 'external/testsuite/int_exprs.wast', 268);
+  assertReturn(module, '$assert_return_4', 'external/testsuite/int_exprs.wast', 269);
+  assertReturn(module, '$assert_return_5', 'external/testsuite/int_exprs.wast', 270);
+  assertReturn(module, '$assert_return_6', 'external/testsuite/int_exprs.wast', 271);
+  assertReturn(module, '$assert_return_7', 'external/testsuite/int_exprs.wast', 272);
 }
 
-function testModule12() {
+function testModule13() {
   var module = createModule([
       0,  97, 115, 109,  11,   0,   0,   0,   4, 116, 121, 112, 101,  15,   3,  64,
       1,   1,   1,   1,  64,   1,   2,   1,   2,  64,   0,   1,   1,   8, 102, 117,
@@ -399,17 +426,17 @@ function testModule12() {
       0, 104,
   ]);
 
-  assertReturn(module, '$assert_return_0', 'external/testsuite/int_exprs.wast', 269);
-  assertReturn(module, '$assert_return_1', 'external/testsuite/int_exprs.wast', 270);
-  assertReturn(module, '$assert_return_2', 'external/testsuite/int_exprs.wast', 271);
-  assertReturn(module, '$assert_return_3', 'external/testsuite/int_exprs.wast', 272);
-  assertReturn(module, '$assert_return_4', 'external/testsuite/int_exprs.wast', 273);
-  assertReturn(module, '$assert_return_5', 'external/testsuite/int_exprs.wast', 274);
-  assertReturn(module, '$assert_return_6', 'external/testsuite/int_exprs.wast', 275);
-  assertReturn(module, '$assert_return_7', 'external/testsuite/int_exprs.wast', 276);
+  assertReturn(module, '$assert_return_0', 'external/testsuite/int_exprs.wast', 292);
+  assertReturn(module, '$assert_return_1', 'external/testsuite/int_exprs.wast', 293);
+  assertReturn(module, '$assert_return_2', 'external/testsuite/int_exprs.wast', 294);
+  assertReturn(module, '$assert_return_3', 'external/testsuite/int_exprs.wast', 295);
+  assertReturn(module, '$assert_return_4', 'external/testsuite/int_exprs.wast', 296);
+  assertReturn(module, '$assert_return_5', 'external/testsuite/int_exprs.wast', 297);
+  assertReturn(module, '$assert_return_6', 'external/testsuite/int_exprs.wast', 298);
+  assertReturn(module, '$assert_return_7', 'external/testsuite/int_exprs.wast', 299);
 }
 
-function testModule13() {
+function testModule14() {
   var module = createModule([
       0,  97, 115, 109,  11,   0,   0,   0,   4, 116, 121, 112, 101,  15,   3,  64,
       1,   1,   1,   1,  64,   1,   2,   1,   2,  64,   0,   1,   1,   8, 102, 117,
@@ -439,17 +466,17 @@ function testModule13() {
       3,  17,   0, 104,
   ]);
 
-  assertReturn(module, '$assert_return_0', 'external/testsuite/int_exprs.wast', 296);
-  assertReturn(module, '$assert_return_1', 'external/testsuite/int_exprs.wast', 297);
-  assertReturn(module, '$assert_return_2', 'external/testsuite/int_exprs.wast', 298);
-  assertReturn(module, '$assert_return_3', 'external/testsuite/int_exprs.wast', 299);
-  assertReturn(module, '$assert_return_4', 'external/testsuite/int_exprs.wast', 300);
-  assertReturn(module, '$assert_return_5', 'external/testsuite/int_exprs.wast', 301);
-  assertReturn(module, '$assert_return_6', 'external/testsuite/int_exprs.wast', 302);
-  assertReturn(module, '$assert_return_7', 'external/testsuite/int_exprs.wast', 303);
+  assertReturn(module, '$assert_return_0', 'external/testsuite/int_exprs.wast', 319);
+  assertReturn(module, '$assert_return_1', 'external/testsuite/int_exprs.wast', 320);
+  assertReturn(module, '$assert_return_2', 'external/testsuite/int_exprs.wast', 321);
+  assertReturn(module, '$assert_return_3', 'external/testsuite/int_exprs.wast', 322);
+  assertReturn(module, '$assert_return_4', 'external/testsuite/int_exprs.wast', 323);
+  assertReturn(module, '$assert_return_5', 'external/testsuite/int_exprs.wast', 324);
+  assertReturn(module, '$assert_return_6', 'external/testsuite/int_exprs.wast', 325);
+  assertReturn(module, '$assert_return_7', 'external/testsuite/int_exprs.wast', 326);
 }
 
-function testModule14() {
+function testModule15() {
   var module = createModule([
       0,  97, 115, 109,  11,   0,   0,   0,   4, 116, 121, 112, 101,  15,   3,  64,
       1,   1,   1,   1,  64,   1,   2,   1,   2,  64,   0,   1,   1,   8, 102, 117,
@@ -479,14 +506,14 @@ function testModule14() {
      17,   0, 104,
   ]);
 
-  assertReturn(module, '$assert_return_0', 'external/testsuite/int_exprs.wast', 323);
-  assertReturn(module, '$assert_return_1', 'external/testsuite/int_exprs.wast', 324);
-  assertReturn(module, '$assert_return_2', 'external/testsuite/int_exprs.wast', 325);
-  assertReturn(module, '$assert_return_3', 'external/testsuite/int_exprs.wast', 326);
-  assertReturn(module, '$assert_return_4', 'external/testsuite/int_exprs.wast', 327);
-  assertReturn(module, '$assert_return_5', 'external/testsuite/int_exprs.wast', 328);
-  assertReturn(module, '$assert_return_6', 'external/testsuite/int_exprs.wast', 329);
-  assertReturn(module, '$assert_return_7', 'external/testsuite/int_exprs.wast', 330);
+  assertReturn(module, '$assert_return_0', 'external/testsuite/int_exprs.wast', 346);
+  assertReturn(module, '$assert_return_1', 'external/testsuite/int_exprs.wast', 347);
+  assertReturn(module, '$assert_return_2', 'external/testsuite/int_exprs.wast', 348);
+  assertReturn(module, '$assert_return_3', 'external/testsuite/int_exprs.wast', 349);
+  assertReturn(module, '$assert_return_4', 'external/testsuite/int_exprs.wast', 350);
+  assertReturn(module, '$assert_return_5', 'external/testsuite/int_exprs.wast', 351);
+  assertReturn(module, '$assert_return_6', 'external/testsuite/int_exprs.wast', 352);
+  assertReturn(module, '$assert_return_7', 'external/testsuite/int_exprs.wast', 353);
 }
 
 function createModule(data) {
