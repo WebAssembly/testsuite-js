@@ -38,6 +38,8 @@ mkdir -p ${TEMP_DIR}
 
 (cd ${TEMP_DIR} && cmake ../${SEXPR_WASM_DIR} -DBUILD_TESTS=OFF && make)
 
+rm test/*.js
+
 for TEST_FILE in `ls ${TESTSUITE_DIR}/*.wast`; do
   if [[ ${TEST_FILE} =~ \.fail\.wast$ ]]; then
     # Skip tests that are meant to fail.

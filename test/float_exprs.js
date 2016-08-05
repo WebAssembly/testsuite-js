@@ -73,6 +73,16 @@ testModule67();
 testModule68();
 testModule69();
 testModule70();
+testModule71();
+testModule72();
+testModule73();
+testModule74();
+testModule75();
+testModule76();
+testModule77();
+testModule78();
+testModule79();
+testModule80();
 end();
 
 function testModule0() {
@@ -1122,25 +1132,24 @@ function testModule24() {
 
 function testModule25() {
   var module = createModule([
-      0,  97, 115, 109,  11,   0,   0,   0,   4, 116, 121, 112, 101,  11,   2,  64,
-      2,   3,   3,   1,   3,  64,   0,   1,   1,   8, 102, 117, 110,  99, 116, 105,
-    111, 110,   7,   6,   0,   1,   1,   1,   1,   1,   6, 101, 120, 112, 111, 114,
-    116, 122,   6,   0,  29, 102,  51,  50,  46, 110, 111,  95,  97, 112, 112, 114,
-    111, 120, 105, 109,  97, 116, 101,  95, 114, 101,  99, 105, 112, 114, 111,  99,
-     97, 108,   1,  16,  36,  97, 115, 115, 101, 114, 116,  95, 114, 101, 116, 117,
-    114, 110,  95,  48,   2,  16,  36,  97, 115, 115, 101, 114, 116,  95, 114, 101,
-    116, 117, 114, 110,  95,  49,   3,  16,  36,  97, 115, 115, 101, 114, 116,  95,
-    114, 101, 116, 117, 114, 110,  95,  50,   4,  16,  36,  97, 115, 115, 101, 114,
-    116,  95, 114, 101, 116, 117, 114, 110,  95,  51,   5,  16,  36,  97, 115, 115,
-    101, 114, 116,  95, 114, 101, 116, 117, 114, 110,  95,  52,   4,  99, 111, 100,
-    101, 126,   6,   9,   0,  19,   0,   0, 128,  63,  20,   0, 120,  22,   0,  19,
-     91, 128, 148, 186,  19, 244,  19, 234,  91,  22,   2,   0, 180,  19, 106, 168,
-     92, 196, 180,  77,  22,   0,  19, 144, 144, 115, 127,  19, 149, 193, 170, 213,
-     22,   2,   0, 180,  19,  63, 162,  33,   0, 180,  77,  22,   0,  19,  51,  82,
-     33, 145,  19, 108, 177, 189,  81,  22,   2,   0, 180,  19, 115,  31, 203, 237,
-    180,  77,  22,   0,  19,  25, 134, 174, 101,  19, 230, 166, 232,  26,  22,   2,
-      0, 180,  19, 177, 193,  59,  25, 180,  77,  22,   0,  19, 241,  14, 176, 150,
-     19,  93,  61, 158, 212,  22,   2,   0, 180,  19, 191,  30,  58, 232, 180,  77,
+      0,  97, 115, 109,  11,   0,   0,   0,   4, 116, 121, 112, 101,  10,   2,  64,
+      1,   3,   1,   3,  64,   0,   1,   1,   8, 102, 117, 110,  99, 116, 105, 111,
+    110,   7,   6,   0,   1,   1,   1,   1,   1,   6, 101, 120, 112, 111, 114, 116,
+    122,   6,   0,  29, 102,  51,  50,  46, 110, 111,  95,  97, 112, 112, 114, 111,
+    120, 105, 109,  97, 116, 101,  95, 114, 101,  99, 105, 112, 114, 111,  99,  97,
+    108,   1,  16,  36,  97, 115, 115, 101, 114, 116,  95, 114, 101, 116, 117, 114,
+    110,  95,  48,   2,  16,  36,  97, 115, 115, 101, 114, 116,  95, 114, 101, 116,
+    117, 114, 110,  95,  49,   3,  16,  36,  97, 115, 115, 101, 114, 116,  95, 114,
+    101, 116, 117, 114, 110,  95,  50,   4,  16,  36,  97, 115, 115, 101, 114, 116,
+     95, 114, 101, 116, 117, 114, 110,  95,  51,   5,  16,  36,  97, 115, 115, 101,
+    114, 116,  95, 114, 101, 116, 117, 114, 110,  95,  52,   4,  99, 111, 100, 101,
+    101,   6,   9,   0,  19,   0,   0, 128,  63,  20,   0, 120,  17,   0,  19,  91,
+    128, 148, 186,  22,   1,   0, 180,  19, 106, 168,  92, 196, 180,  77,  17,   0,
+     19, 144, 144, 115, 127,  22,   1,   0, 180,  19,  63, 162,  33,   0, 180,  77,
+     17,   0,  19,  51,  82,  33, 145,  22,   1,   0, 180,  19, 115,  31, 203, 237,
+    180,  77,  17,   0,  19,  25, 134, 174, 101,  22,   1,   0, 180,  19, 177, 193,
+     59,  25, 180,  77,  17,   0,  19, 241,  14, 176, 150,  22,   1,   0, 180,  19,
+    191,  30,  58, 232, 180,  77,
   ]);
 
   assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 508);
@@ -1152,64 +1161,83 @@ function testModule25() {
 
 function testModule26() {
   var module = createModule([
-      0,  97, 115, 109,  11,   0,   0,   0,   4, 116, 121, 112, 101,  11,   2,  64,
-      2,   3,   3,   1,   3,  64,   0,   1,   1,   8, 102, 117, 110,  99, 116, 105,
-    111, 110,   7,   6,   0,   1,   1,   1,   1,   1,   6, 101, 120, 112, 111, 114,
-    116, 127,   6,   0,  34, 102,  51,  50,  46, 110, 111,  95,  97, 112, 112, 114,
-    111, 120, 105, 109,  97, 116, 101,  95, 114, 101,  99, 105, 112, 114, 111,  99,
-     97, 108,  95, 115, 113, 114, 116,   1,  16,  36,  97, 115, 115, 101, 114, 116,
-     95, 114, 101, 116, 117, 114, 110,  95,  48,   2,  16,  36,  97, 115, 115, 101,
-    114, 116,  95, 114, 101, 116, 117, 114, 110,  95,  49,   3,  16,  36,  97, 115,
-    115, 101, 114, 116,  95, 114, 101, 116, 117, 114, 110,  95,  50,   4,  16,  36,
-     97, 115, 115, 101, 114, 116,  95, 114, 101, 116, 117, 114, 110,  95,  51,   5,
+      0,  97, 115, 109,  11,   0,   0,   0,   4, 116, 121, 112, 101,  15,   3,  64,
+      1,   3,   1,   3,  64,   1,   4,   1,   4,  64,   0,   1,   1,   8, 102, 117,
+    110,  99, 116, 105, 111, 110,  13,  12,   0,   1,   2,   2,   2,   2,   2,   2,
+      2,   2,   2,   2,   6, 101, 120, 112, 111, 114, 116, 246,   1,  12,   0,  34,
+    102,  51,  50,  46, 110, 111,  95,  97, 112, 112, 114, 111, 120, 105, 109,  97,
+    116, 101,  95, 114, 101,  99, 105, 112, 114, 111,  99,  97, 108,  95, 115, 113,
+    114, 116,   1,  27, 102,  54,  52,  46, 110, 111,  95, 102, 117, 115, 101,  95,
+    114, 101,  99, 105, 112, 114, 111,  99,  97, 108,  95, 115, 113, 114, 116,   2,
      16,  36,  97, 115, 115, 101, 114, 116,  95, 114, 101, 116, 117, 114, 110,  95,
-     52,   4,  99, 111, 100, 101, 127,   6,  10,   0,  19,   0,   0, 128,  63,  20,
-      0, 130, 120,  22,   0,  19, 149, 120,  53,  42,  19, 157,   8, 217,  56,  22,
-      2,   0, 180,  19, 106,   7,  24,  74, 180,  77,  22,   0,  19, 227,  23, 244,
-     59,  19, 193,  81, 171, 128,  22,   2,   0, 180,  19, 187,  97,  57,  65, 180,
-     77,  22,   0,  19,  78, 253, 220,  30,  19, 166, 156,  26, 209,  22,   2,   0,
-    180,  19, 221, 212, 194,  79, 180,  77,  22,   0,  19, 163, 122, 250,  41,  19,
-    103, 151, 228, 252,  22,   2,   0, 180,  19, 225,   0,  55,  74, 180,  77,  22,
-      0,  19, 213, 211, 174,  20,  19,  41,  43,  51, 251,  22,   2,   0, 180,  19,
-    101,  12, 219,  84, 180,  77,
+     48,   3,  16,  36,  97, 115, 115, 101, 114, 116,  95, 114, 101, 116, 117, 114,
+    110,  95,  49,   4,  16,  36,  97, 115, 115, 101, 114, 116,  95, 114, 101, 116,
+    117, 114, 110,  95,  50,   5,  16,  36,  97, 115, 115, 101, 114, 116,  95, 114,
+    101, 116, 117, 114, 110,  95,  51,   6,  16,  36,  97, 115, 115, 101, 114, 116,
+     95, 114, 101, 116, 117, 114, 110,  95,  52,   7,  16,  36,  97, 115, 115, 101,
+    114, 116,  95, 114, 101, 116, 117, 114, 110,  95,  53,   8,  16,  36,  97, 115,
+    115, 101, 114, 116,  95, 114, 101, 116, 117, 114, 110,  95,  54,   9,  16,  36,
+     97, 115, 115, 101, 114, 116,  95, 114, 101, 116, 117, 114, 110,  95,  55,  10,
+     16,  36,  97, 115, 115, 101, 114, 116,  95, 114, 101, 116, 117, 114, 110,  95,
+     56,  11,  16,  36,  97, 115, 115, 101, 114, 116,  95, 114, 101, 116, 117, 114,
+    110,  95,  57,   4,  99, 111, 100, 101, 247,   1,  12,  10,   0,  19,   0,   0,
+    128,  63,  20,   0, 130, 120,  14,   0,  18,   0,   0,   0,   0,   0,   0, 240,
+     63,  20,   0, 150, 140,  17,   0,  19, 149, 120,  53,  42,  22,   1,   0, 180,
+     19, 106,   7,  24,  74, 180,  77,  17,   0,  19, 227,  23, 244,  59,  22,   1,
+      0, 180,  19, 187,  97,  57,  65, 180,  77,  17,   0,  19,  78, 253, 220,  30,
+     22,   1,   0, 180,  19, 221, 212, 194,  79, 180,  77,  17,   0,  19, 163, 122,
+    250,  41,  22,   1,   0, 180,  19, 225,   0,  55,  74, 180,  77,  17,   0,  19,
+    213, 211, 174,  20,  22,   1,   0, 180,  19, 101,  12, 219,  84, 180,  77,  25,
+      0,  18, 163,  95, 181,  99, 138,  86, 129, 119,  22,   1,   1, 181,  18,  32,
+    149, 201, 116, 156, 188,  37,  36, 181, 104,  25,   0,  18, 175, 156, 147, 208,
+    252,  57,  98,  83,  22,   1,   1, 181,  18,  24,  72,  43, 146,  74,  51,  53,
+     54, 181, 104,  25,   0,  18,  84,  16, 225,  36, 106, 227, 118,  70,  22,   1,
+      1, 181,  18,  41, 127, 151,  32,  63, 193, 170,  60, 181, 104,  25,   0,  18,
+    131, 159,  33, 115, 225,  62, 178, 105,  22,   1,   1, 181,  18,  45, 134,  85,
+    224,  83, 247,  13,  43, 181, 104,  25,   0,  18, 171, 155, 175,  76, 247,  48,
+     27,  73,  22,   1,   1, 181,  18, 169, 100,  23,  61, 252, 139,  88,  59, 181,
+    104,
   ]);
 
-  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 522);
-  assertReturn(module, '$assert_return_1', 'external/testsuite/float_exprs.wast', 523);
-  assertReturn(module, '$assert_return_2', 'external/testsuite/float_exprs.wast', 524);
-  assertReturn(module, '$assert_return_3', 'external/testsuite/float_exprs.wast', 525);
-  assertReturn(module, '$assert_return_4', 'external/testsuite/float_exprs.wast', 526);
+  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 526);
+  assertReturn(module, '$assert_return_1', 'external/testsuite/float_exprs.wast', 527);
+  assertReturn(module, '$assert_return_2', 'external/testsuite/float_exprs.wast', 528);
+  assertReturn(module, '$assert_return_3', 'external/testsuite/float_exprs.wast', 529);
+  assertReturn(module, '$assert_return_4', 'external/testsuite/float_exprs.wast', 530);
+  assertReturn(module, '$assert_return_5', 'external/testsuite/float_exprs.wast', 532);
+  assertReturn(module, '$assert_return_6', 'external/testsuite/float_exprs.wast', 533);
+  assertReturn(module, '$assert_return_7', 'external/testsuite/float_exprs.wast', 534);
+  assertReturn(module, '$assert_return_8', 'external/testsuite/float_exprs.wast', 535);
+  assertReturn(module, '$assert_return_9', 'external/testsuite/float_exprs.wast', 536);
 }
 
 function testModule27() {
   var module = createModule([
-      0,  97, 115, 109,  11,   0,   0,   0,   4, 116, 121, 112, 101,  11,   2,  64,
-      2,   3,   3,   1,   3,  64,   0,   1,   1,   8, 102, 117, 110,  99, 116, 105,
-    111, 110,   7,   6,   0,   1,   1,   1,   1,   1,   6, 101, 120, 112, 111, 114,
-    116, 127,   6,   0,  34, 102,  51,  50,  46, 110, 111,  95,  97, 112, 112, 114,
-    111, 120, 105, 109,  97, 116, 101,  95, 115, 113, 114, 116,  95, 114, 101,  99,
-    105, 112, 114, 111,  99,  97, 108,   1,  16,  36,  97, 115, 115, 101, 114, 116,
-     95, 114, 101, 116, 117, 114, 110,  95,  48,   2,  16,  36,  97, 115, 115, 101,
-    114, 116,  95, 114, 101, 116, 117, 114, 110,  95,  49,   3,  16,  36,  97, 115,
-    115, 101, 114, 116,  95, 114, 101, 116, 117, 114, 110,  95,  50,   4,  16,  36,
-     97, 115, 115, 101, 114, 116,  95, 114, 101, 116, 117, 114, 110,  95,  51,   5,
-     16,  36,  97, 115, 115, 101, 114, 116,  95, 114, 101, 116, 117, 114, 110,  95,
-     52,   4,  99, 111, 100, 101, 127,   6,  10,   0,  19,   0,   0, 128,  63,  20,
-      0, 120, 130,  22,   0,  19, 195, 100, 210,  93,  19,  78, 113, 130, 155,  22,
-      2,   0, 180,  19,  99, 173,  71,  48, 180,  77,  22,   0,  19, 143,  40,  40,
-     59,  19,  71, 145, 156, 175,  22,   2,   0, 180,  19, 163, 238, 157,  65, 180,
-     77,  22,   0,  19,  97,  47,   9,  98,  19,  23, 250, 211, 237,  22,   2,   0,
-    180,  19, 185, 218,  46,  46, 180,  77,  22,   0,  19,  40,  38,  93,  70,  19,
-    194,  59, 202,  27,  22,   2,   0, 180,  19, 139, 183,   9,  60, 180,  77,  22,
-      0,  19, 241,  45, 165, 115,  19, 140, 219,  83,  54,  22,   2,   0, 180,  19,
-    216,  90,  97,  37, 180,  77,
+      0,  97, 115, 109,  11,   0,   0,   0,   4, 116, 121, 112, 101,  10,   2,  64,
+      1,   3,   1,   3,  64,   0,   1,   1,   8, 102, 117, 110,  99, 116, 105, 111,
+    110,   7,   6,   0,   1,   1,   1,   1,   1,   6, 101, 120, 112, 111, 114, 116,
+    127,   6,   0,  34, 102,  51,  50,  46, 110, 111,  95,  97, 112, 112, 114, 111,
+    120, 105, 109,  97, 116, 101,  95, 115, 113, 114, 116,  95, 114, 101,  99, 105,
+    112, 114, 111,  99,  97, 108,   1,  16,  36,  97, 115, 115, 101, 114, 116,  95,
+    114, 101, 116, 117, 114, 110,  95,  48,   2,  16,  36,  97, 115, 115, 101, 114,
+    116,  95, 114, 101, 116, 117, 114, 110,  95,  49,   3,  16,  36,  97, 115, 115,
+    101, 114, 116,  95, 114, 101, 116, 117, 114, 110,  95,  50,   4,  16,  36,  97,
+    115, 115, 101, 114, 116,  95, 114, 101, 116, 117, 114, 110,  95,  51,   5,  16,
+     36,  97, 115, 115, 101, 114, 116,  95, 114, 101, 116, 117, 114, 110,  95,  52,
+      4,  99, 111, 100, 101, 102,   6,  10,   0,  19,   0,   0, 128,  63,  20,   0,
+    120, 130,  17,   0,  19, 195, 100, 210,  93,  22,   1,   0, 180,  19,  99, 173,
+     71,  48, 180,  77,  17,   0,  19, 143,  40,  40,  59,  22,   1,   0, 180,  19,
+    163, 238, 157,  65, 180,  77,  17,   0,  19,  97,  47,   9,  98,  22,   1,   0,
+    180,  19, 185, 218,  46,  46, 180,  77,  17,   0,  19,  40,  38,  93,  70,  22,
+      1,   0, 180,  19, 139, 183,   9,  60, 180,  77,  17,   0,  19, 241,  45, 165,
+    115,  22,   1,   0, 180,  19, 216,  90,  97,  37, 180,  77,
   ]);
 
-  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 536);
-  assertReturn(module, '$assert_return_1', 'external/testsuite/float_exprs.wast', 537);
-  assertReturn(module, '$assert_return_2', 'external/testsuite/float_exprs.wast', 538);
-  assertReturn(module, '$assert_return_3', 'external/testsuite/float_exprs.wast', 539);
-  assertReturn(module, '$assert_return_4', 'external/testsuite/float_exprs.wast', 540);
+  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 546);
+  assertReturn(module, '$assert_return_1', 'external/testsuite/float_exprs.wast', 547);
+  assertReturn(module, '$assert_return_2', 'external/testsuite/float_exprs.wast', 548);
+  assertReturn(module, '$assert_return_3', 'external/testsuite/float_exprs.wast', 549);
+  assertReturn(module, '$assert_return_4', 'external/testsuite/float_exprs.wast', 550);
 }
 
 function testModule28() {
@@ -1256,18 +1284,18 @@ function testModule28() {
     128, 112,  22,   1,   3,  17, 128, 128, 128, 128, 128, 128, 128, 128, 112, 104,
   ]);
 
-  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 562);
-  assertReturn(module, '$assert_return_1', 'external/testsuite/float_exprs.wast', 563);
-  assertReturn(module, '$assert_return_2', 'external/testsuite/float_exprs.wast', 564);
-  assertReturn(module, '$assert_return_3', 'external/testsuite/float_exprs.wast', 566);
-  assertReturn(module, '$assert_return_4', 'external/testsuite/float_exprs.wast', 567);
-  assertReturn(module, '$assert_return_5', 'external/testsuite/float_exprs.wast', 568);
-  assertReturn(module, '$assert_return_6', 'external/testsuite/float_exprs.wast', 570);
-  assertReturn(module, '$assert_return_7', 'external/testsuite/float_exprs.wast', 571);
-  assertReturn(module, '$assert_return_8', 'external/testsuite/float_exprs.wast', 572);
-  assertReturn(module, '$assert_return_9', 'external/testsuite/float_exprs.wast', 574);
-  assertReturn(module, '$assert_return_10', 'external/testsuite/float_exprs.wast', 575);
-  assertReturn(module, '$assert_return_11', 'external/testsuite/float_exprs.wast', 576);
+  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 572);
+  assertReturn(module, '$assert_return_1', 'external/testsuite/float_exprs.wast', 573);
+  assertReturn(module, '$assert_return_2', 'external/testsuite/float_exprs.wast', 574);
+  assertReturn(module, '$assert_return_3', 'external/testsuite/float_exprs.wast', 576);
+  assertReturn(module, '$assert_return_4', 'external/testsuite/float_exprs.wast', 577);
+  assertReturn(module, '$assert_return_5', 'external/testsuite/float_exprs.wast', 578);
+  assertReturn(module, '$assert_return_6', 'external/testsuite/float_exprs.wast', 580);
+  assertReturn(module, '$assert_return_7', 'external/testsuite/float_exprs.wast', 581);
+  assertReturn(module, '$assert_return_8', 'external/testsuite/float_exprs.wast', 582);
+  assertReturn(module, '$assert_return_9', 'external/testsuite/float_exprs.wast', 584);
+  assertReturn(module, '$assert_return_10', 'external/testsuite/float_exprs.wast', 585);
+  assertReturn(module, '$assert_return_11', 'external/testsuite/float_exprs.wast', 586);
 }
 
 function testModule29() {
@@ -1312,16 +1340,16 @@ function testModule29() {
     181,  18,   0,   0,   0, 128,  74, 173,  65, 153, 181, 104,
   ]);
 
-  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 590);
-  assertReturn(module, '$assert_return_1', 'external/testsuite/float_exprs.wast', 591);
-  assertReturn(module, '$assert_return_2', 'external/testsuite/float_exprs.wast', 592);
-  assertReturn(module, '$assert_return_3', 'external/testsuite/float_exprs.wast', 593);
-  assertReturn(module, '$assert_return_4', 'external/testsuite/float_exprs.wast', 594);
-  assertReturn(module, '$assert_return_5', 'external/testsuite/float_exprs.wast', 596);
-  assertReturn(module, '$assert_return_6', 'external/testsuite/float_exprs.wast', 597);
-  assertReturn(module, '$assert_return_7', 'external/testsuite/float_exprs.wast', 598);
-  assertReturn(module, '$assert_return_8', 'external/testsuite/float_exprs.wast', 599);
-  assertReturn(module, '$assert_return_9', 'external/testsuite/float_exprs.wast', 600);
+  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 600);
+  assertReturn(module, '$assert_return_1', 'external/testsuite/float_exprs.wast', 601);
+  assertReturn(module, '$assert_return_2', 'external/testsuite/float_exprs.wast', 602);
+  assertReturn(module, '$assert_return_3', 'external/testsuite/float_exprs.wast', 603);
+  assertReturn(module, '$assert_return_4', 'external/testsuite/float_exprs.wast', 604);
+  assertReturn(module, '$assert_return_5', 'external/testsuite/float_exprs.wast', 606);
+  assertReturn(module, '$assert_return_6', 'external/testsuite/float_exprs.wast', 607);
+  assertReturn(module, '$assert_return_7', 'external/testsuite/float_exprs.wast', 608);
+  assertReturn(module, '$assert_return_8', 'external/testsuite/float_exprs.wast', 609);
+  assertReturn(module, '$assert_return_9', 'external/testsuite/float_exprs.wast', 610);
 }
 
 function testModule30() {
@@ -1366,16 +1394,16 @@ function testModule30() {
     181,  18, 192, 250,  74, 142, 230, 219,   4,  41, 181, 104,
   ]);
 
-  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 614);
-  assertReturn(module, '$assert_return_1', 'external/testsuite/float_exprs.wast', 615);
-  assertReturn(module, '$assert_return_2', 'external/testsuite/float_exprs.wast', 616);
-  assertReturn(module, '$assert_return_3', 'external/testsuite/float_exprs.wast', 617);
-  assertReturn(module, '$assert_return_4', 'external/testsuite/float_exprs.wast', 618);
-  assertReturn(module, '$assert_return_5', 'external/testsuite/float_exprs.wast', 620);
-  assertReturn(module, '$assert_return_6', 'external/testsuite/float_exprs.wast', 621);
-  assertReturn(module, '$assert_return_7', 'external/testsuite/float_exprs.wast', 622);
-  assertReturn(module, '$assert_return_8', 'external/testsuite/float_exprs.wast', 623);
-  assertReturn(module, '$assert_return_9', 'external/testsuite/float_exprs.wast', 624);
+  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 624);
+  assertReturn(module, '$assert_return_1', 'external/testsuite/float_exprs.wast', 625);
+  assertReturn(module, '$assert_return_2', 'external/testsuite/float_exprs.wast', 626);
+  assertReturn(module, '$assert_return_3', 'external/testsuite/float_exprs.wast', 627);
+  assertReturn(module, '$assert_return_4', 'external/testsuite/float_exprs.wast', 628);
+  assertReturn(module, '$assert_return_5', 'external/testsuite/float_exprs.wast', 630);
+  assertReturn(module, '$assert_return_6', 'external/testsuite/float_exprs.wast', 631);
+  assertReturn(module, '$assert_return_7', 'external/testsuite/float_exprs.wast', 632);
+  assertReturn(module, '$assert_return_8', 'external/testsuite/float_exprs.wast', 633);
+  assertReturn(module, '$assert_return_9', 'external/testsuite/float_exprs.wast', 634);
 }
 
 function testModule31() {
@@ -1420,16 +1448,16 @@ function testModule31() {
     181,  18, 213, 220, 124, 137, 234, 149,  62, 233, 181, 104,
   ]);
 
-  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 638);
-  assertReturn(module, '$assert_return_1', 'external/testsuite/float_exprs.wast', 639);
-  assertReturn(module, '$assert_return_2', 'external/testsuite/float_exprs.wast', 640);
-  assertReturn(module, '$assert_return_3', 'external/testsuite/float_exprs.wast', 641);
-  assertReturn(module, '$assert_return_4', 'external/testsuite/float_exprs.wast', 642);
-  assertReturn(module, '$assert_return_5', 'external/testsuite/float_exprs.wast', 644);
-  assertReturn(module, '$assert_return_6', 'external/testsuite/float_exprs.wast', 645);
-  assertReturn(module, '$assert_return_7', 'external/testsuite/float_exprs.wast', 646);
-  assertReturn(module, '$assert_return_8', 'external/testsuite/float_exprs.wast', 647);
-  assertReturn(module, '$assert_return_9', 'external/testsuite/float_exprs.wast', 648);
+  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 648);
+  assertReturn(module, '$assert_return_1', 'external/testsuite/float_exprs.wast', 649);
+  assertReturn(module, '$assert_return_2', 'external/testsuite/float_exprs.wast', 650);
+  assertReturn(module, '$assert_return_3', 'external/testsuite/float_exprs.wast', 651);
+  assertReturn(module, '$assert_return_4', 'external/testsuite/float_exprs.wast', 652);
+  assertReturn(module, '$assert_return_5', 'external/testsuite/float_exprs.wast', 654);
+  assertReturn(module, '$assert_return_6', 'external/testsuite/float_exprs.wast', 655);
+  assertReturn(module, '$assert_return_7', 'external/testsuite/float_exprs.wast', 656);
+  assertReturn(module, '$assert_return_8', 'external/testsuite/float_exprs.wast', 657);
+  assertReturn(module, '$assert_return_9', 'external/testsuite/float_exprs.wast', 658);
 }
 
 function testModule32() {
@@ -1474,16 +1502,16 @@ function testModule32() {
     181,  18,  79,  95,  59, 156, 254,  21, 181, 230, 181, 104,
   ]);
 
-  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 662);
-  assertReturn(module, '$assert_return_1', 'external/testsuite/float_exprs.wast', 663);
-  assertReturn(module, '$assert_return_2', 'external/testsuite/float_exprs.wast', 664);
-  assertReturn(module, '$assert_return_3', 'external/testsuite/float_exprs.wast', 665);
-  assertReturn(module, '$assert_return_4', 'external/testsuite/float_exprs.wast', 666);
-  assertReturn(module, '$assert_return_5', 'external/testsuite/float_exprs.wast', 668);
-  assertReturn(module, '$assert_return_6', 'external/testsuite/float_exprs.wast', 669);
-  assertReturn(module, '$assert_return_7', 'external/testsuite/float_exprs.wast', 670);
-  assertReturn(module, '$assert_return_8', 'external/testsuite/float_exprs.wast', 671);
-  assertReturn(module, '$assert_return_9', 'external/testsuite/float_exprs.wast', 672);
+  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 672);
+  assertReturn(module, '$assert_return_1', 'external/testsuite/float_exprs.wast', 673);
+  assertReturn(module, '$assert_return_2', 'external/testsuite/float_exprs.wast', 674);
+  assertReturn(module, '$assert_return_3', 'external/testsuite/float_exprs.wast', 675);
+  assertReturn(module, '$assert_return_4', 'external/testsuite/float_exprs.wast', 676);
+  assertReturn(module, '$assert_return_5', 'external/testsuite/float_exprs.wast', 678);
+  assertReturn(module, '$assert_return_6', 'external/testsuite/float_exprs.wast', 679);
+  assertReturn(module, '$assert_return_7', 'external/testsuite/float_exprs.wast', 680);
+  assertReturn(module, '$assert_return_8', 'external/testsuite/float_exprs.wast', 681);
+  assertReturn(module, '$assert_return_9', 'external/testsuite/float_exprs.wast', 682);
 }
 
 function testModule33() {
@@ -1510,26 +1538,66 @@ function testModule33() {
     114,  70, 181, 104,
   ]);
 
-  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 682);
-  assertReturn(module, '$assert_return_1', 'external/testsuite/float_exprs.wast', 683);
-  assertReturn(module, '$assert_return_2', 'external/testsuite/float_exprs.wast', 684);
-  assertReturn(module, '$assert_return_3', 'external/testsuite/float_exprs.wast', 685);
-  assertReturn(module, '$assert_return_4', 'external/testsuite/float_exprs.wast', 686);
+  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 692);
+  assertReturn(module, '$assert_return_1', 'external/testsuite/float_exprs.wast', 693);
+  assertReturn(module, '$assert_return_2', 'external/testsuite/float_exprs.wast', 694);
+  assertReturn(module, '$assert_return_3', 'external/testsuite/float_exprs.wast', 695);
+  assertReturn(module, '$assert_return_4', 'external/testsuite/float_exprs.wast', 696);
 }
 
 function testModule34() {
   var module = createModule([
       0,  97, 115, 109,  11,   0,   0,   0,   4, 116, 121, 112, 101,  10,   2,  64,
       1,   3,   1,   3,  64,   0,   1,   1,   8, 102, 117, 110,  99, 116, 105, 111,
-    110,   3,   2,   0,   1,   6, 101, 120, 112, 111, 114, 116,  43,   2,   0,  22,
-    110, 111,  95, 102, 111, 108, 100,  95, 112, 114, 111, 109, 111, 116, 101,  95,
-    100, 101, 109, 111, 116, 101,   1,  16,  36,  97, 115, 115, 101, 114, 116,  95,
-    114, 101, 116, 117, 114, 110,  95,  48,   4,  99, 111, 100, 101,  25,   2,   5,
-      0,  20,   0, 178, 172,  17,   0,  19,   0,   0, 160, 127,  22,   1,   0, 180,
-     19,   0,   0, 224, 127, 180,  77,
+    110,  15,  14,   0,   1,   1,   1,   1,   1,   1,   1,   1,   1,   1,   1,   1,
+      1,   6, 101, 120, 112, 111, 114, 116, 134,   2,  14,   0,  22, 110, 111,  95,
+    102, 111, 108, 100,  95, 112, 114, 111, 109, 111, 116, 101,  95, 100, 101, 109,
+    111, 116, 101,   1,  16,  36,  97, 115, 115, 101, 114, 116,  95, 114, 101, 116,
+    117, 114, 110,  95,  48,   2,  16,  36,  97, 115, 115, 101, 114, 116,  95, 114,
+    101, 116, 117, 114, 110,  95,  49,   3,  16,  36,  97, 115, 115, 101, 114, 116,
+     95, 114, 101, 116, 117, 114, 110,  95,  50,   4,  16,  36,  97, 115, 115, 101,
+    114, 116,  95, 114, 101, 116, 117, 114, 110,  95,  51,   5,  16,  36,  97, 115,
+    115, 101, 114, 116,  95, 114, 101, 116, 117, 114, 110,  95,  52,   6,  16,  36,
+     97, 115, 115, 101, 114, 116,  95, 114, 101, 116, 117, 114, 110,  95,  53,   7,
+     16,  36,  97, 115, 115, 101, 114, 116,  95, 114, 101, 116, 117, 114, 110,  95,
+     54,   8,  16,  36,  97, 115, 115, 101, 114, 116,  95, 114, 101, 116, 117, 114,
+    110,  95,  55,   9,  16,  36,  97, 115, 115, 101, 114, 116,  95, 114, 101, 116,
+    117, 114, 110,  95,  56,  10,  16,  36,  97, 115, 115, 101, 114, 116,  95, 114,
+    101, 116, 117, 114, 110,  95,  57,  11,  17,  36,  97, 115, 115, 101, 114, 116,
+     95, 114, 101, 116, 117, 114, 110,  95,  49,  48,  12,  17,  36,  97, 115, 115,
+    101, 114, 116,  95, 114, 101, 116, 117, 114, 110,  95,  49,  49,  13,  17,  36,
+     97, 115, 115, 101, 114, 116,  95, 114, 101, 116, 117, 114, 110,  95,  49,  50,
+      4,  99, 111, 100, 101, 241,   1,  14,   5,   0,  20,   0, 178, 172,  17,   0,
+     19,   0,   0, 160, 127,  22,   1,   0, 180,  19,   0,   0, 224, 127, 180,  77,
+     17,   0,  19,   0,   0,   0,   0,  22,   1,   0, 180,  19,   0,   0,   0,   0,
+    180,  77,  17,   0,  19,   0,   0,   0, 128,  22,   1,   0, 180,  19,   0,   0,
+      0, 128, 180,  77,  17,   0,  19,   1,   0,   0,   0,  22,   1,   0, 180,  19,
+      1,   0,   0,   0, 180,  77,  17,   0,  19,   1,   0,   0, 128,  22,   1,   0,
+    180,  19,   1,   0,   0, 128, 180,  77,  17,   0,  19, 255, 255, 127,   0,  22,
+      1,   0, 180,  19, 255, 255, 127,   0, 180,  77,  17,   0,  19, 255, 255, 127,
+    128,  22,   1,   0, 180,  19, 255, 255, 127, 128, 180,  77,  17,   0,  19,   0,
+      0, 128,   0,  22,   1,   0, 180,  19,   0,   0, 128,   0, 180,  77,  17,   0,
+     19,   0,   0, 128, 128,  22,   1,   0, 180,  19,   0,   0, 128, 128, 180,  77,
+     17,   0,  19, 255, 255, 127, 127,  22,   1,   0, 180,  19, 255, 255, 127, 127,
+    180,  77,  17,   0,  19, 255, 255, 127, 255,  22,   1,   0, 180,  19, 255, 255,
+    127, 255, 180,  77,  17,   0,  19,   0,   0, 128, 127,  22,   1,   0, 180,  19,
+      0,   0, 128, 127, 180,  77,  17,   0,  19,   0,   0, 128, 255,  22,   1,   0,
+    180,  19,   0,   0, 128, 255, 180,  77,
   ]);
 
-  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 696);
+  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 707);
+  assertReturn(module, '$assert_return_1', 'external/testsuite/float_exprs.wast', 708);
+  assertReturn(module, '$assert_return_2', 'external/testsuite/float_exprs.wast', 709);
+  assertReturn(module, '$assert_return_3', 'external/testsuite/float_exprs.wast', 710);
+  assertReturn(module, '$assert_return_4', 'external/testsuite/float_exprs.wast', 711);
+  assertReturn(module, '$assert_return_5', 'external/testsuite/float_exprs.wast', 712);
+  assertReturn(module, '$assert_return_6', 'external/testsuite/float_exprs.wast', 713);
+  assertReturn(module, '$assert_return_7', 'external/testsuite/float_exprs.wast', 714);
+  assertReturn(module, '$assert_return_8', 'external/testsuite/float_exprs.wast', 715);
+  assertReturn(module, '$assert_return_9', 'external/testsuite/float_exprs.wast', 716);
+  assertReturn(module, '$assert_return_10', 'external/testsuite/float_exprs.wast', 717);
+  assertReturn(module, '$assert_return_11', 'external/testsuite/float_exprs.wast', 718);
+  assertReturn(module, '$assert_return_12', 'external/testsuite/float_exprs.wast', 719);
 }
 
 function testModule35() {
@@ -1573,16 +1641,16 @@ function testModule35() {
      82,  56, 183, 190,  22,   2,   1, 180,  19, 155, 194, 185, 181, 180,  77,
   ]);
 
-  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 710);
-  assertReturn(module, '$assert_return_1', 'external/testsuite/float_exprs.wast', 711);
-  assertReturn(module, '$assert_return_2', 'external/testsuite/float_exprs.wast', 712);
-  assertReturn(module, '$assert_return_3', 'external/testsuite/float_exprs.wast', 713);
-  assertReturn(module, '$assert_return_4', 'external/testsuite/float_exprs.wast', 714);
-  assertReturn(module, '$assert_return_5', 'external/testsuite/float_exprs.wast', 716);
-  assertReturn(module, '$assert_return_6', 'external/testsuite/float_exprs.wast', 717);
-  assertReturn(module, '$assert_return_7', 'external/testsuite/float_exprs.wast', 718);
-  assertReturn(module, '$assert_return_8', 'external/testsuite/float_exprs.wast', 719);
-  assertReturn(module, '$assert_return_9', 'external/testsuite/float_exprs.wast', 720);
+  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 733);
+  assertReturn(module, '$assert_return_1', 'external/testsuite/float_exprs.wast', 734);
+  assertReturn(module, '$assert_return_2', 'external/testsuite/float_exprs.wast', 735);
+  assertReturn(module, '$assert_return_3', 'external/testsuite/float_exprs.wast', 736);
+  assertReturn(module, '$assert_return_4', 'external/testsuite/float_exprs.wast', 737);
+  assertReturn(module, '$assert_return_5', 'external/testsuite/float_exprs.wast', 739);
+  assertReturn(module, '$assert_return_6', 'external/testsuite/float_exprs.wast', 740);
+  assertReturn(module, '$assert_return_7', 'external/testsuite/float_exprs.wast', 741);
+  assertReturn(module, '$assert_return_8', 'external/testsuite/float_exprs.wast', 742);
+  assertReturn(module, '$assert_return_9', 'external/testsuite/float_exprs.wast', 743);
 }
 
 function testModule36() {
@@ -1609,11 +1677,11 @@ function testModule36() {
       2,   0, 180,  19, 129, 190,  12, 199, 180,  77,
   ]);
 
-  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 730);
-  assertReturn(module, '$assert_return_1', 'external/testsuite/float_exprs.wast', 731);
-  assertReturn(module, '$assert_return_2', 'external/testsuite/float_exprs.wast', 732);
-  assertReturn(module, '$assert_return_3', 'external/testsuite/float_exprs.wast', 733);
-  assertReturn(module, '$assert_return_4', 'external/testsuite/float_exprs.wast', 734);
+  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 753);
+  assertReturn(module, '$assert_return_1', 'external/testsuite/float_exprs.wast', 754);
+  assertReturn(module, '$assert_return_2', 'external/testsuite/float_exprs.wast', 755);
+  assertReturn(module, '$assert_return_3', 'external/testsuite/float_exprs.wast', 756);
+  assertReturn(module, '$assert_return_4', 'external/testsuite/float_exprs.wast', 757);
 }
 
 function testModule37() {
@@ -1749,38 +1817,38 @@ function testModule37() {
     191,  22,   1,  15, 181,  18,   0,   0,   0,   0,   0,   0,   0,   0, 181, 104,
   ]);
 
-  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 804);
-  assertReturn(module, '$assert_return_1', 'external/testsuite/float_exprs.wast', 805);
-  assertReturn(module, '$assert_return_2', 'external/testsuite/float_exprs.wast', 806);
-  assertReturn(module, '$assert_return_3', 'external/testsuite/float_exprs.wast', 807);
-  assertReturn(module, '$assert_return_4', 'external/testsuite/float_exprs.wast', 808);
-  assertReturn(module, '$assert_return_5', 'external/testsuite/float_exprs.wast', 809);
-  assertReturn(module, '$assert_return_6', 'external/testsuite/float_exprs.wast', 810);
-  assertReturn(module, '$assert_return_7', 'external/testsuite/float_exprs.wast', 811);
-  assertReturn(module, '$assert_return_8', 'external/testsuite/float_exprs.wast', 813);
-  assertReturn(module, '$assert_return_9', 'external/testsuite/float_exprs.wast', 814);
-  assertReturn(module, '$assert_return_10', 'external/testsuite/float_exprs.wast', 815);
-  assertReturn(module, '$assert_return_11', 'external/testsuite/float_exprs.wast', 816);
-  assertReturn(module, '$assert_return_12', 'external/testsuite/float_exprs.wast', 817);
-  assertReturn(module, '$assert_return_13', 'external/testsuite/float_exprs.wast', 818);
-  assertReturn(module, '$assert_return_14', 'external/testsuite/float_exprs.wast', 819);
-  assertReturn(module, '$assert_return_15', 'external/testsuite/float_exprs.wast', 820);
-  assertReturn(module, '$assert_return_16', 'external/testsuite/float_exprs.wast', 822);
-  assertReturn(module, '$assert_return_17', 'external/testsuite/float_exprs.wast', 823);
-  assertReturn(module, '$assert_return_18', 'external/testsuite/float_exprs.wast', 824);
-  assertReturn(module, '$assert_return_19', 'external/testsuite/float_exprs.wast', 825);
-  assertReturn(module, '$assert_return_20', 'external/testsuite/float_exprs.wast', 826);
-  assertReturn(module, '$assert_return_21', 'external/testsuite/float_exprs.wast', 827);
-  assertReturn(module, '$assert_return_22', 'external/testsuite/float_exprs.wast', 828);
-  assertReturn(module, '$assert_return_23', 'external/testsuite/float_exprs.wast', 829);
-  assertReturn(module, '$assert_return_24', 'external/testsuite/float_exprs.wast', 831);
-  assertReturn(module, '$assert_return_25', 'external/testsuite/float_exprs.wast', 832);
-  assertReturn(module, '$assert_return_26', 'external/testsuite/float_exprs.wast', 833);
-  assertReturn(module, '$assert_return_27', 'external/testsuite/float_exprs.wast', 834);
-  assertReturn(module, '$assert_return_28', 'external/testsuite/float_exprs.wast', 835);
-  assertReturn(module, '$assert_return_29', 'external/testsuite/float_exprs.wast', 836);
-  assertReturn(module, '$assert_return_30', 'external/testsuite/float_exprs.wast', 837);
-  assertReturn(module, '$assert_return_31', 'external/testsuite/float_exprs.wast', 838);
+  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 827);
+  assertReturn(module, '$assert_return_1', 'external/testsuite/float_exprs.wast', 828);
+  assertReturn(module, '$assert_return_2', 'external/testsuite/float_exprs.wast', 829);
+  assertReturn(module, '$assert_return_3', 'external/testsuite/float_exprs.wast', 830);
+  assertReturn(module, '$assert_return_4', 'external/testsuite/float_exprs.wast', 831);
+  assertReturn(module, '$assert_return_5', 'external/testsuite/float_exprs.wast', 832);
+  assertReturn(module, '$assert_return_6', 'external/testsuite/float_exprs.wast', 833);
+  assertReturn(module, '$assert_return_7', 'external/testsuite/float_exprs.wast', 834);
+  assertReturn(module, '$assert_return_8', 'external/testsuite/float_exprs.wast', 836);
+  assertReturn(module, '$assert_return_9', 'external/testsuite/float_exprs.wast', 837);
+  assertReturn(module, '$assert_return_10', 'external/testsuite/float_exprs.wast', 838);
+  assertReturn(module, '$assert_return_11', 'external/testsuite/float_exprs.wast', 839);
+  assertReturn(module, '$assert_return_12', 'external/testsuite/float_exprs.wast', 840);
+  assertReturn(module, '$assert_return_13', 'external/testsuite/float_exprs.wast', 841);
+  assertReturn(module, '$assert_return_14', 'external/testsuite/float_exprs.wast', 842);
+  assertReturn(module, '$assert_return_15', 'external/testsuite/float_exprs.wast', 843);
+  assertReturn(module, '$assert_return_16', 'external/testsuite/float_exprs.wast', 845);
+  assertReturn(module, '$assert_return_17', 'external/testsuite/float_exprs.wast', 846);
+  assertReturn(module, '$assert_return_18', 'external/testsuite/float_exprs.wast', 847);
+  assertReturn(module, '$assert_return_19', 'external/testsuite/float_exprs.wast', 848);
+  assertReturn(module, '$assert_return_20', 'external/testsuite/float_exprs.wast', 849);
+  assertReturn(module, '$assert_return_21', 'external/testsuite/float_exprs.wast', 850);
+  assertReturn(module, '$assert_return_22', 'external/testsuite/float_exprs.wast', 851);
+  assertReturn(module, '$assert_return_23', 'external/testsuite/float_exprs.wast', 852);
+  assertReturn(module, '$assert_return_24', 'external/testsuite/float_exprs.wast', 854);
+  assertReturn(module, '$assert_return_25', 'external/testsuite/float_exprs.wast', 855);
+  assertReturn(module, '$assert_return_26', 'external/testsuite/float_exprs.wast', 856);
+  assertReturn(module, '$assert_return_27', 'external/testsuite/float_exprs.wast', 857);
+  assertReturn(module, '$assert_return_28', 'external/testsuite/float_exprs.wast', 858);
+  assertReturn(module, '$assert_return_29', 'external/testsuite/float_exprs.wast', 859);
+  assertReturn(module, '$assert_return_30', 'external/testsuite/float_exprs.wast', 860);
+  assertReturn(module, '$assert_return_31', 'external/testsuite/float_exprs.wast', 861);
 }
 
 function testModule38() {
@@ -1825,15 +1893,15 @@ function testModule38() {
   invoke(module, '$invoke_1');
   invoke(module, '$invoke_2');
   invoke(module, '$invoke_3');
-  assertReturn(module, '$assert_return_4', 'external/testsuite/float_exprs.wast', 867);
-  assertReturn(module, '$assert_return_5', 'external/testsuite/float_exprs.wast', 868);
-  assertReturn(module, '$assert_return_6', 'external/testsuite/float_exprs.wast', 869);
-  assertReturn(module, '$assert_return_7', 'external/testsuite/float_exprs.wast', 870);
+  assertReturn(module, '$assert_return_4', 'external/testsuite/float_exprs.wast', 890);
+  assertReturn(module, '$assert_return_5', 'external/testsuite/float_exprs.wast', 891);
+  assertReturn(module, '$assert_return_6', 'external/testsuite/float_exprs.wast', 892);
+  assertReturn(module, '$assert_return_7', 'external/testsuite/float_exprs.wast', 893);
   invoke(module, '$invoke_8');
-  assertReturn(module, '$assert_return_9', 'external/testsuite/float_exprs.wast', 872);
-  assertReturn(module, '$assert_return_10', 'external/testsuite/float_exprs.wast', 873);
-  assertReturn(module, '$assert_return_11', 'external/testsuite/float_exprs.wast', 874);
-  assertReturn(module, '$assert_return_12', 'external/testsuite/float_exprs.wast', 875);
+  assertReturn(module, '$assert_return_9', 'external/testsuite/float_exprs.wast', 895);
+  assertReturn(module, '$assert_return_10', 'external/testsuite/float_exprs.wast', 896);
+  assertReturn(module, '$assert_return_11', 'external/testsuite/float_exprs.wast', 897);
+  assertReturn(module, '$assert_return_12', 'external/testsuite/float_exprs.wast', 898);
 }
 
 function testModule39() {
@@ -1881,15 +1949,15 @@ function testModule39() {
   invoke(module, '$invoke_1');
   invoke(module, '$invoke_2');
   invoke(module, '$invoke_3');
-  assertReturn(module, '$assert_return_4', 'external/testsuite/float_exprs.wast', 900);
-  assertReturn(module, '$assert_return_5', 'external/testsuite/float_exprs.wast', 901);
-  assertReturn(module, '$assert_return_6', 'external/testsuite/float_exprs.wast', 902);
-  assertReturn(module, '$assert_return_7', 'external/testsuite/float_exprs.wast', 903);
+  assertReturn(module, '$assert_return_4', 'external/testsuite/float_exprs.wast', 923);
+  assertReturn(module, '$assert_return_5', 'external/testsuite/float_exprs.wast', 924);
+  assertReturn(module, '$assert_return_6', 'external/testsuite/float_exprs.wast', 925);
+  assertReturn(module, '$assert_return_7', 'external/testsuite/float_exprs.wast', 926);
   invoke(module, '$invoke_8');
-  assertReturn(module, '$assert_return_9', 'external/testsuite/float_exprs.wast', 905);
-  assertReturn(module, '$assert_return_10', 'external/testsuite/float_exprs.wast', 906);
-  assertReturn(module, '$assert_return_11', 'external/testsuite/float_exprs.wast', 907);
-  assertReturn(module, '$assert_return_12', 'external/testsuite/float_exprs.wast', 908);
+  assertReturn(module, '$assert_return_9', 'external/testsuite/float_exprs.wast', 928);
+  assertReturn(module, '$assert_return_10', 'external/testsuite/float_exprs.wast', 929);
+  assertReturn(module, '$assert_return_11', 'external/testsuite/float_exprs.wast', 930);
+  assertReturn(module, '$assert_return_12', 'external/testsuite/float_exprs.wast', 931);
 }
 
 function testModule40() {
@@ -1993,38 +2061,38 @@ function testModule40() {
       1,  77,
   ]);
 
-  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 933);
-  assertReturn(module, '$assert_return_1', 'external/testsuite/float_exprs.wast', 934);
-  assertReturn(module, '$assert_return_2', 'external/testsuite/float_exprs.wast', 935);
-  assertReturn(module, '$assert_return_3', 'external/testsuite/float_exprs.wast', 936);
-  assertReturn(module, '$assert_return_4', 'external/testsuite/float_exprs.wast', 937);
-  assertReturn(module, '$assert_return_5', 'external/testsuite/float_exprs.wast', 938);
-  assertReturn(module, '$assert_return_6', 'external/testsuite/float_exprs.wast', 939);
-  assertReturn(module, '$assert_return_7', 'external/testsuite/float_exprs.wast', 940);
-  assertReturn(module, '$assert_return_8', 'external/testsuite/float_exprs.wast', 941);
-  assertReturn(module, '$assert_return_9', 'external/testsuite/float_exprs.wast', 942);
-  assertReturn(module, '$assert_return_10', 'external/testsuite/float_exprs.wast', 943);
-  assertReturn(module, '$assert_return_11', 'external/testsuite/float_exprs.wast', 944);
-  assertReturn(module, '$assert_return_12', 'external/testsuite/float_exprs.wast', 945);
-  assertReturn(module, '$assert_return_13', 'external/testsuite/float_exprs.wast', 946);
-  assertReturn(module, '$assert_return_14', 'external/testsuite/float_exprs.wast', 947);
-  assertReturn(module, '$assert_return_15', 'external/testsuite/float_exprs.wast', 948);
-  assertReturn(module, '$assert_return_16', 'external/testsuite/float_exprs.wast', 949);
-  assertReturn(module, '$assert_return_17', 'external/testsuite/float_exprs.wast', 950);
-  assertReturn(module, '$assert_return_18', 'external/testsuite/float_exprs.wast', 951);
-  assertReturn(module, '$assert_return_19', 'external/testsuite/float_exprs.wast', 952);
-  assertReturn(module, '$assert_return_20', 'external/testsuite/float_exprs.wast', 953);
-  assertReturn(module, '$assert_return_21', 'external/testsuite/float_exprs.wast', 954);
-  assertReturn(module, '$assert_return_22', 'external/testsuite/float_exprs.wast', 955);
-  assertReturn(module, '$assert_return_23', 'external/testsuite/float_exprs.wast', 956);
-  assertReturn(module, '$assert_return_24', 'external/testsuite/float_exprs.wast', 957);
-  assertReturn(module, '$assert_return_25', 'external/testsuite/float_exprs.wast', 958);
-  assertReturn(module, '$assert_return_26', 'external/testsuite/float_exprs.wast', 959);
-  assertReturn(module, '$assert_return_27', 'external/testsuite/float_exprs.wast', 960);
-  assertReturn(module, '$assert_return_28', 'external/testsuite/float_exprs.wast', 961);
-  assertReturn(module, '$assert_return_29', 'external/testsuite/float_exprs.wast', 962);
-  assertReturn(module, '$assert_return_30', 'external/testsuite/float_exprs.wast', 963);
-  assertReturn(module, '$assert_return_31', 'external/testsuite/float_exprs.wast', 964);
+  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 956);
+  assertReturn(module, '$assert_return_1', 'external/testsuite/float_exprs.wast', 957);
+  assertReturn(module, '$assert_return_2', 'external/testsuite/float_exprs.wast', 958);
+  assertReturn(module, '$assert_return_3', 'external/testsuite/float_exprs.wast', 959);
+  assertReturn(module, '$assert_return_4', 'external/testsuite/float_exprs.wast', 960);
+  assertReturn(module, '$assert_return_5', 'external/testsuite/float_exprs.wast', 961);
+  assertReturn(module, '$assert_return_6', 'external/testsuite/float_exprs.wast', 962);
+  assertReturn(module, '$assert_return_7', 'external/testsuite/float_exprs.wast', 963);
+  assertReturn(module, '$assert_return_8', 'external/testsuite/float_exprs.wast', 964);
+  assertReturn(module, '$assert_return_9', 'external/testsuite/float_exprs.wast', 965);
+  assertReturn(module, '$assert_return_10', 'external/testsuite/float_exprs.wast', 966);
+  assertReturn(module, '$assert_return_11', 'external/testsuite/float_exprs.wast', 967);
+  assertReturn(module, '$assert_return_12', 'external/testsuite/float_exprs.wast', 968);
+  assertReturn(module, '$assert_return_13', 'external/testsuite/float_exprs.wast', 969);
+  assertReturn(module, '$assert_return_14', 'external/testsuite/float_exprs.wast', 970);
+  assertReturn(module, '$assert_return_15', 'external/testsuite/float_exprs.wast', 971);
+  assertReturn(module, '$assert_return_16', 'external/testsuite/float_exprs.wast', 972);
+  assertReturn(module, '$assert_return_17', 'external/testsuite/float_exprs.wast', 973);
+  assertReturn(module, '$assert_return_18', 'external/testsuite/float_exprs.wast', 974);
+  assertReturn(module, '$assert_return_19', 'external/testsuite/float_exprs.wast', 975);
+  assertReturn(module, '$assert_return_20', 'external/testsuite/float_exprs.wast', 976);
+  assertReturn(module, '$assert_return_21', 'external/testsuite/float_exprs.wast', 977);
+  assertReturn(module, '$assert_return_22', 'external/testsuite/float_exprs.wast', 978);
+  assertReturn(module, '$assert_return_23', 'external/testsuite/float_exprs.wast', 979);
+  assertReturn(module, '$assert_return_24', 'external/testsuite/float_exprs.wast', 980);
+  assertReturn(module, '$assert_return_25', 'external/testsuite/float_exprs.wast', 981);
+  assertReturn(module, '$assert_return_26', 'external/testsuite/float_exprs.wast', 982);
+  assertReturn(module, '$assert_return_27', 'external/testsuite/float_exprs.wast', 983);
+  assertReturn(module, '$assert_return_28', 'external/testsuite/float_exprs.wast', 984);
+  assertReturn(module, '$assert_return_29', 'external/testsuite/float_exprs.wast', 985);
+  assertReturn(module, '$assert_return_30', 'external/testsuite/float_exprs.wast', 986);
+  assertReturn(module, '$assert_return_31', 'external/testsuite/float_exprs.wast', 987);
 }
 
 function testModule41() {
@@ -2151,38 +2219,38 @@ function testModule41() {
     181, 104,
   ]);
 
-  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 988);
-  assertReturn(module, '$assert_return_1', 'external/testsuite/float_exprs.wast', 989);
-  assertReturn(module, '$assert_return_2', 'external/testsuite/float_exprs.wast', 990);
-  assertReturn(module, '$assert_return_3', 'external/testsuite/float_exprs.wast', 991);
-  assertReturn(module, '$assert_return_4', 'external/testsuite/float_exprs.wast', 992);
-  assertReturn(module, '$assert_return_5', 'external/testsuite/float_exprs.wast', 993);
-  assertReturn(module, '$assert_return_6', 'external/testsuite/float_exprs.wast', 994);
-  assertReturn(module, '$assert_return_7', 'external/testsuite/float_exprs.wast', 995);
-  assertReturn(module, '$assert_return_8', 'external/testsuite/float_exprs.wast', 996);
-  assertReturn(module, '$assert_return_9', 'external/testsuite/float_exprs.wast', 997);
-  assertReturn(module, '$assert_return_10', 'external/testsuite/float_exprs.wast', 998);
-  assertReturn(module, '$assert_return_11', 'external/testsuite/float_exprs.wast', 999);
-  assertReturn(module, '$assert_return_12', 'external/testsuite/float_exprs.wast', 1000);
-  assertReturn(module, '$assert_return_13', 'external/testsuite/float_exprs.wast', 1001);
-  assertReturn(module, '$assert_return_14', 'external/testsuite/float_exprs.wast', 1002);
-  assertReturn(module, '$assert_return_15', 'external/testsuite/float_exprs.wast', 1003);
-  assertReturn(module, '$assert_return_16', 'external/testsuite/float_exprs.wast', 1004);
-  assertReturn(module, '$assert_return_17', 'external/testsuite/float_exprs.wast', 1005);
-  assertReturn(module, '$assert_return_18', 'external/testsuite/float_exprs.wast', 1006);
-  assertReturn(module, '$assert_return_19', 'external/testsuite/float_exprs.wast', 1007);
-  assertReturn(module, '$assert_return_20', 'external/testsuite/float_exprs.wast', 1008);
-  assertReturn(module, '$assert_return_21', 'external/testsuite/float_exprs.wast', 1009);
-  assertReturn(module, '$assert_return_22', 'external/testsuite/float_exprs.wast', 1010);
-  assertReturn(module, '$assert_return_23', 'external/testsuite/float_exprs.wast', 1011);
-  assertReturn(module, '$assert_return_24', 'external/testsuite/float_exprs.wast', 1012);
-  assertReturn(module, '$assert_return_25', 'external/testsuite/float_exprs.wast', 1013);
-  assertReturn(module, '$assert_return_26', 'external/testsuite/float_exprs.wast', 1014);
-  assertReturn(module, '$assert_return_27', 'external/testsuite/float_exprs.wast', 1015);
-  assertReturn(module, '$assert_return_28', 'external/testsuite/float_exprs.wast', 1016);
-  assertReturn(module, '$assert_return_29', 'external/testsuite/float_exprs.wast', 1017);
-  assertReturn(module, '$assert_return_30', 'external/testsuite/float_exprs.wast', 1018);
-  assertReturn(module, '$assert_return_31', 'external/testsuite/float_exprs.wast', 1019);
+  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 1011);
+  assertReturn(module, '$assert_return_1', 'external/testsuite/float_exprs.wast', 1012);
+  assertReturn(module, '$assert_return_2', 'external/testsuite/float_exprs.wast', 1013);
+  assertReturn(module, '$assert_return_3', 'external/testsuite/float_exprs.wast', 1014);
+  assertReturn(module, '$assert_return_4', 'external/testsuite/float_exprs.wast', 1015);
+  assertReturn(module, '$assert_return_5', 'external/testsuite/float_exprs.wast', 1016);
+  assertReturn(module, '$assert_return_6', 'external/testsuite/float_exprs.wast', 1017);
+  assertReturn(module, '$assert_return_7', 'external/testsuite/float_exprs.wast', 1018);
+  assertReturn(module, '$assert_return_8', 'external/testsuite/float_exprs.wast', 1019);
+  assertReturn(module, '$assert_return_9', 'external/testsuite/float_exprs.wast', 1020);
+  assertReturn(module, '$assert_return_10', 'external/testsuite/float_exprs.wast', 1021);
+  assertReturn(module, '$assert_return_11', 'external/testsuite/float_exprs.wast', 1022);
+  assertReturn(module, '$assert_return_12', 'external/testsuite/float_exprs.wast', 1023);
+  assertReturn(module, '$assert_return_13', 'external/testsuite/float_exprs.wast', 1024);
+  assertReturn(module, '$assert_return_14', 'external/testsuite/float_exprs.wast', 1025);
+  assertReturn(module, '$assert_return_15', 'external/testsuite/float_exprs.wast', 1026);
+  assertReturn(module, '$assert_return_16', 'external/testsuite/float_exprs.wast', 1027);
+  assertReturn(module, '$assert_return_17', 'external/testsuite/float_exprs.wast', 1028);
+  assertReturn(module, '$assert_return_18', 'external/testsuite/float_exprs.wast', 1029);
+  assertReturn(module, '$assert_return_19', 'external/testsuite/float_exprs.wast', 1030);
+  assertReturn(module, '$assert_return_20', 'external/testsuite/float_exprs.wast', 1031);
+  assertReturn(module, '$assert_return_21', 'external/testsuite/float_exprs.wast', 1032);
+  assertReturn(module, '$assert_return_22', 'external/testsuite/float_exprs.wast', 1033);
+  assertReturn(module, '$assert_return_23', 'external/testsuite/float_exprs.wast', 1034);
+  assertReturn(module, '$assert_return_24', 'external/testsuite/float_exprs.wast', 1035);
+  assertReturn(module, '$assert_return_25', 'external/testsuite/float_exprs.wast', 1036);
+  assertReturn(module, '$assert_return_26', 'external/testsuite/float_exprs.wast', 1037);
+  assertReturn(module, '$assert_return_27', 'external/testsuite/float_exprs.wast', 1038);
+  assertReturn(module, '$assert_return_28', 'external/testsuite/float_exprs.wast', 1039);
+  assertReturn(module, '$assert_return_29', 'external/testsuite/float_exprs.wast', 1040);
+  assertReturn(module, '$assert_return_30', 'external/testsuite/float_exprs.wast', 1041);
+  assertReturn(module, '$assert_return_31', 'external/testsuite/float_exprs.wast', 1042);
 }
 
 function testModule42() {
@@ -2308,38 +2376,38 @@ function testModule42() {
     181, 104,
   ]);
 
-  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 1043);
-  assertReturn(module, '$assert_return_1', 'external/testsuite/float_exprs.wast', 1044);
-  assertReturn(module, '$assert_return_2', 'external/testsuite/float_exprs.wast', 1045);
-  assertReturn(module, '$assert_return_3', 'external/testsuite/float_exprs.wast', 1046);
-  assertReturn(module, '$assert_return_4', 'external/testsuite/float_exprs.wast', 1047);
-  assertReturn(module, '$assert_return_5', 'external/testsuite/float_exprs.wast', 1048);
-  assertReturn(module, '$assert_return_6', 'external/testsuite/float_exprs.wast', 1049);
-  assertReturn(module, '$assert_return_7', 'external/testsuite/float_exprs.wast', 1050);
-  assertReturn(module, '$assert_return_8', 'external/testsuite/float_exprs.wast', 1051);
-  assertReturn(module, '$assert_return_9', 'external/testsuite/float_exprs.wast', 1052);
-  assertReturn(module, '$assert_return_10', 'external/testsuite/float_exprs.wast', 1053);
-  assertReturn(module, '$assert_return_11', 'external/testsuite/float_exprs.wast', 1054);
-  assertReturn(module, '$assert_return_12', 'external/testsuite/float_exprs.wast', 1055);
-  assertReturn(module, '$assert_return_13', 'external/testsuite/float_exprs.wast', 1056);
-  assertReturn(module, '$assert_return_14', 'external/testsuite/float_exprs.wast', 1057);
-  assertReturn(module, '$assert_return_15', 'external/testsuite/float_exprs.wast', 1058);
-  assertReturn(module, '$assert_return_16', 'external/testsuite/float_exprs.wast', 1059);
-  assertReturn(module, '$assert_return_17', 'external/testsuite/float_exprs.wast', 1060);
-  assertReturn(module, '$assert_return_18', 'external/testsuite/float_exprs.wast', 1061);
-  assertReturn(module, '$assert_return_19', 'external/testsuite/float_exprs.wast', 1062);
-  assertReturn(module, '$assert_return_20', 'external/testsuite/float_exprs.wast', 1063);
-  assertReturn(module, '$assert_return_21', 'external/testsuite/float_exprs.wast', 1064);
-  assertReturn(module, '$assert_return_22', 'external/testsuite/float_exprs.wast', 1065);
-  assertReturn(module, '$assert_return_23', 'external/testsuite/float_exprs.wast', 1066);
-  assertReturn(module, '$assert_return_24', 'external/testsuite/float_exprs.wast', 1067);
-  assertReturn(module, '$assert_return_25', 'external/testsuite/float_exprs.wast', 1068);
-  assertReturn(module, '$assert_return_26', 'external/testsuite/float_exprs.wast', 1069);
-  assertReturn(module, '$assert_return_27', 'external/testsuite/float_exprs.wast', 1070);
-  assertReturn(module, '$assert_return_28', 'external/testsuite/float_exprs.wast', 1071);
-  assertReturn(module, '$assert_return_29', 'external/testsuite/float_exprs.wast', 1072);
-  assertReturn(module, '$assert_return_30', 'external/testsuite/float_exprs.wast', 1073);
-  assertReturn(module, '$assert_return_31', 'external/testsuite/float_exprs.wast', 1074);
+  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 1066);
+  assertReturn(module, '$assert_return_1', 'external/testsuite/float_exprs.wast', 1067);
+  assertReturn(module, '$assert_return_2', 'external/testsuite/float_exprs.wast', 1068);
+  assertReturn(module, '$assert_return_3', 'external/testsuite/float_exprs.wast', 1069);
+  assertReturn(module, '$assert_return_4', 'external/testsuite/float_exprs.wast', 1070);
+  assertReturn(module, '$assert_return_5', 'external/testsuite/float_exprs.wast', 1071);
+  assertReturn(module, '$assert_return_6', 'external/testsuite/float_exprs.wast', 1072);
+  assertReturn(module, '$assert_return_7', 'external/testsuite/float_exprs.wast', 1073);
+  assertReturn(module, '$assert_return_8', 'external/testsuite/float_exprs.wast', 1074);
+  assertReturn(module, '$assert_return_9', 'external/testsuite/float_exprs.wast', 1075);
+  assertReturn(module, '$assert_return_10', 'external/testsuite/float_exprs.wast', 1076);
+  assertReturn(module, '$assert_return_11', 'external/testsuite/float_exprs.wast', 1077);
+  assertReturn(module, '$assert_return_12', 'external/testsuite/float_exprs.wast', 1078);
+  assertReturn(module, '$assert_return_13', 'external/testsuite/float_exprs.wast', 1079);
+  assertReturn(module, '$assert_return_14', 'external/testsuite/float_exprs.wast', 1080);
+  assertReturn(module, '$assert_return_15', 'external/testsuite/float_exprs.wast', 1081);
+  assertReturn(module, '$assert_return_16', 'external/testsuite/float_exprs.wast', 1082);
+  assertReturn(module, '$assert_return_17', 'external/testsuite/float_exprs.wast', 1083);
+  assertReturn(module, '$assert_return_18', 'external/testsuite/float_exprs.wast', 1084);
+  assertReturn(module, '$assert_return_19', 'external/testsuite/float_exprs.wast', 1085);
+  assertReturn(module, '$assert_return_20', 'external/testsuite/float_exprs.wast', 1086);
+  assertReturn(module, '$assert_return_21', 'external/testsuite/float_exprs.wast', 1087);
+  assertReturn(module, '$assert_return_22', 'external/testsuite/float_exprs.wast', 1088);
+  assertReturn(module, '$assert_return_23', 'external/testsuite/float_exprs.wast', 1089);
+  assertReturn(module, '$assert_return_24', 'external/testsuite/float_exprs.wast', 1090);
+  assertReturn(module, '$assert_return_25', 'external/testsuite/float_exprs.wast', 1091);
+  assertReturn(module, '$assert_return_26', 'external/testsuite/float_exprs.wast', 1092);
+  assertReturn(module, '$assert_return_27', 'external/testsuite/float_exprs.wast', 1093);
+  assertReturn(module, '$assert_return_28', 'external/testsuite/float_exprs.wast', 1094);
+  assertReturn(module, '$assert_return_29', 'external/testsuite/float_exprs.wast', 1095);
+  assertReturn(module, '$assert_return_30', 'external/testsuite/float_exprs.wast', 1096);
+  assertReturn(module, '$assert_return_31', 'external/testsuite/float_exprs.wast', 1097);
 }
 
 function testModule43() {
@@ -2458,38 +2526,38 @@ function testModule43() {
       0,   0,   0,   0,   0, 128, 181, 104,
   ]);
 
-  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 1098);
-  assertReturn(module, '$assert_return_1', 'external/testsuite/float_exprs.wast', 1099);
-  assertReturn(module, '$assert_return_2', 'external/testsuite/float_exprs.wast', 1100);
-  assertReturn(module, '$assert_return_3', 'external/testsuite/float_exprs.wast', 1101);
-  assertReturn(module, '$assert_return_4', 'external/testsuite/float_exprs.wast', 1102);
-  assertReturn(module, '$assert_return_5', 'external/testsuite/float_exprs.wast', 1103);
-  assertReturn(module, '$assert_return_6', 'external/testsuite/float_exprs.wast', 1104);
-  assertReturn(module, '$assert_return_7', 'external/testsuite/float_exprs.wast', 1105);
-  assertReturn(module, '$assert_return_8', 'external/testsuite/float_exprs.wast', 1106);
-  assertReturn(module, '$assert_return_9', 'external/testsuite/float_exprs.wast', 1107);
-  assertReturn(module, '$assert_return_10', 'external/testsuite/float_exprs.wast', 1108);
-  assertReturn(module, '$assert_return_11', 'external/testsuite/float_exprs.wast', 1109);
-  assertReturn(module, '$assert_return_12', 'external/testsuite/float_exprs.wast', 1110);
-  assertReturn(module, '$assert_return_13', 'external/testsuite/float_exprs.wast', 1111);
-  assertReturn(module, '$assert_return_14', 'external/testsuite/float_exprs.wast', 1112);
-  assertReturn(module, '$assert_return_15', 'external/testsuite/float_exprs.wast', 1113);
-  assertReturn(module, '$assert_return_16', 'external/testsuite/float_exprs.wast', 1114);
-  assertReturn(module, '$assert_return_17', 'external/testsuite/float_exprs.wast', 1115);
-  assertReturn(module, '$assert_return_18', 'external/testsuite/float_exprs.wast', 1116);
-  assertReturn(module, '$assert_return_19', 'external/testsuite/float_exprs.wast', 1117);
-  assertReturn(module, '$assert_return_20', 'external/testsuite/float_exprs.wast', 1118);
-  assertReturn(module, '$assert_return_21', 'external/testsuite/float_exprs.wast', 1119);
-  assertReturn(module, '$assert_return_22', 'external/testsuite/float_exprs.wast', 1120);
-  assertReturn(module, '$assert_return_23', 'external/testsuite/float_exprs.wast', 1121);
-  assertReturn(module, '$assert_return_24', 'external/testsuite/float_exprs.wast', 1122);
-  assertReturn(module, '$assert_return_25', 'external/testsuite/float_exprs.wast', 1123);
-  assertReturn(module, '$assert_return_26', 'external/testsuite/float_exprs.wast', 1124);
-  assertReturn(module, '$assert_return_27', 'external/testsuite/float_exprs.wast', 1125);
-  assertReturn(module, '$assert_return_28', 'external/testsuite/float_exprs.wast', 1126);
-  assertReturn(module, '$assert_return_29', 'external/testsuite/float_exprs.wast', 1127);
-  assertReturn(module, '$assert_return_30', 'external/testsuite/float_exprs.wast', 1128);
-  assertReturn(module, '$assert_return_31', 'external/testsuite/float_exprs.wast', 1129);
+  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 1121);
+  assertReturn(module, '$assert_return_1', 'external/testsuite/float_exprs.wast', 1122);
+  assertReturn(module, '$assert_return_2', 'external/testsuite/float_exprs.wast', 1123);
+  assertReturn(module, '$assert_return_3', 'external/testsuite/float_exprs.wast', 1124);
+  assertReturn(module, '$assert_return_4', 'external/testsuite/float_exprs.wast', 1125);
+  assertReturn(module, '$assert_return_5', 'external/testsuite/float_exprs.wast', 1126);
+  assertReturn(module, '$assert_return_6', 'external/testsuite/float_exprs.wast', 1127);
+  assertReturn(module, '$assert_return_7', 'external/testsuite/float_exprs.wast', 1128);
+  assertReturn(module, '$assert_return_8', 'external/testsuite/float_exprs.wast', 1129);
+  assertReturn(module, '$assert_return_9', 'external/testsuite/float_exprs.wast', 1130);
+  assertReturn(module, '$assert_return_10', 'external/testsuite/float_exprs.wast', 1131);
+  assertReturn(module, '$assert_return_11', 'external/testsuite/float_exprs.wast', 1132);
+  assertReturn(module, '$assert_return_12', 'external/testsuite/float_exprs.wast', 1133);
+  assertReturn(module, '$assert_return_13', 'external/testsuite/float_exprs.wast', 1134);
+  assertReturn(module, '$assert_return_14', 'external/testsuite/float_exprs.wast', 1135);
+  assertReturn(module, '$assert_return_15', 'external/testsuite/float_exprs.wast', 1136);
+  assertReturn(module, '$assert_return_16', 'external/testsuite/float_exprs.wast', 1137);
+  assertReturn(module, '$assert_return_17', 'external/testsuite/float_exprs.wast', 1138);
+  assertReturn(module, '$assert_return_18', 'external/testsuite/float_exprs.wast', 1139);
+  assertReturn(module, '$assert_return_19', 'external/testsuite/float_exprs.wast', 1140);
+  assertReturn(module, '$assert_return_20', 'external/testsuite/float_exprs.wast', 1141);
+  assertReturn(module, '$assert_return_21', 'external/testsuite/float_exprs.wast', 1142);
+  assertReturn(module, '$assert_return_22', 'external/testsuite/float_exprs.wast', 1143);
+  assertReturn(module, '$assert_return_23', 'external/testsuite/float_exprs.wast', 1144);
+  assertReturn(module, '$assert_return_24', 'external/testsuite/float_exprs.wast', 1145);
+  assertReturn(module, '$assert_return_25', 'external/testsuite/float_exprs.wast', 1146);
+  assertReturn(module, '$assert_return_26', 'external/testsuite/float_exprs.wast', 1147);
+  assertReturn(module, '$assert_return_27', 'external/testsuite/float_exprs.wast', 1148);
+  assertReturn(module, '$assert_return_28', 'external/testsuite/float_exprs.wast', 1149);
+  assertReturn(module, '$assert_return_29', 'external/testsuite/float_exprs.wast', 1150);
+  assertReturn(module, '$assert_return_30', 'external/testsuite/float_exprs.wast', 1151);
+  assertReturn(module, '$assert_return_31', 'external/testsuite/float_exprs.wast', 1152);
 }
 
 function testModule44() {
@@ -2607,38 +2675,38 @@ function testModule44() {
       0,   0,   0,   0,   0, 128, 181, 104,
   ]);
 
-  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 1153);
-  assertReturn(module, '$assert_return_1', 'external/testsuite/float_exprs.wast', 1154);
-  assertReturn(module, '$assert_return_2', 'external/testsuite/float_exprs.wast', 1155);
-  assertReturn(module, '$assert_return_3', 'external/testsuite/float_exprs.wast', 1156);
-  assertReturn(module, '$assert_return_4', 'external/testsuite/float_exprs.wast', 1157);
-  assertReturn(module, '$assert_return_5', 'external/testsuite/float_exprs.wast', 1158);
-  assertReturn(module, '$assert_return_6', 'external/testsuite/float_exprs.wast', 1159);
-  assertReturn(module, '$assert_return_7', 'external/testsuite/float_exprs.wast', 1160);
-  assertReturn(module, '$assert_return_8', 'external/testsuite/float_exprs.wast', 1161);
-  assertReturn(module, '$assert_return_9', 'external/testsuite/float_exprs.wast', 1162);
-  assertReturn(module, '$assert_return_10', 'external/testsuite/float_exprs.wast', 1163);
-  assertReturn(module, '$assert_return_11', 'external/testsuite/float_exprs.wast', 1164);
-  assertReturn(module, '$assert_return_12', 'external/testsuite/float_exprs.wast', 1165);
-  assertReturn(module, '$assert_return_13', 'external/testsuite/float_exprs.wast', 1166);
-  assertReturn(module, '$assert_return_14', 'external/testsuite/float_exprs.wast', 1167);
-  assertReturn(module, '$assert_return_15', 'external/testsuite/float_exprs.wast', 1168);
-  assertReturn(module, '$assert_return_16', 'external/testsuite/float_exprs.wast', 1169);
-  assertReturn(module, '$assert_return_17', 'external/testsuite/float_exprs.wast', 1170);
-  assertReturn(module, '$assert_return_18', 'external/testsuite/float_exprs.wast', 1171);
-  assertReturn(module, '$assert_return_19', 'external/testsuite/float_exprs.wast', 1172);
-  assertReturn(module, '$assert_return_20', 'external/testsuite/float_exprs.wast', 1173);
-  assertReturn(module, '$assert_return_21', 'external/testsuite/float_exprs.wast', 1174);
-  assertReturn(module, '$assert_return_22', 'external/testsuite/float_exprs.wast', 1175);
-  assertReturn(module, '$assert_return_23', 'external/testsuite/float_exprs.wast', 1176);
-  assertReturn(module, '$assert_return_24', 'external/testsuite/float_exprs.wast', 1177);
-  assertReturn(module, '$assert_return_25', 'external/testsuite/float_exprs.wast', 1178);
-  assertReturn(module, '$assert_return_26', 'external/testsuite/float_exprs.wast', 1179);
-  assertReturn(module, '$assert_return_27', 'external/testsuite/float_exprs.wast', 1180);
-  assertReturn(module, '$assert_return_28', 'external/testsuite/float_exprs.wast', 1181);
-  assertReturn(module, '$assert_return_29', 'external/testsuite/float_exprs.wast', 1182);
-  assertReturn(module, '$assert_return_30', 'external/testsuite/float_exprs.wast', 1183);
-  assertReturn(module, '$assert_return_31', 'external/testsuite/float_exprs.wast', 1184);
+  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 1176);
+  assertReturn(module, '$assert_return_1', 'external/testsuite/float_exprs.wast', 1177);
+  assertReturn(module, '$assert_return_2', 'external/testsuite/float_exprs.wast', 1178);
+  assertReturn(module, '$assert_return_3', 'external/testsuite/float_exprs.wast', 1179);
+  assertReturn(module, '$assert_return_4', 'external/testsuite/float_exprs.wast', 1180);
+  assertReturn(module, '$assert_return_5', 'external/testsuite/float_exprs.wast', 1181);
+  assertReturn(module, '$assert_return_6', 'external/testsuite/float_exprs.wast', 1182);
+  assertReturn(module, '$assert_return_7', 'external/testsuite/float_exprs.wast', 1183);
+  assertReturn(module, '$assert_return_8', 'external/testsuite/float_exprs.wast', 1184);
+  assertReturn(module, '$assert_return_9', 'external/testsuite/float_exprs.wast', 1185);
+  assertReturn(module, '$assert_return_10', 'external/testsuite/float_exprs.wast', 1186);
+  assertReturn(module, '$assert_return_11', 'external/testsuite/float_exprs.wast', 1187);
+  assertReturn(module, '$assert_return_12', 'external/testsuite/float_exprs.wast', 1188);
+  assertReturn(module, '$assert_return_13', 'external/testsuite/float_exprs.wast', 1189);
+  assertReturn(module, '$assert_return_14', 'external/testsuite/float_exprs.wast', 1190);
+  assertReturn(module, '$assert_return_15', 'external/testsuite/float_exprs.wast', 1191);
+  assertReturn(module, '$assert_return_16', 'external/testsuite/float_exprs.wast', 1192);
+  assertReturn(module, '$assert_return_17', 'external/testsuite/float_exprs.wast', 1193);
+  assertReturn(module, '$assert_return_18', 'external/testsuite/float_exprs.wast', 1194);
+  assertReturn(module, '$assert_return_19', 'external/testsuite/float_exprs.wast', 1195);
+  assertReturn(module, '$assert_return_20', 'external/testsuite/float_exprs.wast', 1196);
+  assertReturn(module, '$assert_return_21', 'external/testsuite/float_exprs.wast', 1197);
+  assertReturn(module, '$assert_return_22', 'external/testsuite/float_exprs.wast', 1198);
+  assertReturn(module, '$assert_return_23', 'external/testsuite/float_exprs.wast', 1199);
+  assertReturn(module, '$assert_return_24', 'external/testsuite/float_exprs.wast', 1200);
+  assertReturn(module, '$assert_return_25', 'external/testsuite/float_exprs.wast', 1201);
+  assertReturn(module, '$assert_return_26', 'external/testsuite/float_exprs.wast', 1202);
+  assertReturn(module, '$assert_return_27', 'external/testsuite/float_exprs.wast', 1203);
+  assertReturn(module, '$assert_return_28', 'external/testsuite/float_exprs.wast', 1204);
+  assertReturn(module, '$assert_return_29', 'external/testsuite/float_exprs.wast', 1205);
+  assertReturn(module, '$assert_return_30', 'external/testsuite/float_exprs.wast', 1206);
+  assertReturn(module, '$assert_return_31', 'external/testsuite/float_exprs.wast', 1207);
 }
 
 function testModule45() {
@@ -2654,7 +2722,7 @@ function testModule45() {
     180,  77,
   ]);
 
-  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 1196);
+  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 1219);
 }
 
 function testModule46() {
@@ -2671,7 +2739,7 @@ function testModule46() {
       0,   0, 176, 188, 181, 104,
   ]);
 
-  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 1205);
+  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 1228);
 }
 
 function testModule47() {
@@ -2689,7 +2757,7 @@ function testModule47() {
     163, 118, 233, 195, 180,  77,
   ]);
 
-  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 1228);
+  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 1251);
 }
 
 function testModule48() {
@@ -2708,7 +2776,7 @@ function testModule48() {
     212,  46, 125, 192, 181, 104,
   ]);
 
-  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 1248);
+  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 1271);
 }
 
 function testModule49() {
@@ -2723,7 +2791,7 @@ function testModule49() {
      19,   0,   0,   0,   0, 180,  77,
   ]);
 
-  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 1260);
+  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 1283);
 }
 
 function testModule50() {
@@ -2738,7 +2806,7 @@ function testModule50() {
       0, 180,  19,   0,   0, 192,  75, 180,  77,
   ]);
 
-  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 1272);
+  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 1295);
 }
 
 function testModule51() {
@@ -2754,7 +2822,7 @@ function testModule51() {
     180,  77,
   ]);
 
-  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 1285);
+  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 1308);
 }
 
 function testModule52() {
@@ -2781,9 +2849,9 @@ function testModule52() {
     128,  63,  22,   3,   2, 180,  19,   0,   0, 128,   0, 180,  77,
   ]);
 
-  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 1312);
-  assertReturn(module, '$assert_return_1', 'external/testsuite/float_exprs.wast', 1313);
-  assertReturn(module, '$assert_return_2', 'external/testsuite/float_exprs.wast', 1314);
+  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 1335);
+  assertReturn(module, '$assert_return_1', 'external/testsuite/float_exprs.wast', 1336);
+  assertReturn(module, '$assert_return_2', 'external/testsuite/float_exprs.wast', 1337);
 }
 
 function testModule53() {
@@ -2797,7 +2865,7 @@ function testModule53() {
      66,  22,   1,   0, 180,  19, 171, 170,  42,  60, 180,  77,
   ]);
 
-  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 1326);
+  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 1349);
 }
 
 function testModule54() {
@@ -2817,31 +2885,41 @@ function testModule54() {
       0,   0,   0,   0,   0,   0,   0,   0, 181, 104,
   ]);
 
-  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 1343);
-  assertReturn(module, '$assert_return_1', 'external/testsuite/float_exprs.wast', 1344);
+  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 1366);
+  assertReturn(module, '$assert_return_1', 'external/testsuite/float_exprs.wast', 1367);
 }
 
 function testModule55() {
   var module = createModule([
       0,  97, 115, 109,  11,   0,   0,   0,   4, 116, 121, 112, 101,  15,   3,  64,
       1,   3,   1,   3,  64,   1,   4,   1,   4,  64,   0,   1,   1,   8, 102, 117,
-    110,  99, 116, 105, 111, 110,  13,  12,   0,   1,   2,   2,   2,   2,   2,   2,
-      2,   2,   2,   2,   6, 101, 120, 112, 111, 114, 116, 231,   1,  12,   0,  23,
-    102,  51,  50,  46, 110, 111,  95, 102, 111, 108, 100,  95, 114, 101,  99, 105,
-    112,  95, 114, 101,  99, 105, 112,   1,  23, 102,  54,  52,  46, 110, 111,  95,
-    102, 111, 108, 100,  95, 114, 101,  99, 105, 112,  95, 114, 101,  99, 105, 112,
-      2,  16,  36,  97, 115, 115, 101, 114, 116,  95, 114, 101, 116, 117, 114, 110,
-     95,  48,   3,  16,  36,  97, 115, 115, 101, 114, 116,  95, 114, 101, 116, 117,
-    114, 110,  95,  49,   4,  16,  36,  97, 115, 115, 101, 114, 116,  95, 114, 101,
-    116, 117, 114, 110,  95,  50,   5,  16,  36,  97, 115, 115, 101, 114, 116,  95,
-    114, 101, 116, 117, 114, 110,  95,  51,   6,  16,  36,  97, 115, 115, 101, 114,
-    116,  95, 114, 101, 116, 117, 114, 110,  95,  52,   7,  16,  36,  97, 115, 115,
-    101, 114, 116,  95, 114, 101, 116, 117, 114, 110,  95,  53,   8,  16,  36,  97,
-    115, 115, 101, 114, 116,  95, 114, 101, 116, 117, 114, 110,  95,  54,   9,  16,
-     36,  97, 115, 115, 101, 114, 116,  95, 114, 101, 116, 117, 114, 110,  95,  55,
-     10,  16,  36,  97, 115, 115, 101, 114, 116,  95, 114, 101, 116, 117, 114, 110,
-     95,  56,  11,  16,  36,  97, 115, 115, 101, 114, 116,  95, 114, 101, 116, 117,
-    114, 110,  95,  57,   4,  99, 111, 100, 101, 133,   2,  12,  15,   0,  19,   0,
+    110,  99, 116, 105, 111, 110,  21,  20,   0,   1,   2,   2,   2,   2,   2,   2,
+      2,   2,   2,   2,   2,   2,   2,   2,   2,   2,   2,   2,   6, 101, 120, 112,
+    111, 114, 116, 255,   2,  20,   0,  23, 102,  51,  50,  46, 110, 111,  95, 102,
+    111, 108, 100,  95, 114, 101,  99, 105, 112,  95, 114, 101,  99, 105, 112,   1,
+     23, 102,  54,  52,  46, 110, 111,  95, 102, 111, 108, 100,  95, 114, 101,  99,
+    105, 112,  95, 114, 101,  99, 105, 112,   2,  16,  36,  97, 115, 115, 101, 114,
+    116,  95, 114, 101, 116, 117, 114, 110,  95,  48,   3,  16,  36,  97, 115, 115,
+    101, 114, 116,  95, 114, 101, 116, 117, 114, 110,  95,  49,   4,  16,  36,  97,
+    115, 115, 101, 114, 116,  95, 114, 101, 116, 117, 114, 110,  95,  50,   5,  16,
+     36,  97, 115, 115, 101, 114, 116,  95, 114, 101, 116, 117, 114, 110,  95,  51,
+      6,  16,  36,  97, 115, 115, 101, 114, 116,  95, 114, 101, 116, 117, 114, 110,
+     95,  52,   7,  16,  36,  97, 115, 115, 101, 114, 116,  95, 114, 101, 116, 117,
+    114, 110,  95,  53,   8,  16,  36,  97, 115, 115, 101, 114, 116,  95, 114, 101,
+    116, 117, 114, 110,  95,  54,   9,  16,  36,  97, 115, 115, 101, 114, 116,  95,
+    114, 101, 116, 117, 114, 110,  95,  55,  10,  16,  36,  97, 115, 115, 101, 114,
+    116,  95, 114, 101, 116, 117, 114, 110,  95,  56,  11,  16,  36,  97, 115, 115,
+    101, 114, 116,  95, 114, 101, 116, 117, 114, 110,  95,  57,  12,  17,  36,  97,
+    115, 115, 101, 114, 116,  95, 114, 101, 116, 117, 114, 110,  95,  49,  48,  13,
+     17,  36,  97, 115, 115, 101, 114, 116,  95, 114, 101, 116, 117, 114, 110,  95,
+     49,  49,  14,  17,  36,  97, 115, 115, 101, 114, 116,  95, 114, 101, 116, 117,
+    114, 110,  95,  49,  50,  15,  17,  36,  97, 115, 115, 101, 114, 116,  95, 114,
+    101, 116, 117, 114, 110,  95,  49,  51,  16,  17,  36,  97, 115, 115, 101, 114,
+    116,  95, 114, 101, 116, 117, 114, 110,  95,  49,  52,  17,  17,  36,  97, 115,
+    115, 101, 114, 116,  95, 114, 101, 116, 117, 114, 110,  95,  49,  53,  18,  17,
+     36,  97, 115, 115, 101, 114, 116,  95, 114, 101, 116, 117, 114, 110,  95,  49,
+     54,  19,  17,  36,  97, 115, 115, 101, 114, 116,  95, 114, 101, 116, 117, 114,
+    110,  95,  49,  55,   4,  99, 111, 100, 101, 181,   3,  20,  15,   0,  19,   0,
       0, 128,  63,  19,   0,   0, 128,  63,  20,   0, 120, 120,  23,   0,  18,   0,
       0,   0,   0,   0,   0, 240,  63,  18,   0,   0,   0,   0,   0,   0, 240,  63,
      20,   0, 140, 140,  17,   0,  19, 140,  95, 116, 224,  22,   1,   0, 180,  19,
@@ -2849,27 +2927,46 @@ function testModule55() {
     180,  19,  35,  33, 113,  25, 180,  77,  17,   0,  19, 116, 120, 229,  31,  22,
       1,   0, 180,  19, 117, 120, 229,  31, 180,  77,  17,   0,  19, 193,  52, 243,
     193,  22,   1,   0, 180,  19, 194,  52, 243, 193, 180,  77,  17,   0,  19, 139,
-    204, 252,  98,  22,   1,   0, 180,  19, 138, 204, 252,  98, 180,  77,  25,   0,
-     18, 208,  99, 218, 141,  36, 129,  61, 201,  22,   1,   1, 181,  18, 209,  99,
-    218, 141,  36, 129,  61, 201, 181, 104,  25,   0,  18, 227,  57,  32,  49,  80,
-     71,  31, 196,  22,   1,   1, 181,  18, 226,  57,  32,  49,  80,  71,  31, 196,
-    181, 104,  25,   0,  18, 246, 199, 238,  48,   6, 165,  95,  74,  22,   1,   1,
-    181,  18, 245, 199, 238,  48,   6, 165,  95,  74, 181, 104,  25,   0,  18, 146,
-    186,  23, 134,  89, 176,  29,  21,  22,   1,   1, 181,  18, 145, 186,  23, 134,
-     89, 176,  29,  21, 181, 104,  25,   0,  18,  43, 200, 160,  56,  22,  95,  88,
-    120,  22,   1,   1, 181,  18,  42, 200, 160,  56,  22,  95,  88, 120, 181, 104,
+    204, 252,  98,  22,   1,   0, 180,  19, 138, 204, 252,  98, 180,  77,  17,   0,
+     19,   0,   0,   0, 128,  22,   1,   0, 180,  19,   0,   0,   0, 128, 180,  77,
+     17,   0,  19,   0,   0,   0,   0,  22,   1,   0, 180,  19,   0,   0,   0,   0,
+    180,  77,  17,   0,  19,   0,   0, 128, 255,  22,   1,   0, 180,  19,   0,   0,
+    128, 255, 180,  77,  17,   0,  19,   0,   0, 128, 127,  22,   1,   0, 180,  19,
+      0,   0, 128, 127, 180,  77,  25,   0,  18, 208,  99, 218, 141,  36, 129,  61,
+    201,  22,   1,   1, 181,  18, 209,  99, 218, 141,  36, 129,  61, 201, 181, 104,
+     25,   0,  18, 227,  57,  32,  49,  80,  71,  31, 196,  22,   1,   1, 181,  18,
+    226,  57,  32,  49,  80,  71,  31, 196, 181, 104,  25,   0,  18, 246, 199, 238,
+     48,   6, 165,  95,  74,  22,   1,   1, 181,  18, 245, 199, 238,  48,   6, 165,
+     95,  74, 181, 104,  25,   0,  18, 146, 186,  23, 134,  89, 176,  29,  21,  22,
+      1,   1, 181,  18, 145, 186,  23, 134,  89, 176,  29,  21, 181, 104,  25,   0,
+     18,  43, 200, 160,  56,  22,  95,  88, 120,  22,   1,   1, 181,  18,  42, 200,
+    160,  56,  22,  95,  88, 120, 181, 104,  25,   0,  18,   0,   0,   0,   0,   0,
+      0,   0, 128,  22,   1,   1, 181,  18,   0,   0,   0,   0,   0,   0,   0, 128,
+    181, 104,  25,   0,  18,   0,   0,   0,   0,   0,   0,   0,   0,  22,   1,   1,
+    181,  18,   0,   0,   0,   0,   0,   0,   0,   0, 181, 104,  25,   0,  18,   0,
+      0,   0,   0,   0,   0, 240, 255,  22,   1,   1, 181,  18,   0,   0,   0,   0,
+      0,   0, 240, 255, 181, 104,  25,   0,  18,   0,   0,   0,   0,   0,   0, 240,
+    127,  22,   1,   1, 181,  18,   0,   0,   0,   0,   0,   0, 240, 127, 181, 104,
   ]);
 
-  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 1358);
-  assertReturn(module, '$assert_return_1', 'external/testsuite/float_exprs.wast', 1359);
-  assertReturn(module, '$assert_return_2', 'external/testsuite/float_exprs.wast', 1360);
-  assertReturn(module, '$assert_return_3', 'external/testsuite/float_exprs.wast', 1361);
-  assertReturn(module, '$assert_return_4', 'external/testsuite/float_exprs.wast', 1362);
-  assertReturn(module, '$assert_return_5', 'external/testsuite/float_exprs.wast', 1364);
-  assertReturn(module, '$assert_return_6', 'external/testsuite/float_exprs.wast', 1365);
-  assertReturn(module, '$assert_return_7', 'external/testsuite/float_exprs.wast', 1366);
-  assertReturn(module, '$assert_return_8', 'external/testsuite/float_exprs.wast', 1367);
-  assertReturn(module, '$assert_return_9', 'external/testsuite/float_exprs.wast', 1368);
+  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 1381);
+  assertReturn(module, '$assert_return_1', 'external/testsuite/float_exprs.wast', 1382);
+  assertReturn(module, '$assert_return_2', 'external/testsuite/float_exprs.wast', 1383);
+  assertReturn(module, '$assert_return_3', 'external/testsuite/float_exprs.wast', 1384);
+  assertReturn(module, '$assert_return_4', 'external/testsuite/float_exprs.wast', 1385);
+  assertReturn(module, '$assert_return_5', 'external/testsuite/float_exprs.wast', 1387);
+  assertReturn(module, '$assert_return_6', 'external/testsuite/float_exprs.wast', 1388);
+  assertReturn(module, '$assert_return_7', 'external/testsuite/float_exprs.wast', 1389);
+  assertReturn(module, '$assert_return_8', 'external/testsuite/float_exprs.wast', 1390);
+  assertReturn(module, '$assert_return_9', 'external/testsuite/float_exprs.wast', 1392);
+  assertReturn(module, '$assert_return_10', 'external/testsuite/float_exprs.wast', 1393);
+  assertReturn(module, '$assert_return_11', 'external/testsuite/float_exprs.wast', 1394);
+  assertReturn(module, '$assert_return_12', 'external/testsuite/float_exprs.wast', 1395);
+  assertReturn(module, '$assert_return_13', 'external/testsuite/float_exprs.wast', 1396);
+  assertReturn(module, '$assert_return_14', 'external/testsuite/float_exprs.wast', 1398);
+  assertReturn(module, '$assert_return_15', 'external/testsuite/float_exprs.wast', 1399);
+  assertReturn(module, '$assert_return_16', 'external/testsuite/float_exprs.wast', 1400);
+  assertReturn(module, '$assert_return_17', 'external/testsuite/float_exprs.wast', 1401);
 }
 
 function testModule56() {
@@ -2915,16 +3012,16 @@ function testModule56() {
     197,  22,   2,   1, 181,  18, 114, 191, 247, 219, 114, 139,  57,  78, 181, 104,
   ]);
 
-  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 1384);
-  assertReturn(module, '$assert_return_1', 'external/testsuite/float_exprs.wast', 1385);
-  assertReturn(module, '$assert_return_2', 'external/testsuite/float_exprs.wast', 1386);
-  assertReturn(module, '$assert_return_3', 'external/testsuite/float_exprs.wast', 1387);
-  assertReturn(module, '$assert_return_4', 'external/testsuite/float_exprs.wast', 1388);
-  assertReturn(module, '$assert_return_5', 'external/testsuite/float_exprs.wast', 1390);
-  assertReturn(module, '$assert_return_6', 'external/testsuite/float_exprs.wast', 1391);
-  assertReturn(module, '$assert_return_7', 'external/testsuite/float_exprs.wast', 1392);
-  assertReturn(module, '$assert_return_8', 'external/testsuite/float_exprs.wast', 1393);
-  assertReturn(module, '$assert_return_9', 'external/testsuite/float_exprs.wast', 1394);
+  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 1417);
+  assertReturn(module, '$assert_return_1', 'external/testsuite/float_exprs.wast', 1418);
+  assertReturn(module, '$assert_return_2', 'external/testsuite/float_exprs.wast', 1419);
+  assertReturn(module, '$assert_return_3', 'external/testsuite/float_exprs.wast', 1420);
+  assertReturn(module, '$assert_return_4', 'external/testsuite/float_exprs.wast', 1421);
+  assertReturn(module, '$assert_return_5', 'external/testsuite/float_exprs.wast', 1423);
+  assertReturn(module, '$assert_return_6', 'external/testsuite/float_exprs.wast', 1424);
+  assertReturn(module, '$assert_return_7', 'external/testsuite/float_exprs.wast', 1425);
+  assertReturn(module, '$assert_return_8', 'external/testsuite/float_exprs.wast', 1426);
+  assertReturn(module, '$assert_return_9', 'external/testsuite/float_exprs.wast', 1427);
 }
 
 function testModule57() {
@@ -2970,16 +3067,16 @@ function testModule57() {
     177,  22,   2,   1, 181,  18, 184, 209, 107,  21,  67,  46,  84,  34, 181, 104,
   ]);
 
-  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 1410);
-  assertReturn(module, '$assert_return_1', 'external/testsuite/float_exprs.wast', 1411);
-  assertReturn(module, '$assert_return_2', 'external/testsuite/float_exprs.wast', 1412);
-  assertReturn(module, '$assert_return_3', 'external/testsuite/float_exprs.wast', 1413);
-  assertReturn(module, '$assert_return_4', 'external/testsuite/float_exprs.wast', 1414);
-  assertReturn(module, '$assert_return_5', 'external/testsuite/float_exprs.wast', 1416);
-  assertReturn(module, '$assert_return_6', 'external/testsuite/float_exprs.wast', 1417);
-  assertReturn(module, '$assert_return_7', 'external/testsuite/float_exprs.wast', 1418);
-  assertReturn(module, '$assert_return_8', 'external/testsuite/float_exprs.wast', 1419);
-  assertReturn(module, '$assert_return_9', 'external/testsuite/float_exprs.wast', 1420);
+  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 1443);
+  assertReturn(module, '$assert_return_1', 'external/testsuite/float_exprs.wast', 1444);
+  assertReturn(module, '$assert_return_2', 'external/testsuite/float_exprs.wast', 1445);
+  assertReturn(module, '$assert_return_3', 'external/testsuite/float_exprs.wast', 1446);
+  assertReturn(module, '$assert_return_4', 'external/testsuite/float_exprs.wast', 1447);
+  assertReturn(module, '$assert_return_5', 'external/testsuite/float_exprs.wast', 1449);
+  assertReturn(module, '$assert_return_6', 'external/testsuite/float_exprs.wast', 1450);
+  assertReturn(module, '$assert_return_7', 'external/testsuite/float_exprs.wast', 1451);
+  assertReturn(module, '$assert_return_8', 'external/testsuite/float_exprs.wast', 1452);
+  assertReturn(module, '$assert_return_9', 'external/testsuite/float_exprs.wast', 1453);
 }
 
 function testModule58() {
@@ -3067,8 +3164,8 @@ function testModule58() {
     183, 200, 131, 225,  66, 245, 190, 173,  98, 148, 173, 141, 161,
   ]);
 
-  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 1457);
-  assertReturn(module, '$assert_return_1', 'external/testsuite/float_exprs.wast', 1458);
+  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 1490);
+  assertReturn(module, '$assert_return_1', 'external/testsuite/float_exprs.wast', 1491);
 }
 
 function testModule59() {
@@ -3221,8 +3318,8 @@ function testModule59() {
     207, 122,   4,  47, 220, 237,
   ]);
 
-  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 1492);
-  assertReturn(module, '$assert_return_1', 'external/testsuite/float_exprs.wast', 1493);
+  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 1525);
+  assertReturn(module, '$assert_return_1', 'external/testsuite/float_exprs.wast', 1526);
 }
 
 function testModule60() {
@@ -3249,7 +3346,7 @@ function testModule60() {
       0,   0, 128,  22,   2,   0, 180,  19,   0,   0,   0, 128, 180,  77,  22,   0,
      19,   0,   0,   0, 128,  19,   0,   0,   0,   0,  22,   2,   0, 180,  19,   0,
       0,   0,   0, 180,  77,  22,   0,  19,   0,   0,   0,   0,  19,   0,   0,   0,
-    128,  22,   2,   0, 180,  19,   0,   0,   0, 128, 180,  77,  34,   0,  18,   0,
+      0,  22,   2,   0, 180,  19,   0,   0,   0, 128, 180,  77,  34,   0,  18,   0,
       0,   0,   0,   0,   0,   0, 128,  18,   0,   0,   0,   0,   0,   0,   0, 128,
      22,   2,   1, 181,  18,   0,   0,   0,   0,   0,   0,   0, 128, 181, 104,  34,
       0,  18,   0,   0,   0,   0,   0,   0,   0,   0,  18,   0,   0,   0,   0,   0,
@@ -3257,18 +3354,18 @@ function testModule60() {
     181, 104,  34,   0,  18,   0,   0,   0,   0,   0,   0,   0, 128,  18,   0,   0,
       0,   0,   0,   0,   0,   0,  22,   2,   1, 181,  18,   0,   0,   0,   0,   0,
       0,   0,   0, 181, 104,  34,   0,  18,   0,   0,   0,   0,   0,   0,   0,   0,
-     18,   0,   0,   0,   0,   0,   0,   0, 128,  22,   2,   1, 181,  18,   0,   0,
+     18,   0,   0,   0,   0,   0,   0,   0,   0,  22,   2,   1, 181,  18,   0,   0,
       0,   0,   0,   0,   0, 128, 181, 104,
   ]);
 
-  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 1507);
-  assertReturn(module, '$assert_return_1', 'external/testsuite/float_exprs.wast', 1508);
-  assertReturn(module, '$assert_return_2', 'external/testsuite/float_exprs.wast', 1509);
-  assertReturn(module, '$assert_return_3', 'external/testsuite/float_exprs.wast', 1510);
-  assertReturn(module, '$assert_return_4', 'external/testsuite/float_exprs.wast', 1512);
-  assertReturn(module, '$assert_return_5', 'external/testsuite/float_exprs.wast', 1513);
-  assertReturn(module, '$assert_return_6', 'external/testsuite/float_exprs.wast', 1514);
-  assertReturn(module, '$assert_return_7', 'external/testsuite/float_exprs.wast', 1515);
+  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 1540);
+  assertReturn(module, '$assert_return_1', 'external/testsuite/float_exprs.wast', 1541);
+  assertReturn(module, '$assert_return_2', 'external/testsuite/float_exprs.wast', 1542);
+  assertReturn(module, '$assert_return_3', 'external/testsuite/float_exprs.wast', 1543);
+  assertReturn(module, '$assert_return_4', 'external/testsuite/float_exprs.wast', 1545);
+  assertReturn(module, '$assert_return_5', 'external/testsuite/float_exprs.wast', 1546);
+  assertReturn(module, '$assert_return_6', 'external/testsuite/float_exprs.wast', 1547);
+  assertReturn(module, '$assert_return_7', 'external/testsuite/float_exprs.wast', 1548);
 }
 
 function testModule61() {
@@ -3304,14 +3401,14 @@ function testModule61() {
      22,   1,   1,  21,   0,  20,   0,  20,   0, 152,
   ]);
 
-  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 1529);
-  assertReturn(module, '$assert_return_1', 'external/testsuite/float_exprs.wast', 1530);
-  assertReturn(module, '$assert_return_nan_2', 'external/testsuite/float_exprs.wast', 1531);
-  assertReturn(module, '$assert_return_nan_3', 'external/testsuite/float_exprs.wast', 1532);
-  assertReturn(module, '$assert_return_4', 'external/testsuite/float_exprs.wast', 1534);
-  assertReturn(module, '$assert_return_5', 'external/testsuite/float_exprs.wast', 1535);
-  assertReturn(module, '$assert_return_nan_6', 'external/testsuite/float_exprs.wast', 1536);
-  assertReturn(module, '$assert_return_nan_7', 'external/testsuite/float_exprs.wast', 1537);
+  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 1562);
+  assertReturn(module, '$assert_return_1', 'external/testsuite/float_exprs.wast', 1563);
+  assertReturn(module, '$assert_return_nan_2', 'external/testsuite/float_exprs.wast', 1564);
+  assertReturn(module, '$assert_return_nan_3', 'external/testsuite/float_exprs.wast', 1565);
+  assertReturn(module, '$assert_return_4', 'external/testsuite/float_exprs.wast', 1567);
+  assertReturn(module, '$assert_return_5', 'external/testsuite/float_exprs.wast', 1568);
+  assertReturn(module, '$assert_return_nan_6', 'external/testsuite/float_exprs.wast', 1569);
+  assertReturn(module, '$assert_return_nan_7', 'external/testsuite/float_exprs.wast', 1570);
 }
 
 function testModule62() {
@@ -3320,9 +3417,9 @@ function testModule62() {
       1,   3,   1,   3,  64,   1,   4,   1,   4,  64,   0,   1,   1,   8, 102, 117,
     110,  99, 116, 105, 111, 110,  13,  12,   0,   1,   2,   2,   2,   2,   2,   2,
       2,   2,   2,   2,   6, 101, 120, 112, 111, 114, 116, 229,   1,  12,   0,  22,
-    102,  51,  50,  46, 110, 111,  95, 102, 111, 108, 100,  95,  55, 120,  95, 118,
+    102,  51,  50,  46, 110, 111,  95, 102, 111, 108, 100,  95,  54, 120,  95, 118,
     105,  97,  95,  97, 100, 100,   1,  22, 102,  54,  52,  46, 110, 111,  95, 102,
-    111, 108, 100,  95,  55, 120,  95, 118, 105,  97,  95,  97, 100, 100,   2,  16,
+    111, 108, 100,  95,  54, 120,  95, 118, 105,  97,  95,  97, 100, 100,   2,  16,
      36,  97, 115, 115, 101, 114, 116,  95, 114, 101, 116, 117, 114, 110,  95,  48,
       3,  16,  36,  97, 115, 115, 101, 114, 116,  95, 114, 101, 116, 117, 114, 110,
      95,  49,   4,  16,  36,  97, 115, 115, 101, 114, 116,  95, 114, 101, 116, 117,
@@ -3334,36 +3431,35 @@ function testModule62() {
     115, 115, 101, 114, 116,  95, 114, 101, 116, 117, 114, 110,  95,  55,  10,  16,
      36,  97, 115, 115, 101, 114, 116,  95, 114, 101, 116, 117, 114, 110,  95,  56,
      11,  16,  36,  97, 115, 115, 101, 114, 116,  95, 114, 101, 116, 117, 114, 110,
-     95,  57,   4,  99, 111, 100, 101, 137,   2,  12,  21,   0,  20,   0,  20,   0,
-    117,  20,   0, 117,  20,   0, 117,  20,   0, 117,  20,   0, 117,  20,   0, 117,
-     21,   0,  20,   0,  20,   0, 137,  20,   0, 137,  20,   0, 137,  20,   0, 137,
-     20,   0, 137,  20,   0, 137,  17,   0,  19, 174, 120,  24, 202,  22,   1,   0,
-    180,  19, 153, 105, 133, 203, 180,  77,  17,   0,  19,  10, 142,  82,  69,  22,
-      1,   0, 180,  19,  72,  60, 184,  70, 180,  77,  17,   0,  19,  50,  31, 248,
-      5,  22,   1,   0, 180,  19,  75,  27,  89,   7, 180,  77,  17,   0,  19, 246,
-    175, 120, 149,  22,   1,   0, 180,  19, 248, 153, 217, 150, 180,  77,  17,   0,
-     19,  87,  28,  13, 156,  22,   1,   0, 180,  19, 153, 241, 118, 157, 180,  77,
-     25,   0,  18,   1, 118, 191, 239, 153, 120,  48, 217,  22,   1,   1, 181,  18,
-    129,  14, 143,  99,  13, 211,  92, 217, 181, 104,  25,   0,  18,  75, 247, 245,
-    115, 174, 244,  48, 166,  22,   1,   1, 181,  18, 196, 112, 238,  74,  49, 172,
-     93, 166, 181, 104,  25,   0,  18, 186,  42, 104, 181, 107, 235, 145, 226,  22,
-      1,   1, 181,  18, 196,  74, 118, 125, 252,  91, 191, 226, 181, 104,  25,   0,
-     18, 114,  93,  97, 153,  58, 194,   5,  68,  22,   1,   1, 181,  18, 195,  49,
-     53,  70, 243,   9,  51,  68, 181, 104,  25,   0,  18, 212,  29, 225, 110, 132,
-    199, 204,  88,  22,   1,   1, 181,  18,  24, 250,   4, 225, 147,  46, 249,  88,
-    181, 104,
+     95,  57,   4,  99, 111, 100, 101, 131,   2,  12,  18,   0,  20,   0,  20,   0,
+    117,  20,   0, 117,  20,   0, 117,  20,   0, 117,  20,   0, 117,  18,   0,  20,
+      0,  20,   0, 137,  20,   0, 137,  20,   0, 137,  20,   0, 137,  20,   0, 137,
+     17,   0,  19,   6, 197,  44, 241,  22,   1,   0, 180,  19, 197, 147, 129, 242,
+    180,  77,  17,   0,  19, 214, 243, 105, 153,  22,   1,   0, 180,  19, 225, 118,
+    175, 154, 180,  77,  17,   0,  19,   1, 125,   0,  25,  22,   1,   0, 180,  19,
+    129, 187,  64,  26, 180,  77,  17,   0,  19,  26, 250,  40, 176,  22,   1,   0,
+    180,  19,  38, 119, 125, 177, 180,  77,  17,   0,  19,  69,  25, 128, 231,  22,
+      1,   0, 180,  19, 231,  37, 192, 232, 180,  77,  25,   0,  18, 230, 255, 202,
+     90, 225,  16,  51, 196,  22,   1,   1, 181,  18, 218, 127,  48,   8,  82, 153,
+     92, 196, 181, 104,  25,   0,  18, 180, 169, 143, 199,  98, 173, 138, 158,  22,
+      1,   1, 181,  18,  70, 191, 171,  21,  10,   2, 180, 158, 181, 104,  25,   0,
+     18, 178, 106,  79, 169, 191, 143, 239, 208,  22,   1,   1, 181,  18,   5, 144,
+    251, 190, 207, 171,  23, 209, 181, 104,  25,   0,  18, 142,  10, 131, 194, 204,
+     86, 231, 110,  22,   1,   1, 181,  18, 235,  71, 226, 145,  25, 129,  17, 111,
+    181, 104,  25,   0,  18,  42,  64, 210, 177,  26, 253, 152, 206,  22,   1,   1,
+    181,  18,  31, 176,  93,   5, 212, 189, 194, 206, 181, 104,
   ]);
 
-  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 1557);
-  assertReturn(module, '$assert_return_1', 'external/testsuite/float_exprs.wast', 1558);
-  assertReturn(module, '$assert_return_2', 'external/testsuite/float_exprs.wast', 1559);
-  assertReturn(module, '$assert_return_3', 'external/testsuite/float_exprs.wast', 1560);
-  assertReturn(module, '$assert_return_4', 'external/testsuite/float_exprs.wast', 1561);
-  assertReturn(module, '$assert_return_5', 'external/testsuite/float_exprs.wast', 1563);
-  assertReturn(module, '$assert_return_6', 'external/testsuite/float_exprs.wast', 1564);
-  assertReturn(module, '$assert_return_7', 'external/testsuite/float_exprs.wast', 1565);
-  assertReturn(module, '$assert_return_8', 'external/testsuite/float_exprs.wast', 1566);
-  assertReturn(module, '$assert_return_9', 'external/testsuite/float_exprs.wast', 1567);
+  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 1590);
+  assertReturn(module, '$assert_return_1', 'external/testsuite/float_exprs.wast', 1591);
+  assertReturn(module, '$assert_return_2', 'external/testsuite/float_exprs.wast', 1592);
+  assertReturn(module, '$assert_return_3', 'external/testsuite/float_exprs.wast', 1593);
+  assertReturn(module, '$assert_return_4', 'external/testsuite/float_exprs.wast', 1594);
+  assertReturn(module, '$assert_return_5', 'external/testsuite/float_exprs.wast', 1596);
+  assertReturn(module, '$assert_return_6', 'external/testsuite/float_exprs.wast', 1597);
+  assertReturn(module, '$assert_return_7', 'external/testsuite/float_exprs.wast', 1598);
+  assertReturn(module, '$assert_return_8', 'external/testsuite/float_exprs.wast', 1599);
+  assertReturn(module, '$assert_return_9', 'external/testsuite/float_exprs.wast', 1600);
 }
 
 function testModule63() {
@@ -3413,16 +3509,16 @@ function testModule63() {
      88,  54, 181, 104,
   ]);
 
-  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 1582);
-  assertReturn(module, '$assert_return_1', 'external/testsuite/float_exprs.wast', 1583);
-  assertReturn(module, '$assert_return_2', 'external/testsuite/float_exprs.wast', 1584);
-  assertReturn(module, '$assert_return_3', 'external/testsuite/float_exprs.wast', 1585);
-  assertReturn(module, '$assert_return_4', 'external/testsuite/float_exprs.wast', 1586);
-  assertReturn(module, '$assert_return_5', 'external/testsuite/float_exprs.wast', 1588);
-  assertReturn(module, '$assert_return_6', 'external/testsuite/float_exprs.wast', 1589);
-  assertReturn(module, '$assert_return_7', 'external/testsuite/float_exprs.wast', 1590);
-  assertReturn(module, '$assert_return_8', 'external/testsuite/float_exprs.wast', 1591);
-  assertReturn(module, '$assert_return_9', 'external/testsuite/float_exprs.wast', 1592);
+  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 1615);
+  assertReturn(module, '$assert_return_1', 'external/testsuite/float_exprs.wast', 1616);
+  assertReturn(module, '$assert_return_2', 'external/testsuite/float_exprs.wast', 1617);
+  assertReturn(module, '$assert_return_3', 'external/testsuite/float_exprs.wast', 1618);
+  assertReturn(module, '$assert_return_4', 'external/testsuite/float_exprs.wast', 1619);
+  assertReturn(module, '$assert_return_5', 'external/testsuite/float_exprs.wast', 1621);
+  assertReturn(module, '$assert_return_6', 'external/testsuite/float_exprs.wast', 1622);
+  assertReturn(module, '$assert_return_7', 'external/testsuite/float_exprs.wast', 1623);
+  assertReturn(module, '$assert_return_8', 'external/testsuite/float_exprs.wast', 1624);
+  assertReturn(module, '$assert_return_9', 'external/testsuite/float_exprs.wast', 1625);
 }
 
 function testModule64() {
@@ -3477,16 +3573,16 @@ function testModule64() {
      94, 147, 181, 104,
   ]);
 
-  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 1608);
-  assertReturn(module, '$assert_return_1', 'external/testsuite/float_exprs.wast', 1609);
-  assertReturn(module, '$assert_return_2', 'external/testsuite/float_exprs.wast', 1610);
-  assertReturn(module, '$assert_return_3', 'external/testsuite/float_exprs.wast', 1611);
-  assertReturn(module, '$assert_return_4', 'external/testsuite/float_exprs.wast', 1612);
-  assertReturn(module, '$assert_return_5', 'external/testsuite/float_exprs.wast', 1614);
-  assertReturn(module, '$assert_return_6', 'external/testsuite/float_exprs.wast', 1615);
-  assertReturn(module, '$assert_return_7', 'external/testsuite/float_exprs.wast', 1616);
-  assertReturn(module, '$assert_return_8', 'external/testsuite/float_exprs.wast', 1617);
-  assertReturn(module, '$assert_return_9', 'external/testsuite/float_exprs.wast', 1618);
+  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 1641);
+  assertReturn(module, '$assert_return_1', 'external/testsuite/float_exprs.wast', 1642);
+  assertReturn(module, '$assert_return_2', 'external/testsuite/float_exprs.wast', 1643);
+  assertReturn(module, '$assert_return_3', 'external/testsuite/float_exprs.wast', 1644);
+  assertReturn(module, '$assert_return_4', 'external/testsuite/float_exprs.wast', 1645);
+  assertReturn(module, '$assert_return_5', 'external/testsuite/float_exprs.wast', 1647);
+  assertReturn(module, '$assert_return_6', 'external/testsuite/float_exprs.wast', 1648);
+  assertReturn(module, '$assert_return_7', 'external/testsuite/float_exprs.wast', 1649);
+  assertReturn(module, '$assert_return_8', 'external/testsuite/float_exprs.wast', 1650);
+  assertReturn(module, '$assert_return_9', 'external/testsuite/float_exprs.wast', 1651);
 }
 
 function testModule65() {
@@ -3536,16 +3632,16 @@ function testModule65() {
     181,  18,  35,  86,  47,  28, 155, 154, 205, 150, 181, 104,
   ]);
 
-  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 1632);
-  assertReturn(module, '$assert_return_1', 'external/testsuite/float_exprs.wast', 1633);
-  assertReturn(module, '$assert_return_2', 'external/testsuite/float_exprs.wast', 1634);
-  assertReturn(module, '$assert_return_3', 'external/testsuite/float_exprs.wast', 1635);
-  assertReturn(module, '$assert_return_4', 'external/testsuite/float_exprs.wast', 1636);
-  assertReturn(module, '$assert_return_5', 'external/testsuite/float_exprs.wast', 1638);
-  assertReturn(module, '$assert_return_6', 'external/testsuite/float_exprs.wast', 1639);
-  assertReturn(module, '$assert_return_7', 'external/testsuite/float_exprs.wast', 1640);
-  assertReturn(module, '$assert_return_8', 'external/testsuite/float_exprs.wast', 1641);
-  assertReturn(module, '$assert_return_9', 'external/testsuite/float_exprs.wast', 1642);
+  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 1665);
+  assertReturn(module, '$assert_return_1', 'external/testsuite/float_exprs.wast', 1666);
+  assertReturn(module, '$assert_return_2', 'external/testsuite/float_exprs.wast', 1667);
+  assertReturn(module, '$assert_return_3', 'external/testsuite/float_exprs.wast', 1668);
+  assertReturn(module, '$assert_return_4', 'external/testsuite/float_exprs.wast', 1669);
+  assertReturn(module, '$assert_return_5', 'external/testsuite/float_exprs.wast', 1671);
+  assertReturn(module, '$assert_return_6', 'external/testsuite/float_exprs.wast', 1672);
+  assertReturn(module, '$assert_return_7', 'external/testsuite/float_exprs.wast', 1673);
+  assertReturn(module, '$assert_return_8', 'external/testsuite/float_exprs.wast', 1674);
+  assertReturn(module, '$assert_return_9', 'external/testsuite/float_exprs.wast', 1675);
 }
 
 function testModule66() {
@@ -3586,16 +3682,16 @@ function testModule66() {
       0,   0,   0,   0, 240, 127, 181, 104,
   ]);
 
-  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 1656);
-  assertReturn(module, '$assert_return_1', 'external/testsuite/float_exprs.wast', 1657);
-  assertReturn(module, '$assert_return_2', 'external/testsuite/float_exprs.wast', 1658);
-  assertReturn(module, '$assert_return_3', 'external/testsuite/float_exprs.wast', 1659);
-  assertReturn(module, '$assert_return_4', 'external/testsuite/float_exprs.wast', 1660);
-  assertReturn(module, '$assert_return_5', 'external/testsuite/float_exprs.wast', 1662);
-  assertReturn(module, '$assert_return_6', 'external/testsuite/float_exprs.wast', 1663);
-  assertReturn(module, '$assert_return_7', 'external/testsuite/float_exprs.wast', 1664);
-  assertReturn(module, '$assert_return_8', 'external/testsuite/float_exprs.wast', 1665);
-  assertReturn(module, '$assert_return_9', 'external/testsuite/float_exprs.wast', 1666);
+  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 1689);
+  assertReturn(module, '$assert_return_1', 'external/testsuite/float_exprs.wast', 1690);
+  assertReturn(module, '$assert_return_2', 'external/testsuite/float_exprs.wast', 1691);
+  assertReturn(module, '$assert_return_3', 'external/testsuite/float_exprs.wast', 1692);
+  assertReturn(module, '$assert_return_4', 'external/testsuite/float_exprs.wast', 1693);
+  assertReturn(module, '$assert_return_5', 'external/testsuite/float_exprs.wast', 1695);
+  assertReturn(module, '$assert_return_6', 'external/testsuite/float_exprs.wast', 1696);
+  assertReturn(module, '$assert_return_7', 'external/testsuite/float_exprs.wast', 1697);
+  assertReturn(module, '$assert_return_8', 'external/testsuite/float_exprs.wast', 1698);
+  assertReturn(module, '$assert_return_9', 'external/testsuite/float_exprs.wast', 1699);
 }
 
 function testModule67() {
@@ -3641,16 +3737,16 @@ function testModule67() {
     192,  80, 181, 104,
   ]);
 
-  assertReturn(module, '$assert_return_nan_0', 'external/testsuite/float_exprs.wast', 1680);
-  assertReturn(module, '$assert_return_1', 'external/testsuite/float_exprs.wast', 1681);
-  assertReturn(module, '$assert_return_2', 'external/testsuite/float_exprs.wast', 1682);
-  assertReturn(module, '$assert_return_3', 'external/testsuite/float_exprs.wast', 1683);
-  assertReturn(module, '$assert_return_4', 'external/testsuite/float_exprs.wast', 1684);
-  assertReturn(module, '$assert_return_nan_5', 'external/testsuite/float_exprs.wast', 1686);
-  assertReturn(module, '$assert_return_6', 'external/testsuite/float_exprs.wast', 1687);
-  assertReturn(module, '$assert_return_7', 'external/testsuite/float_exprs.wast', 1688);
-  assertReturn(module, '$assert_return_8', 'external/testsuite/float_exprs.wast', 1689);
-  assertReturn(module, '$assert_return_9', 'external/testsuite/float_exprs.wast', 1690);
+  assertReturn(module, '$assert_return_nan_0', 'external/testsuite/float_exprs.wast', 1713);
+  assertReturn(module, '$assert_return_1', 'external/testsuite/float_exprs.wast', 1714);
+  assertReturn(module, '$assert_return_2', 'external/testsuite/float_exprs.wast', 1715);
+  assertReturn(module, '$assert_return_3', 'external/testsuite/float_exprs.wast', 1716);
+  assertReturn(module, '$assert_return_4', 'external/testsuite/float_exprs.wast', 1717);
+  assertReturn(module, '$assert_return_nan_5', 'external/testsuite/float_exprs.wast', 1719);
+  assertReturn(module, '$assert_return_6', 'external/testsuite/float_exprs.wast', 1720);
+  assertReturn(module, '$assert_return_7', 'external/testsuite/float_exprs.wast', 1721);
+  assertReturn(module, '$assert_return_8', 'external/testsuite/float_exprs.wast', 1722);
+  assertReturn(module, '$assert_return_9', 'external/testsuite/float_exprs.wast', 1723);
 }
 
 function testModule68() {
@@ -3696,16 +3792,16 @@ function testModule68() {
     192,   9, 181, 104,
   ]);
 
-  assertReturn(module, '$assert_return_nan_0', 'external/testsuite/float_exprs.wast', 1704);
-  assertReturn(module, '$assert_return_1', 'external/testsuite/float_exprs.wast', 1705);
-  assertReturn(module, '$assert_return_2', 'external/testsuite/float_exprs.wast', 1706);
-  assertReturn(module, '$assert_return_3', 'external/testsuite/float_exprs.wast', 1707);
-  assertReturn(module, '$assert_return_4', 'external/testsuite/float_exprs.wast', 1708);
-  assertReturn(module, '$assert_return_nan_5', 'external/testsuite/float_exprs.wast', 1710);
-  assertReturn(module, '$assert_return_6', 'external/testsuite/float_exprs.wast', 1711);
-  assertReturn(module, '$assert_return_7', 'external/testsuite/float_exprs.wast', 1712);
-  assertReturn(module, '$assert_return_8', 'external/testsuite/float_exprs.wast', 1713);
-  assertReturn(module, '$assert_return_9', 'external/testsuite/float_exprs.wast', 1714);
+  assertReturn(module, '$assert_return_nan_0', 'external/testsuite/float_exprs.wast', 1737);
+  assertReturn(module, '$assert_return_1', 'external/testsuite/float_exprs.wast', 1738);
+  assertReturn(module, '$assert_return_2', 'external/testsuite/float_exprs.wast', 1739);
+  assertReturn(module, '$assert_return_3', 'external/testsuite/float_exprs.wast', 1740);
+  assertReturn(module, '$assert_return_4', 'external/testsuite/float_exprs.wast', 1741);
+  assertReturn(module, '$assert_return_nan_5', 'external/testsuite/float_exprs.wast', 1743);
+  assertReturn(module, '$assert_return_6', 'external/testsuite/float_exprs.wast', 1744);
+  assertReturn(module, '$assert_return_7', 'external/testsuite/float_exprs.wast', 1745);
+  assertReturn(module, '$assert_return_8', 'external/testsuite/float_exprs.wast', 1746);
+  assertReturn(module, '$assert_return_9', 'external/testsuite/float_exprs.wast', 1747);
 }
 
 function testModule69() {
@@ -3751,16 +3847,16 @@ function testModule69() {
     245, 114, 128,  70,  36,  44, 181, 104,
   ]);
 
-  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 1728);
-  assertReturn(module, '$assert_return_1', 'external/testsuite/float_exprs.wast', 1729);
-  assertReturn(module, '$assert_return_2', 'external/testsuite/float_exprs.wast', 1730);
-  assertReturn(module, '$assert_return_3', 'external/testsuite/float_exprs.wast', 1731);
-  assertReturn(module, '$assert_return_4', 'external/testsuite/float_exprs.wast', 1732);
-  assertReturn(module, '$assert_return_5', 'external/testsuite/float_exprs.wast', 1734);
-  assertReturn(module, '$assert_return_6', 'external/testsuite/float_exprs.wast', 1735);
-  assertReturn(module, '$assert_return_7', 'external/testsuite/float_exprs.wast', 1736);
-  assertReturn(module, '$assert_return_8', 'external/testsuite/float_exprs.wast', 1737);
-  assertReturn(module, '$assert_return_9', 'external/testsuite/float_exprs.wast', 1738);
+  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 1761);
+  assertReturn(module, '$assert_return_1', 'external/testsuite/float_exprs.wast', 1762);
+  assertReturn(module, '$assert_return_2', 'external/testsuite/float_exprs.wast', 1763);
+  assertReturn(module, '$assert_return_3', 'external/testsuite/float_exprs.wast', 1764);
+  assertReturn(module, '$assert_return_4', 'external/testsuite/float_exprs.wast', 1765);
+  assertReturn(module, '$assert_return_5', 'external/testsuite/float_exprs.wast', 1767);
+  assertReturn(module, '$assert_return_6', 'external/testsuite/float_exprs.wast', 1768);
+  assertReturn(module, '$assert_return_7', 'external/testsuite/float_exprs.wast', 1769);
+  assertReturn(module, '$assert_return_8', 'external/testsuite/float_exprs.wast', 1770);
+  assertReturn(module, '$assert_return_9', 'external/testsuite/float_exprs.wast', 1771);
 }
 
 function testModule70() {
@@ -3784,8 +3880,435 @@ function testModule70() {
       0,   0,   0,   0,   0,   0,  16,   0, 181, 104,
   ]);
 
-  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 1753);
-  assertReturn(module, '$assert_return_1', 'external/testsuite/float_exprs.wast', 1754);
+  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 1786);
+  assertReturn(module, '$assert_return_1', 'external/testsuite/float_exprs.wast', 1787);
+}
+
+function testModule71() {
+  var module = createModule([
+      0,  97, 115, 109,  11,   0,   0,   0,   4, 116, 121, 112, 101,  23,   4,  64,
+      2,   3,   3,   1,   1,  64,   2,   4,   4,   1,   1,  64,   2,   4,   3,   1,
+      3,  64,   0,   1,   1,   8, 102, 117, 110,  99, 116, 105, 111, 110,  21,  20,
+      0,   0,   0,   1,   1,   1,   2,   3,   3,   3,   3,   3,   3,   3,   3,   3,
+      3,   3,   3,   3,   6, 101, 120, 112, 111, 114, 116, 229,   2,  20,   0,  15,
+    102,  51,  50,  46, 114, 101,  99, 111, 100, 105, 110, 103,  95, 101, 113,   1,
+     15, 102,  51,  50,  46, 114, 101,  99, 111, 100, 105, 110, 103,  95, 108, 101,
+      2,  15, 102,  51,  50,  46, 114, 101,  99, 111, 100, 105, 110, 103,  95, 108,
+    116,   3,  15, 102,  54,  52,  46, 114, 101,  99, 111, 100, 105, 110, 103,  95,
+    101, 113,   4,  15, 102,  54,  52,  46, 114, 101,  99, 111, 100, 105, 110, 103,
+     95, 108, 101,   5,  15, 102,  54,  52,  46, 114, 101,  99, 111, 100, 105, 110,
+    103,  95, 108, 116,   6,  15, 114, 101,  99, 111, 100, 105, 110, 103,  95, 100,
+    101, 109, 111, 116, 101,   7,  16,  36,  97, 115, 115, 101, 114, 116,  95, 114,
+    101, 116, 117, 114, 110,  95,  48,   8,  16,  36,  97, 115, 115, 101, 114, 116,
+     95, 114, 101, 116, 117, 114, 110,  95,  49,   9,  16,  36,  97, 115, 115, 101,
+    114, 116,  95, 114, 101, 116, 117, 114, 110,  95,  50,  10,  16,  36,  97, 115,
+    115, 101, 114, 116,  95, 114, 101, 116, 117, 114, 110,  95,  51,  11,  16,  36,
+     97, 115, 115, 101, 114, 116,  95, 114, 101, 116, 117, 114, 110,  95,  52,  12,
+     16,  36,  97, 115, 115, 101, 114, 116,  95, 114, 101, 116, 117, 114, 110,  95,
+     53,  13,  16,  36,  97, 115, 115, 101, 114, 116,  95, 114, 101, 116, 117, 114,
+    110,  95,  54,  14,  16,  36,  97, 115, 115, 101, 114, 116,  95, 114, 101, 116,
+    117, 114, 110,  95,  55,  15,  16,  36,  97, 115, 115, 101, 114, 116,  95, 114,
+    101, 116, 117, 114, 110,  95,  56,  16,  16,  36,  97, 115, 115, 101, 114, 116,
+     95, 114, 101, 116, 117, 114, 110,  95,  57,  17,  17,  36,  97, 115, 115, 101,
+    114, 116,  95, 114, 101, 116, 117, 114, 110,  95,  49,  48,  18,  17,  36,  97,
+    115, 115, 101, 114, 116,  95, 114, 101, 116, 117, 114, 110,  95,  49,  49,  19,
+     17,  36,  97, 115, 115, 101, 114, 116,  95, 114, 101, 116, 117, 114, 110,  95,
+     49,  50,   4,  99, 111, 100, 101, 232,   2,  20,   9,   0,  20,   0,  20,   1,
+    119,  20,   0, 131,   9,   0,  20,   0,  20,   1, 119,  20,   0, 134,   9,   0,
+     20,   0,  20,   1, 119,  20,   0, 133,   9,   0,  20,   0,  20,   1, 139,  20,
+      0, 151,   9,   0,  20,   0,  20,   1, 139,  20,   0, 154,   9,   0,  20,   0,
+     20,   1, 139,  20,   0, 153,   7,   0,  20,   0, 172,  20,   1, 119,  17,   0,
+     19,   0,   0, 128, 255,  19,   0,   0,  64,  64,  22,   2,   0,  16,   1,  77,
+     17,   0,  19,   0,   0, 128, 255,  19,   0,   0,  64,  64,  22,   2,   1,  16,
+      1,  77,  17,   0,  19,   0,   0, 128, 255,  19,   0,   0,  64,  64,  22,   2,
+      2,  16,   0,  77,  17,   0,  19,   0,   0,   0,   0,  19,   0,   0, 128,  63,
+     22,   2,   0,  16,   1,  77,  17,   0,  19,   0,   0,   0,   0,  19,   0,   0,
+    128,  63,  22,   2,   1,  16,   1,  77,  17,   0,  19,   0,   0,   0,   0,  19,
+      0,   0, 128,  63,  22,   2,   2,  16,   0,  77,  25,   0,  18,   0,   0,   0,
+      0,   0,   0, 240, 255,  18,   0,   0,   0,   0,   0,   0,   8,  64,  22,   2,
+      3,  16,   1,  77,  25,   0,  18,   0,   0,   0,   0,   0,   0, 240, 255,  18,
+      0,   0,   0,   0,   0,   0,   8,  64,  22,   2,   4,  16,   1,  77,  25,   0,
+     18,   0,   0,   0,   0,   0,   0, 240, 255,  18,   0,   0,   0,   0,   0,   0,
+      8,  64,  22,   2,   5,  16,   0,  77,  25,   0,  18,   0,   0,   0,   0,   0,
+      0,   0,   0,  18,   0,   0,   0,   0,   0,   0, 240,  63,  22,   2,   3,  16,
+      1,  77,  25,   0,  18,   0,   0,   0,   0,   0,   0,   0,   0,  18,   0,   0,
+      0,   0,   0,   0, 240,  63,  22,   2,   4,  16,   1,  77,  25,   0,  18,   0,
+      0,   0,   0,   0,   0,   0,   0,  18,   0,   0,   0,   0,   0,   0, 240,  63,
+     22,   2,   5,  16,   0,  77,  26,   0,  18,   0,   0,   0,   0, 248, 200, 180,
+     55,  19,   0, 160, 152,  68,  22,   2,   6, 180,  19,  14,  69, 198,   2, 180,
+     77,
+  ]);
+
+  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 1822);
+  assertReturn(module, '$assert_return_1', 'external/testsuite/float_exprs.wast', 1823);
+  assertReturn(module, '$assert_return_2', 'external/testsuite/float_exprs.wast', 1824);
+  assertReturn(module, '$assert_return_3', 'external/testsuite/float_exprs.wast', 1826);
+  assertReturn(module, '$assert_return_4', 'external/testsuite/float_exprs.wast', 1827);
+  assertReturn(module, '$assert_return_5', 'external/testsuite/float_exprs.wast', 1828);
+  assertReturn(module, '$assert_return_6', 'external/testsuite/float_exprs.wast', 1830);
+  assertReturn(module, '$assert_return_7', 'external/testsuite/float_exprs.wast', 1831);
+  assertReturn(module, '$assert_return_8', 'external/testsuite/float_exprs.wast', 1832);
+  assertReturn(module, '$assert_return_9', 'external/testsuite/float_exprs.wast', 1834);
+  assertReturn(module, '$assert_return_10', 'external/testsuite/float_exprs.wast', 1835);
+  assertReturn(module, '$assert_return_11', 'external/testsuite/float_exprs.wast', 1836);
+  assertReturn(module, '$assert_return_12', 'external/testsuite/float_exprs.wast', 1838);
+}
+
+function testModule72() {
+  var module = createModule([
+      0,  97, 115, 109,  11,   0,   0,   0,   4, 116, 121, 112, 101,  19,   3,  64,
+      3,   3,   3,   3,   1,   1,  64,   3,   4,   4,   4,   1,   1,  64,   0,   1,
+      1,   8, 102, 117, 110,  99, 116, 105, 111, 110,   5,   4,   0,   1,   2,   2,
+      6, 101, 120, 112, 111, 114, 116,  99,   4,   0,  29, 102,  51,  50,  46, 110,
+    111,  95, 101, 120, 116, 101, 110, 100, 101, 100,  95, 112, 114, 101,  99, 105,
+    115, 105, 111, 110,  95, 100, 105, 118,   1,  29, 102,  54,  52,  46, 110, 111,
+     95, 101, 120, 116, 101, 110, 100, 101, 100,  95, 112, 114, 101,  99, 105, 115,
+    105, 111, 110,  95, 100, 105, 118,   2,  16,  36,  97, 115, 115, 101, 114, 116,
+     95, 114, 101, 116, 117, 114, 110,  95,  48,   3,  16,  36,  97, 115, 115, 101,
+    114, 116,  95, 114, 101, 116, 117, 114, 110,  95,  49,   4,  99, 111, 100, 101,
+     79,   4,   9,   0,  20,   0,  20,   1, 120,  20,   2, 131,   9,   0,  20,   0,
+     20,   1, 140,  20,   2, 151,  22,   0,  19,   0,   0,  64,  64,  19,   0,   0,
+    224,  64,  19, 183, 109, 219,  62,  22,   3,   0,  16,   1,  77,  34,   0,  18,
+      0,   0,   0,   0,   0,   0,   8,  64,  18,   0,   0,   0,   0,   0,   0,  28,
+     64,  18, 219, 182, 109, 219, 182, 109, 219,  63,  22,   3,   1,  16,   1,  77,
+  ]);
+
+  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 1853);
+  assertReturn(module, '$assert_return_1', 'external/testsuite/float_exprs.wast', 1854);
+}
+
+function testModule73() {
+  var module = createModule([
+      0,  97, 115, 109,  11,   0,   0,   0,   4, 116, 121, 112, 101,  15,   3,  64,
+      1,   3,   1,   3,  64,   1,   4,   1,   4,  64,   0,   1,   1,   8, 102, 117,
+    110,  99, 116, 105, 111, 110,   5,   4,   0,   1,   2,   2,   6, 101, 120, 112,
+    111, 114, 116,  87,   4,   0,  23, 102,  51,  50,  46, 110, 111,  95, 100, 105,
+    115, 116, 114, 105,  98, 117, 116, 101,  95, 101, 120,  97,  99, 116,   1,  23,
+    102,  54,  52,  46, 110, 111,  95, 100, 105, 115, 116, 114, 105,  98, 117, 116,
+    101,  95, 101, 120,  97,  99, 116,   2,  16,  36,  97, 115, 115, 101, 114, 116,
+     95, 114, 101, 116, 117, 114, 110,  95,  48,   3,  16,  36,  97, 115, 115, 101,
+    114, 116,  95, 114, 101, 116, 117, 114, 110,  95,  49,   4,  99, 111, 100, 101,
+     91,   4,  18,   0,  19,   0,   0,   0, 193,  20,   0, 119,  19,   0,   0,   0,
+     65,  20,   0, 119, 117,  26,   0,  18,   0,   0,   0,   0,   0,   0,  32, 192,
+     20,   0, 139,  18,   0,   0,   0,   0,   0,   0,  32,  64,  20,   0, 139, 137,
+     17,   0,  19,   0,   0,   0, 128,  22,   1,   0, 180,  19,   0,   0,   0,   0,
+    180,  77,  25,   0,  18,   0,   0,   0,   0,   0,   0,   0, 128,  22,   1,   1,
+    181,  18,   0,   0,   0,   0,   0,   0,   0,   0, 181, 104,
+  ]);
+
+  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 1871);
+  assertReturn(module, '$assert_return_1', 'external/testsuite/float_exprs.wast', 1872);
+}
+
+function testModule74() {
+  var module = createModule([
+      0,  97, 115, 109,  11,   0,   0,   0,   4, 116, 121, 112, 101,  45,   7,  64,
+      1,   3,   1,   3,  64,   4,   3,   3,   3,   3,   1,   3,  64,   3,   3,   3,
+      3,   1,   3,  64,   1,   4,   1,   4,  64,   4,   4,   4,   4,   4,   1,   4,
+     64,   3,   4,   4,   4,   1,   4,  64,   0,   1,   1,   8, 102, 117, 110,  99,
+    116, 105, 111, 110,  25,  24,   0,   1,   2,   2,   1,   3,   4,   5,   5,   4,
+      6,   6,   6,   6,   6,   6,   6,   6,   6,   6,   6,   6,   6,   6,   6, 101,
+    120, 112, 111, 114, 116, 171,   3,  24,   0,   8, 102,  51,  50,  46, 115, 113,
+    114, 116,   1,  15, 102,  51,  50,  46, 120, 107,  99, 100,  95, 115, 113, 114,
+    116,  95,  50,   2,  15, 102,  51,  50,  46, 120, 107,  99, 100,  95, 115, 113,
+    114, 116,  95,  51,   3,  15, 102,  51,  50,  46, 120, 107,  99, 100,  95, 115,
+    113, 114, 116,  95,  53,   4,  22, 102,  51,  50,  46, 120, 107,  99, 100,  95,
+     98, 101, 116, 116, 101, 114,  95, 115, 113, 114, 116,  95,  53,   5,   8, 102,
+     54,  52,  46, 115, 113, 114, 116,   6,  15, 102,  54,  52,  46, 120, 107,  99,
+    100,  95, 115, 113, 114, 116,  95,  50,   7,  15, 102,  54,  52,  46, 120, 107,
+     99, 100,  95, 115, 113, 114, 116,  95,  51,   8,  15, 102,  54,  52,  46, 120,
+    107,  99, 100,  95, 115, 113, 114, 116,  95,  53,   9,  22, 102,  54,  52,  46,
+    120, 107,  99, 100,  95,  98, 101, 116, 116, 101, 114,  95, 115, 113, 114, 116,
+     95,  53,  10,  16,  36,  97, 115, 115, 101, 114, 116,  95, 114, 101, 116, 117,
+    114, 110,  95,  48,  11,  16,  36,  97, 115, 115, 101, 114, 116,  95, 114, 101,
+    116, 117, 114, 110,  95,  49,  12,  16,  36,  97, 115, 115, 101, 114, 116,  95,
+    114, 101, 116, 117, 114, 110,  95,  50,  13,  16,  36,  97, 115, 115, 101, 114,
+    116,  95, 114, 101, 116, 117, 114, 110,  95,  51,  14,  16,  36,  97, 115, 115,
+    101, 114, 116,  95, 114, 101, 116, 117, 114, 110,  95,  52,  15,  16,  36,  97,
+    115, 115, 101, 114, 116,  95, 114, 101, 116, 117, 114, 110,  95,  53,  16,  16,
+     36,  97, 115, 115, 101, 114, 116,  95, 114, 101, 116, 117, 114, 110,  95,  54,
+     17,  16,  36,  97, 115, 115, 101, 114, 116,  95, 114, 101, 116, 117, 114, 110,
+     95,  55,  18,  16,  36,  97, 115, 115, 101, 114, 116,  95, 114, 101, 116, 117,
+    114, 110,  95,  56,  19,  16,  36,  97, 115, 115, 101, 114, 116,  95, 114, 101,
+    116, 117, 114, 110,  95,  57,  20,  17,  36,  97, 115, 115, 101, 114, 116,  95,
+    114, 101, 116, 117, 114, 110,  95,  49,  48,  21,  17,  36,  97, 115, 115, 101,
+    114, 116,  95, 114, 101, 116, 117, 114, 110,  95,  49,  49,  22,  17,  36,  97,
+    115, 115, 101, 114, 116,  95, 114, 101, 116, 117, 114, 110,  95,  49,  50,  23,
+     17,  36,  97, 115, 115, 101, 114, 116,  95, 114, 101, 116, 117, 114, 110,  95,
+     49,  51,   4,  99, 111, 100, 101, 191,   4,  24,   4,   0,  20,   0, 130,  15,
+      0,  20,   0,  20,   1, 120,  20,   2,  20,   3,  20,   2, 118, 120, 117,   9,
+      0,  20,   0,  20,   1, 119,  20,   2, 120,  12,   0,  20,   0,  20,   1, 120,
+     20,   2,  20,   0, 120, 117,  18,   0,  20,   0,  20,   1,  20,   2, 119, 117,
+     20,   3,  20,   1,  20,   2, 119, 118, 120,   4,   0,  20,   0, 150,  15,   0,
+     20,   0,  20,   1, 140,  20,   2,  20,   3,  20,   2, 138, 140, 137,   9,   0,
+     20,   0,  20,   1, 139,  20,   2, 140,  12,   0,  20,   0,  20,   1, 140,  20,
+      2,  20,   0, 140, 137,  18,   0,  20,   0,  20,   1,  20,   2, 139, 137,  20,
+      3,  20,   1,  20,   2, 139, 138, 140,  17,   0,  19,   0,   0,   0,  64,  22,
+      1,   0, 180,  19, 243,   4, 181,  63, 180,  77,  32,   0,  19,   0,   0,  64,
+     64,  19,   0,   0, 160,  64,  19, 219,  15,  73,  64,  19,   0,   0, 224,  64,
+     22,   4,   1, 180,  19,  42,   5, 181,  63, 180,  77,  17,   0,  19,   0,   0,
+     64,  64,  22,   1,   0, 180,  19, 215, 179, 221,  63, 180,  77,  27,   0,  19,
+      0,   0,   0,  64,  19,  84, 248,  45,  64,  19, 219,  15,  73,  64,  22,   3,
+      2, 180,  19, 106, 129, 221,  63, 180,  77,  17,   0,  19,   0,   0, 160,  64,
+     22,   1,   0, 180,  19, 189,  27,  15,  64, 180,  77,  27,   0,  19,   0,   0,
+      0,  64,  19,  84, 248,  45,  64,  19,   0,   0,  64,  64,  22,   3,   3, 180,
+     19, 172,  22,  15,  64, 180,  77,  32,   0,  19,   0,   0,  80,  65,  19,   0,
+      0, 128,  64,  19, 219,  15,  73,  64,  19,   0,   0, 192,  65,  22,   4,   4,
+    180,  19, 189,  27,  15,  64, 180,  77,  25,   0,  18,   0,   0,   0,   0,   0,
+      0,   0,  64,  22,   1,   5, 181,  18, 205,  59, 127, 102, 158, 160, 246,  63,
+    181, 104,  52,   0,  18,   0,   0,   0,   0,   0,   0,   8,  64,  18,   0,   0,
+      0,   0,   0,   0,  20,  64,  18,  24,  45,  68,  84, 251,  33,   9,  64,  18,
+      0,   0,   0,   0,   0,   0,  28,  64,  22,   4,   6, 181,  18,  95,   5,  43,
+     54, 165, 160, 246,  63, 181, 104,  25,   0,  18,   0,   0,   0,   0,   0,   0,
+      8,  64,  22,   1,   5, 181,  18, 170,  76,  88, 232, 122, 182, 251,  63, 181,
+    104,  43,   0,  18,   0,   0,   0,   0,   0,   0,   0,  64,  18, 105,  87,  20,
+    139,  10, 191,   5,  64,  18,  24,  45,  68,  84, 251,  33,   9,  64,  22,   3,
+      7, 181,  18, 149, 143, 202,  78,  45, 176, 251,  63, 181, 104,  25,   0,  18,
+      0,   0,   0,   0,   0,   0,  20,  64,  22,   1,   5, 181,  18, 168, 244, 151,
+    155, 119, 227,   1,  64, 181, 104,  43,   0,  18,   0,   0,   0,   0,   0,   0,
+      0,  64,  18, 105,  87,  20, 139,  10, 191,   5,  64,  18,   0,   0,   0,   0,
+      0,   0,   8,  64,  22,   3,   8, 181,  18, 206,  59, 139, 141, 213, 226,   1,
+     64, 181, 104,  52,   0,  18,   0,   0,   0,   0,   0,   0,  42,  64,  18,   0,
+      0,   0,   0,   0,   0,  16,  64,  18,  24,  45,  68,  84, 251,  33,   9,  64,
+     18,   0,   0,   0,   0,   0,   0,  56,  64,  22,   4,   9, 181,  18, 163, 165,
+      9, 133, 119, 227,   1,  64, 181, 104,
+  ]);
+
+  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 1919);
+  assertReturn(module, '$assert_return_1', 'external/testsuite/float_exprs.wast', 1920);
+  assertReturn(module, '$assert_return_2', 'external/testsuite/float_exprs.wast', 1921);
+  assertReturn(module, '$assert_return_3', 'external/testsuite/float_exprs.wast', 1922);
+  assertReturn(module, '$assert_return_4', 'external/testsuite/float_exprs.wast', 1923);
+  assertReturn(module, '$assert_return_5', 'external/testsuite/float_exprs.wast', 1924);
+  assertReturn(module, '$assert_return_6', 'external/testsuite/float_exprs.wast', 1925);
+  assertReturn(module, '$assert_return_7', 'external/testsuite/float_exprs.wast', 1927);
+  assertReturn(module, '$assert_return_8', 'external/testsuite/float_exprs.wast', 1928);
+  assertReturn(module, '$assert_return_9', 'external/testsuite/float_exprs.wast', 1929);
+  assertReturn(module, '$assert_return_10', 'external/testsuite/float_exprs.wast', 1930);
+  assertReturn(module, '$assert_return_11', 'external/testsuite/float_exprs.wast', 1931);
+  assertReturn(module, '$assert_return_12', 'external/testsuite/float_exprs.wast', 1932);
+  assertReturn(module, '$assert_return_13', 'external/testsuite/float_exprs.wast', 1933);
+}
+
+function testModule75() {
+  var module = createModule([
+      0,  97, 115, 109,  11,   0,   0,   0,   4, 116, 121, 112, 101,  17,   3,  64,
+      2,   3,   3,   1,   3,  64,   2,   4,   4,   1,   4,  64,   0,   1,   1,   8,
+    102, 117, 110,  99, 116, 105, 111, 110,   5,   4,   0,   1,   2,   2,   6, 101,
+    120, 112, 111, 114, 116,  75,   4,   0,  17, 102,  51,  50,  46,  99, 111, 109,
+    112, 117, 116, 101,  95, 114,  97, 100, 105, 120,   1,  17, 102,  54,  52,  46,
+     99, 111, 109, 112, 117, 116, 101,  95, 114,  97, 100, 105, 120,   2,  16,  36,
+     97, 115, 115, 101, 114, 116,  95, 114, 101, 116, 117, 114, 110,  95,  48,   3,
+     16,  36,  97, 115, 115, 101, 114, 116,  95, 114, 101, 116, 117, 114, 110,  95,
+     49,   4,  99, 111, 100, 101, 213,   1,   4,  66,   0,   2,  20,   0,  20,   0,
+    117,  21,   0,  19,   0,   0, 128,  63, 117,  20,   0, 118,  19,   0,   0, 128,
+    191, 117,  19,   0,   0,   0,   0, 131,   7,   0,   0,  15,   2,  20,   0,  20,
+      1,  19,   0,   0, 128,  63, 117,  21,   1, 117,  20,   0, 118,  20,   1, 118,
+     19,   0,   0,   0,   0, 132,   7,   0,   0,  15,  20,   1,  86,   0,   2,  20,
+      0,  20,   0, 137,  21,   0,  18,   0,   0,   0,   0,   0,   0, 240,  63, 137,
+     20,   0, 138,  18,   0,   0,   0,   0,   0,   0, 240, 191, 137,  18,   0,   0,
+      0,   0,   0,   0,   0,   0, 151,   7,   0,   0,  15,   2,  20,   0,  20,   1,
+     18,   0,   0,   0,   0,   0,   0, 240,  63, 137,  21,   1, 137,  20,   0, 138,
+     20,   1, 138,  18,   0,   0,   0,   0,   0,   0,   0,   0, 152,   7,   0,   0,
+     15,  20,   1,  22,   0,  19,   0,   0, 128,  63,  19,   0,   0, 128,  63,  22,
+      2,   0, 180,  19,   0,   0,   0,  64, 180,  77,  34,   0,  18,   0,   0,   0,
+      0,   0,   0, 240,  63,  18,   0,   0,   0,   0,   0,   0, 240,  63,  22,   2,
+      1, 181,  18,   0,   0,   0,   0,   0,   0,   0,  64, 181, 104,
+  ]);
+
+  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 2018);
+  assertReturn(module, '$assert_return_1', 'external/testsuite/float_exprs.wast', 2019);
+}
+
+function testModule76() {
+  var module = createModule([
+      0,  97, 115, 109,  11,   0,   0,   0,   4, 116, 121, 112, 101,  17,   3,  64,
+      2,   3,   3,   1,   3,  64,   2,   4,   4,   1,   4,  64,   0,   1,   1,   8,
+    102, 117, 110,  99, 116, 105, 111, 110,   5,   4,   0,   1,   2,   2,   6, 101,
+    120, 112, 111, 114, 116,  89,   4,   0,  24, 102,  51,  50,  46, 110, 111,  95,
+    102, 111, 108, 100,  95, 115, 117,  98,  49,  95, 109, 117, 108,  95,  97, 100,
+    100,   1,  24, 102,  54,  52,  46, 110, 111,  95, 102, 111, 108, 100,  95, 115,
+    117,  98,  49,  95, 109, 117, 108,  95,  97, 100, 100,   2,  16,  36,  97, 115,
+    115, 101, 114, 116,  95, 114, 101, 116, 117, 114, 110,  95,  48,   3,  16,  36,
+     97, 115, 115, 101, 114, 116,  95, 114, 101, 116, 117, 114, 110,  95,  49,   4,
+     99, 111, 100, 101,  95,   4,  15,   0,  20,   0,  19,   0,   0, 128,  63, 118,
+     20,   1, 119,  20,   1, 117,  19,   0,  20,   0,  18,   0,   0,   0,   0,   0,
+      0, 240,  63, 138,  20,   1, 139,  20,   1, 137,  22,   0,  19,   0,   0, 128,
+     47,  19,   0,   0, 128,  63,  22,   2,   0, 180,  19,   0,   0,   0,   0, 180,
+     77,  34,   0,  18,   0,   0,   0,   0,   0,   0, 240,  59,  18,   0,   0,   0,
+      0,   0,   0, 240,  63,  22,   2,   1, 181,  18,   0,   0,   0,   0,   0,   0,
+      0,   0, 181, 104,
+  ]);
+
+  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 2034);
+  assertReturn(module, '$assert_return_1', 'external/testsuite/float_exprs.wast', 2035);
+}
+
+function testModule77() {
+  var module = createModule([
+      0,  97, 115, 109,  11,   0,   0,   0,   4, 116, 121, 112, 101,  19,   3,  64,
+      3,   3,   3,   3,   1,   1,  64,   3,   4,   4,   4,   1,   1,  64,   0,   1,
+      1,   8, 102, 117, 110,  99, 116, 105, 111, 110,   9,   8,   0,   0,   1,   1,
+      2,   2,   2,   2,   6, 101, 120, 112, 111, 114, 116, 205,   1,   8,   0,  31,
+    102,  51,  50,  46, 110, 111,  95, 102, 111, 108, 100,  95,  97, 100, 100,  95,
+    108, 101,  95, 109, 111, 110, 111, 116, 111, 110, 105,  99, 105, 116, 121,   1,
+     31, 102,  51,  50,  46, 110, 111,  95, 102, 111, 108, 100,  95,  97, 100, 100,
+     95, 103, 101,  95, 109, 111, 110, 111, 116, 111, 110, 105,  99, 105, 116, 121,
+      2,  31, 102,  54,  52,  46, 110, 111,  95, 102, 111, 108, 100,  95,  97, 100,
+    100,  95, 108, 101,  95, 109, 111, 110, 111, 116, 111, 110, 105,  99, 105, 116,
+    121,   3,  31, 102,  54,  52,  46, 110, 111,  95, 102, 111, 108, 100,  95,  97,
+    100, 100,  95, 103, 101,  95, 109, 111, 110, 111, 116, 111, 110, 105,  99, 105,
+    116, 121,   4,  16,  36,  97, 115, 115, 101, 114, 116,  95, 114, 101, 116, 117,
+    114, 110,  95,  48,   5,  16,  36,  97, 115, 115, 101, 114, 116,  95, 114, 101,
+    116, 117, 114, 110,  95,  49,   6,  16,  36,  97, 115, 115, 101, 114, 116,  95,
+    114, 101, 116, 117, 114, 110,  95,  50,   7,  16,  36,  97, 115, 115, 101, 114,
+    116,  95, 114, 101, 116, 117, 114, 110,  95,  51,   4,  99, 111, 100, 101, 169,
+      1,   8,  12,   0,  20,   0,  20,   2, 117,  20,   1,  20,   2, 117, 134,  12,
+      0,  20,   0,  20,   2, 117,  20,   1,  20,   2, 117, 136,  12,   0,  20,   0,
+     20,   2, 137,  20,   1,  20,   2, 137, 154,  12,   0,  20,   0,  20,   2, 137,
+     20,   1,  20,   2, 137, 156,  22,   0,  19,   0,   0,   0,   0,  19,   0,   0,
+      0,   0,  19,   0,   0, 192, 127,  22,   3,   0,  16,   0,  77,  22,   0,  19,
+      0,   0, 128, 127,  19,   0,   0, 128, 255,  19,   0,   0, 128, 127,  22,   3,
+      0,  16,   0,  77,  34,   0,  18,   0,   0,   0,   0,   0,   0,   0,   0,  18,
+      0,   0,   0,   0,   0,   0,   0,   0,  18,   0,   0,   0,   0,   0,   0, 248,
+    127,  22,   3,   2,  16,   0,  77,  34,   0,  18,   0,   0,   0,   0,   0,   0,
+    240, 127,  18,   0,   0,   0,   0,   0,   0, 240, 255,  18,   0,   0,   0,   0,
+      0,   0, 240, 127,  22,   3,   2,  16,   0,  77,
+  ]);
+
+  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 2058);
+  assertReturn(module, '$assert_return_1', 'external/testsuite/float_exprs.wast', 2059);
+  assertReturn(module, '$assert_return_2', 'external/testsuite/float_exprs.wast', 2060);
+  assertReturn(module, '$assert_return_3', 'external/testsuite/float_exprs.wast', 2061);
+}
+
+function testModule78() {
+  var module = createModule([
+      0,  97, 115, 109,  11,   0,   0,   0,   4, 116, 121, 112, 101,  17,   3,  64,
+      2,   3,   3,   1,   1,  64,   2,   4,   4,   1,   1,  64,   0,   1,   1,   8,
+    102, 117, 110,  99, 116, 105, 111, 110,  17,  16,   0,   0,   0,   0,   1,   1,
+      1,   1,   2,   2,   2,   2,   2,   2,   2,   2,   6, 101, 120, 112, 111, 114,
+    116, 241,   1,  16,   0,  10, 102,  51,  50,  46, 110, 111, 116,  95, 108, 116,
+      1,  10, 102,  51,  50,  46, 110, 111, 116,  95, 108, 101,   2,  10, 102,  51,
+     50,  46, 110, 111, 116,  95, 103, 116,   3,  10, 102,  51,  50,  46, 110, 111,
+    116,  95, 103, 101,   4,  10, 102,  54,  52,  46, 110, 111, 116,  95, 108, 116,
+      5,  10, 102,  54,  52,  46, 110, 111, 116,  95, 108, 101,   6,  10, 102,  54,
+     52,  46, 110, 111, 116,  95, 103, 116,   7,  10, 102,  54,  52,  46, 110, 111,
+    116,  95, 103, 101,   8,  16,  36,  97, 115, 115, 101, 114, 116,  95, 114, 101,
+    116, 117, 114, 110,  95,  48,   9,  16,  36,  97, 115, 115, 101, 114, 116,  95,
+    114, 101, 116, 117, 114, 110,  95,  49,  10,  16,  36,  97, 115, 115, 101, 114,
+    116,  95, 114, 101, 116, 117, 114, 110,  95,  50,  11,  16,  36,  97, 115, 115,
+    101, 114, 116,  95, 114, 101, 116, 117, 114, 110,  95,  51,  12,  16,  36,  97,
+    115, 115, 101, 114, 116,  95, 114, 101, 116, 117, 114, 110,  95,  52,  13,  16,
+     36,  97, 115, 115, 101, 114, 116,  95, 114, 101, 116, 117, 114, 110,  95,  53,
+     14,  16,  36,  97, 115, 115, 101, 114, 116,  95, 114, 101, 116, 117, 114, 110,
+     95,  54,  15,  16,  36,  97, 115, 115, 101, 114, 116,  95, 114, 101, 116, 117,
+    114, 110,  95,  55,   4,  99, 111, 100, 101, 241,   1,  16,   7,   0,  20,   0,
+     20,   1, 133,  90,   7,   0,  20,   0,  20,   1, 134,  90,   7,   0,  20,   0,
+     20,   1, 135,  90,   7,   0,  20,   0,  20,   1, 136,  90,   7,   0,  20,   0,
+     20,   1, 153,  90,   7,   0,  20,   0,  20,   1, 154,  90,   7,   0,  20,   0,
+     20,   1, 155,  90,   7,   0,  20,   0,  20,   1, 156,  90,  17,   0,  19,   0,
+      0, 192, 127,  19,   0,   0,   0,   0,  22,   2,   0,  16,   1,  77,  17,   0,
+     19,   0,   0, 192, 127,  19,   0,   0,   0,   0,  22,   2,   1,  16,   1,  77,
+     17,   0,  19,   0,   0, 192, 127,  19,   0,   0,   0,   0,  22,   2,   2,  16,
+      1,  77,  17,   0,  19,   0,   0, 192, 127,  19,   0,   0,   0,   0,  22,   2,
+      3,  16,   1,  77,  25,   0,  18,   0,   0,   0,   0,   0,   0, 248, 127,  18,
+      0,   0,   0,   0,   0,   0,   0,   0,  22,   2,   4,  16,   1,  77,  25,   0,
+     18,   0,   0,   0,   0,   0,   0, 248, 127,  18,   0,   0,   0,   0,   0,   0,
+      0,   0,  22,   2,   5,  16,   1,  77,  25,   0,  18,   0,   0,   0,   0,   0,
+      0, 248, 127,  18,   0,   0,   0,   0,   0,   0,   0,   0,  22,   2,   6,  16,
+      1,  77,  25,   0,  18,   0,   0,   0,   0,   0,   0, 248, 127,  18,   0,   0,
+      0,   0,   0,   0,   0,   0,  22,   2,   7,  16,   1,  77,
+  ]);
+
+  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 2099);
+  assertReturn(module, '$assert_return_1', 'external/testsuite/float_exprs.wast', 2100);
+  assertReturn(module, '$assert_return_2', 'external/testsuite/float_exprs.wast', 2101);
+  assertReturn(module, '$assert_return_3', 'external/testsuite/float_exprs.wast', 2102);
+  assertReturn(module, '$assert_return_4', 'external/testsuite/float_exprs.wast', 2103);
+  assertReturn(module, '$assert_return_5', 'external/testsuite/float_exprs.wast', 2104);
+  assertReturn(module, '$assert_return_6', 'external/testsuite/float_exprs.wast', 2105);
+  assertReturn(module, '$assert_return_7', 'external/testsuite/float_exprs.wast', 2106);
+}
+
+function testModule79() {
+  var module = createModule([
+      0,  97, 115, 109,  11,   0,   0,   0,   4, 116, 121, 112, 101,  13,   3,  64,
+      0,   1,   3,  64,   0,   1,   4,  64,   0,   1,   1,   8, 102, 117, 110,  99,
+    116, 105, 111, 110,   5,   4,   0,   1,   2,   2,   6, 101, 120, 112, 111, 114,
+    116,  63,   4,   0,  11, 102,  51,  50,  46, 101, 112, 115, 105, 108, 111, 110,
+      1,  11, 102,  54,  52,  46, 101, 112, 115, 105, 108, 111, 110,   2,  16,  36,
+     97, 115, 115, 101, 114, 116,  95, 114, 101, 116, 117, 114, 110,  95,  48,   3,
+     16,  36,  97, 115, 115, 101, 114, 116,  95, 114, 101, 116, 117, 114, 110,  95,
+     49,   4,  99, 111, 100, 101, 113,   4,  30,   0,  19,   0,   0, 128,  63,  19,
+      0,   0,  64,  64,  19,   0,   0, 128,  64,  19,   0,   0,  64,  64, 120,  19,
+      0,   0, 128,  63, 118, 119, 118,  50,   0,  18,   0,   0,   0,   0,   0,   0,
+    240,  63,  18,   0,   0,   0,   0,   0,   0,   8,  64,  18,   0,   0,   0,   0,
+      0,   0,  16,  64,  18,   0,   0,   0,   0,   0,   0,   8,  64, 140,  18,   0,
+      0,   0,   0,   0,   0, 240,  63, 138, 139, 138,  12,   0,  22,   0,   0, 180,
+     19,   0,   0,   0, 180, 180,  77,  16,   0,  22,   0,   1, 181,  18,   0,   0,
+      0,   0,   0,   0, 176,  60, 181, 104,
+  ]);
+
+  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 2122);
+  assertReturn(module, '$assert_return_1', 'external/testsuite/float_exprs.wast', 2123);
+}
+
+function testModule80() {
+  var module = createModule([
+      0,  97, 115, 109,  11,   0,   0,   0,   4, 116, 121, 112, 101,  17,   3,  64,
+      2,   3,   3,   1,   1,  64,   2,   4,   4,   1,   1,  64,   0,   1,   1,   8,
+    102, 117, 110,  99, 116, 105, 111, 110,  17,  16,   0,   0,   0,   0,   1,   1,
+      1,   1,   2,   2,   2,   2,   2,   2,   2,   2,   6, 101, 120, 112, 111, 114,
+    116, 193,   2,  16,   0,  20, 102,  51,  50,  46, 110, 111,  95, 116, 114, 105,
+     99, 104, 111, 116, 111, 109, 121,  95, 108, 116,   1,  20, 102,  51,  50,  46,
+    110, 111,  95, 116, 114, 105,  99, 104, 111, 116, 111, 109, 121,  95, 108, 101,
+      2,  20, 102,  51,  50,  46, 110, 111,  95, 116, 114, 105,  99, 104, 111, 116,
+    111, 109, 121,  95, 103, 116,   3,  20, 102,  51,  50,  46, 110, 111,  95, 116,
+    114, 105,  99, 104, 111, 116, 111, 109, 121,  95, 103, 101,   4,  20, 102,  54,
+     52,  46, 110, 111,  95, 116, 114, 105,  99, 104, 111, 116, 111, 109, 121,  95,
+    108, 116,   5,  20, 102,  54,  52,  46, 110, 111,  95, 116, 114, 105,  99, 104,
+    111, 116, 111, 109, 121,  95, 108, 101,   6,  20, 102,  54,  52,  46, 110, 111,
+     95, 116, 114, 105,  99, 104, 111, 116, 111, 109, 121,  95, 103, 116,   7,  20,
+    102,  54,  52,  46, 110, 111,  95, 116, 114, 105,  99, 104, 111, 116, 111, 109,
+    121,  95, 103, 101,   8,  16,  36,  97, 115, 115, 101, 114, 116,  95, 114, 101,
+    116, 117, 114, 110,  95,  48,   9,  16,  36,  97, 115, 115, 101, 114, 116,  95,
+    114, 101, 116, 117, 114, 110,  95,  49,  10,  16,  36,  97, 115, 115, 101, 114,
+    116,  95, 114, 101, 116, 117, 114, 110,  95,  50,  11,  16,  36,  97, 115, 115,
+    101, 114, 116,  95, 114, 101, 116, 117, 114, 110,  95,  51,  12,  16,  36,  97,
+    115, 115, 101, 114, 116,  95, 114, 101, 116, 117, 114, 110,  95,  52,  13,  16,
+     36,  97, 115, 115, 101, 114, 116,  95, 114, 101, 116, 117, 114, 110,  95,  53,
+     14,  16,  36,  97, 115, 115, 101, 114, 116,  95, 114, 101, 116, 117, 114, 110,
+     95,  54,  15,  16,  36,  97, 115, 115, 101, 114, 116,  95, 114, 101, 116, 117,
+    114, 110,  95,  55,   4,  99, 111, 100, 101, 153,   2,  16,  12,   0,  20,   0,
+     20,   1, 133,  20,   0,  20,   1, 136,  72,  12,   0,  20,   0,  20,   1, 134,
+     20,   0,  20,   1, 135,  72,  12,   0,  20,   0,  20,   1, 135,  20,   0,  20,
+      1, 134,  72,  12,   0,  20,   0,  20,   1, 136,  20,   0,  20,   1, 133,  72,
+     12,   0,  20,   0,  20,   1, 153,  20,   0,  20,   1, 156,  72,  12,   0,  20,
+      0,  20,   1, 154,  20,   0,  20,   1, 155,  72,  12,   0,  20,   0,  20,   1,
+    155,  20,   0,  20,   1, 154,  72,  12,   0,  20,   0,  20,   1, 156,  20,   0,
+     20,   1, 153,  72,  17,   0,  19,   0,   0,   0,   0,  19,   0,   0, 192, 127,
+     22,   2,   0,  16,   0,  77,  17,   0,  19,   0,   0,   0,   0,  19,   0,   0,
+    192, 127,  22,   2,   1,  16,   0,  77,  17,   0,  19,   0,   0,   0,   0,  19,
+      0,   0, 192, 127,  22,   2,   2,  16,   0,  77,  17,   0,  19,   0,   0,   0,
+      0,  19,   0,   0, 192, 127,  22,   2,   3,  16,   0,  77,  25,   0,  18,   0,
+      0,   0,   0,   0,   0,   0,   0,  18,   0,   0,   0,   0,   0,   0, 248, 127,
+     22,   2,   4,  16,   0,  77,  25,   0,  18,   0,   0,   0,   0,   0,   0,   0,
+      0,  18,   0,   0,   0,   0,   0,   0, 248, 127,  22,   2,   5,  16,   0,  77,
+     25,   0,  18,   0,   0,   0,   0,   0,   0,   0,   0,  18,   0,   0,   0,   0,
+      0,   0, 248, 127,  22,   2,   6,  16,   0,  77,  25,   0,  18,   0,   0,   0,
+      0,   0,   0,   0,   0,  18,   0,   0,   0,   0,   0,   0, 248, 127,  22,   2,
+      7,  16,   0,  77,
+  ]);
+
+  assertReturn(module, '$assert_return_0', 'external/testsuite/float_exprs.wast', 2156);
+  assertReturn(module, '$assert_return_1', 'external/testsuite/float_exprs.wast', 2157);
+  assertReturn(module, '$assert_return_2', 'external/testsuite/float_exprs.wast', 2158);
+  assertReturn(module, '$assert_return_3', 'external/testsuite/float_exprs.wast', 2159);
+  assertReturn(module, '$assert_return_4', 'external/testsuite/float_exprs.wast', 2160);
+  assertReturn(module, '$assert_return_5', 'external/testsuite/float_exprs.wast', 2161);
+  assertReturn(module, '$assert_return_6', 'external/testsuite/float_exprs.wast', 2162);
+  assertReturn(module, '$assert_return_7', 'external/testsuite/float_exprs.wast', 2163);
 }
 
 function createModule(data) {
