@@ -1,188 +1,97 @@
-var passed = 0;
-var failed = 0;
-var quiet = false;
+'use strict';
 
-testModule0();
-end();
+let spectest = {
+  print: print || ((...xs) => console.log(...xs)),
+  global: 666,
+  table: new WebAssembly.Table({initial: 10, maximum: 20, element: 'anyfunc'}),  memory: new WebAssembly.Memory({initial: 1, maximum: 2}),};
 
-function testModule0() {
-  var module = createModule([
-      0,  97, 115, 109,  11,   0,   0,   0,   4, 116, 121, 112, 101,   8,   2,  64,
-      0,   0,  64,   0,   1,   1,   8, 102, 117, 110,  99, 116, 105, 111, 110,  40,
-     39,   0,   1,   0,   1,   1,   1,   1,   1,   1,   1,   1,   1,   1,   1,   1,
-      0,   0,   0,   0,   1,   1,   1,   1,   1,   1,   1,   1,   1,   1,   1,   1,
-      1,   1,   1,   1,   1,   1,   1,   1,   6, 101, 120, 112, 111, 114, 116, 231,
-      4,  38,   0,   5, 101, 109, 112, 116, 121,   1,   8, 115, 105, 110, 103, 117,
-    108,  97, 114,   3,   5, 109, 117, 108, 116, 105,   4,   6, 110, 101, 115, 116,
-    101, 100,   5,   4, 100, 101, 101, 112,   6,  16,  97, 115,  45, 117, 110,  97,
-    114, 121,  45, 111, 112, 101, 114,  97, 110, 100,   7,  17,  97, 115,  45,  98,
-    105, 110,  97, 114, 121,  45, 111, 112, 101, 114,  97, 110, 100,   8,  15,  97,
-    115,  45, 116, 101, 115, 116,  45, 111, 112, 101, 114,  97, 110, 100,   9,  18,
-     97, 115,  45,  99, 111, 109, 112,  97, 114, 101,  45, 111, 112, 101, 114,  97,
-    110, 100,  10,  10,  98, 114, 101,  97, 107,  45,  98,  97, 114, 101,  11,  11,
-     98, 114, 101,  97, 107,  45, 118,  97, 108, 117, 101,  12,  14,  98, 114, 101,
-     97, 107,  45, 114, 101, 112, 101,  97, 116, 101, 100,  13,  11,  98, 114, 101,
-     97, 107,  45, 105, 110, 110, 101, 114,  14,   8, 100, 114, 111, 112,  45, 109,
-    105, 100,  15,   9, 100, 114, 111, 112,  45, 108,  97, 115, 116,  16,  15, 100,
-    114, 111, 112,  45,  98, 114, 101,  97, 107,  45, 118, 111, 105, 100,  17,  16,
-    100, 114, 111, 112,  45,  98, 114, 101,  97, 107,  45, 118,  97, 108, 117, 101,
-     18,  30, 100, 114, 111, 112,  45,  98, 114, 101,  97, 107,  45, 118,  97, 108,
-    117, 101,  45, 104, 101, 116, 101, 114, 111, 103, 101, 110, 101, 111, 117, 115,
-     19,   7, 101, 102, 102, 101,  99, 116, 115,  20,  16,  36,  97, 115, 115, 101,
-    114, 116,  95, 114, 101, 116, 117, 114, 110,  95,  48,  21,  16,  36,  97, 115,
-    115, 101, 114, 116,  95, 114, 101, 116, 117, 114, 110,  95,  49,  22,  16,  36,
-     97, 115, 115, 101, 114, 116,  95, 114, 101, 116, 117, 114, 110,  95,  50,  23,
-     16,  36,  97, 115, 115, 101, 114, 116,  95, 114, 101, 116, 117, 114, 110,  95,
-     51,  24,  16,  36,  97, 115, 115, 101, 114, 116,  95, 114, 101, 116, 117, 114,
-    110,  95,  52,  25,  16,  36,  97, 115, 115, 101, 114, 116,  95, 114, 101, 116,
-    117, 114, 110,  95,  53,  26,  16,  36,  97, 115, 115, 101, 114, 116,  95, 114,
-    101, 116, 117, 114, 110,  95,  54,  27,  16,  36,  97, 115, 115, 101, 114, 116,
-     95, 114, 101, 116, 117, 114, 110,  95,  55,  28,  16,  36,  97, 115, 115, 101,
-    114, 116,  95, 114, 101, 116, 117, 114, 110,  95,  56,  29,  16,  36,  97, 115,
-    115, 101, 114, 116,  95, 114, 101, 116, 117, 114, 110,  95,  57,  30,  17,  36,
-     97, 115, 115, 101, 114, 116,  95, 114, 101, 116, 117, 114, 110,  95,  49,  48,
-     31,  17,  36,  97, 115, 115, 101, 114, 116,  95, 114, 101, 116, 117, 114, 110,
-     95,  49,  49,  32,  17,  36,  97, 115, 115, 101, 114, 116,  95, 114, 101, 116,
-    117, 114, 110,  95,  49,  50,  33,  17,  36,  97, 115, 115, 101, 114, 116,  95,
-    114, 101, 116, 117, 114, 110,  95,  49,  51,  34,  17,  36,  97, 115, 115, 101,
-    114, 116,  95, 114, 101, 116, 117, 114, 110,  95,  49,  52,  35,  17,  36,  97,
-    115, 115, 101, 114, 116,  95, 114, 101, 116, 117, 114, 110,  95,  49,  53,  36,
-     17,  36,  97, 115, 115, 101, 114, 116,  95, 114, 101, 116, 117, 114, 110,  95,
-     49,  54,  37,  17,  36,  97, 115, 115, 101, 114, 116,  95, 114, 101, 116, 117,
-    114, 110,  95,  49,  55,  38,  17,  36,  97, 115, 115, 101, 114, 116,  95, 114,
-    101, 116, 117, 114, 110,  95,  49,  56,   4,  99, 111, 100, 101, 180,   7,  39,
-      5,   0,   1,  15,   1,  15,   8,   0,   1,   0,  15,   1,  16,   7,  15,   1,
-      0,  28,   0,   1,  22,   0,   2,  22,   0,   2,  22,   0,   2,  22,   0,   2,
-     15,   1,  22,   0,   2,  22,   0,   2,  22,   0,   2,  16,   8,  15,  18,   0,
-      1,   1,  22,   0,   2,   1,  15,   0,  15,   1,  22,   0,   2,  16,   9,  15,
-     15,  97,   0,   1,   1,   1,   1,   1,   1,   1,   1,   1,   1,   1,   1,   1,
-      1,   1,   1,   1,   1,   1,   1,   1,   1,   1,   1,   1,   1,   1,   1,   1,
-      1,   1,   1,   1,   1,   1,   1,   1,   1,   1,   1,   1,   1,   1,   1,   1,
-     22,   0,   2,  16, 150,   1,  15,  15,  15,  15,  15,  15,  15,  15,  15,  15,
-     15,  15,  15,  15,  15,  15,  15,  15,  15,  15,  15,  15,  15,  15,  15,  15,
-     15,  15,  15,  15,  15,  15,  15,  15,  15,  15,  15,  15,  15,  15,  15,  15,
-     15,  15,  15,   9,   0,   1,  22,   0,   2,  16,  13,  15,  88,  16,   0,   1,
-     22,   0,   2,  16,   3,  15,   1,  22,   0,   2,  16,   4,  15,  66,   9,   0,
-      1,  22,   0,   2,  16,  13,  15,  90,  22,   0,   1,  22,   0,   2,  19,   0,
-      0,  64,  64,  15,   1,  22,   0,   2,  19,   0,   0,  64,  64,  15, 135,  49,
-      0,   1,   6,   0,   0,  10,  15,   1,  16,   1,   7,   0,   0,  10,  15,   1,
-     16,   0,   8,   0,   0,   0,   0,   0,   0,  10,  15,   1,  16,   1,   8,   0,
-      2,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,  10,  15,  16,
-     19,  10,   0,   1,  16,  18,   6,   1,   0,  16,  19,  15,  64,   0,   1,  16,
-     18,   6,   1,   0,  16,  19,   6,   1,   0,  16,  20,  16,   0,   7,   1,   0,
-     16,  20,  16,   1,   7,   1,   0,  16,  21,   6,   1,   0,  16,  22,  16,   4,
-      8,   1,   0,   0,   0,   0,   0,  16,  23,  16,   1,   8,   1,   2,   0,   0,
-      0,   0,   0,   0,   0,   0,   0,   0,   0,   0,  16,  21,  15,  65,   1,   1,
-      1,  16,   0,  21,   0,  20,   0,   1,   1,  16,   1,   6,   1,   1,  15,  15,
-     64,  21,   0,  20,   0,   1,   1,   6,   0,   0,  15,  16,   2,  15,  64,  21,
-      0,  20,   0,   1,  16,   4,   6,   1,   0,  88,  15,  64,  21,   0,  20,   0,
-      1,   1,  16,   8,   6,   1,   1,  15,  88,  15,  64,  21,   0,  20,   0,  13,
-      0,   1,  22,   0,  19,  16,   7,  22,   0,   2,  16,   8,  15,  12,   0,   1,
-     22,   0,   2,  22,   0,  19,   0,  16,   8,  15,  83,   0,   1,   0,   6,   1,
-      0,  15,   1,  22,   0,   2,   6,   1,   0,  15,   1,   0,  16,   0,   7,   1,
-      0,  15,   1,   0,  16,   1,   7,   1,   0,  15,   1,  22,   0,   2,  16,   0,
-      7,   1,   0,  15,   1,  22,   0,   2,  16,   1,   7,   1,   0,  15,   1,   0,
-     16,   3,   8,   1,   0,   0,   0,   0,   0,  15,   1,   0,  16,   2,   8,   1,
-      2,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,  15,  60,   0,
-      1,  16,  12,   6,   1,   0,  15,   1,  16,  11,  16,   0,   7,   1,   0,  15,
-      1,  16,  10,  16,   1,   7,   1,   0,  15,   1,  16,   9,  16,   5,   8,   1,
-      0,   0,   0,   0,   0,  15,   1,  16,   8,  16,   1,   8,   1,   2,   0,   0,
-      0,   0,   0,   0,   0,   0,   0,   0,   0,   0,  15, 163,   1,   0,   1,  16,
-      8,   6,   1,   0,  18,   0,   0,   0,   0,   0,   0,  32,  64,   6,   1,   0,
-     19,   0,   0,   0,  65,   6,   1,   0,  15,   1,  16,   8,   6,   1,   0,   6,
-      0,   0,  18,   0,   0,   0,   0,   0,   0,  32,  64,   6,   1,   0,  15,   1,
-     16,   8,   6,   1,   0,  22,   0,   2,   6,   1,   0,  18,   0,   0,   0,   0,
-      0,   0,  32,  64,   6,   1,   0,  15,   1,  16,   8,   6,   1,   0,   6,   0,
-      0,  19,   0,   0,   0,  65,   6,   1,   0,  17,   3,  15,   1,   6,   0,   0,
-     16,   8,   6,   1,   0,  18,   0,   0,   0,   0,   0,   0,  32,  64,   6,   1,
-      0,   0,   6,   1,   0,  15,   1,   6,   0,   0,  16,   8,   6,   1,   0,  19,
-      0,   0,   0,  65,   6,   1,   0,  17,   3,  15,   1,   1,   6,   0,   0,  16,
-      8,   6,   1,   1,  15,  19,   0,   0,   0,  65,   6,   1,   0,  17,   3,  15,
-     46,   1,   1,   1,   1,  16,   1,  21,   0,  20,   0,  16,   3,  66,  21,   0,
-     20,   0,  16,   5,  65,  21,   0,  20,   0,  16,   7,  66,  21,   0,   6,   0,
-      0,  20,   0,  16, 228,   0,  66,  21,   0,  15,  20,   0,  16, 114,  77,   6,
-      0,  22,   0,   0,  16,   1,   7,   0,  22,   0,   1,  16,   7,  77,   7,   0,
-     22,   0,   3,  16,   8,  77,   7,   0,  22,   0,   4,  16,   9,  77,   8,   0,
-     22,   0,   5,  16, 150,   1,  77,   7,   0,  22,   0,   6,  16,   0,  77,   7,
-      0,  22,   0,   7,  16,  12,  77,   7,   0,  22,   0,   8,  16,   0,  77,   7,
-      0,  22,   0,   9,  16,   0,  77,   7,   0,  22,   0,  10,  16,  19,  77,   7,
-      0,  22,   0,  11,  16,  18,  77,   7,   0,  22,   0,  12,  16,  18,  77,   7,
-      0,  22,   0,  13,  16,  15,  77,   7,   0,  22,   0,  14,  16,   8,  77,   6,
-      0,  22,   0,  15,  16,   1,   6,   0,  22,   0,  16,  16,   1,   6,   0,  22,
-      0,  17,  16,   1,   6,   0,  22,   0,  18,  16,   1,   7,   0,  22,   0,  19,
-     16,   1,  77,
-  ]);
+let registry = {spectest};
+let $$;
 
-  assertReturn(module, '$assert_return_0', 'external/testsuite/block.wast', 128);
-  assertReturn(module, '$assert_return_1', 'external/testsuite/block.wast', 129);
-  assertReturn(module, '$assert_return_2', 'external/testsuite/block.wast', 130);
-  assertReturn(module, '$assert_return_3', 'external/testsuite/block.wast', 131);
-  assertReturn(module, '$assert_return_4', 'external/testsuite/block.wast', 132);
-  assertReturn(module, '$assert_return_5', 'external/testsuite/block.wast', 134);
-  assertReturn(module, '$assert_return_6', 'external/testsuite/block.wast', 135);
-  assertReturn(module, '$assert_return_7', 'external/testsuite/block.wast', 136);
-  assertReturn(module, '$assert_return_8', 'external/testsuite/block.wast', 137);
-  assertReturn(module, '$assert_return_9', 'external/testsuite/block.wast', 139);
-  assertReturn(module, '$assert_return_10', 'external/testsuite/block.wast', 140);
-  assertReturn(module, '$assert_return_11', 'external/testsuite/block.wast', 141);
-  assertReturn(module, '$assert_return_12', 'external/testsuite/block.wast', 142);
-  assertReturn(module, '$assert_return_13', 'external/testsuite/block.wast', 144);
-  assertReturn(module, '$assert_return_14', 'external/testsuite/block.wast', 145);
-  assertReturn(module, '$assert_return_15', 'external/testsuite/block.wast', 146);
-  assertReturn(module, '$assert_return_16', 'external/testsuite/block.wast', 147);
-  assertReturn(module, '$assert_return_17', 'external/testsuite/block.wast', 148);
-  assertReturn(module, '$assert_return_18', 'external/testsuite/block.wast', 150);
+function register(name, instance) {
+  registry[name] = instance.exports;
 }
 
-function createModule(data) {
-  var u8a = new Uint8Array(data);
-  var ffi = {spectest: {print: print}};
-  return Wasm.instantiateModule(u8a, ffi);
-}
-
-function assertReturn(module, name, file, line) {
-  try {
-    var result = module.exports[name]();
-  } catch(e) {
-    print(file + ":" + line + ": " + name + " unexpectedly threw: " + e);
+function module(bytes) {
+  let buffer = new ArrayBuffer(bytes.length);
+  let view = new Uint8Array(buffer);
+  for (let i = 0; i < bytes.length; ++i) {
+    view[i] = bytes.charCodeAt(i);
   }
-
-  if (result == 1) {
-    passed++;
-  } else {
-    print(file + ":" + line + ": " + name + " failed.");
-    failed++;
-  }
+  return new WebAssembly.Module(buffer);
 }
 
-function assertTrap(module, name, file, line) {
-  var threw = false;
-  try {
-    module.exports[name]();
-  } catch (e) {
-    threw = true;
-  }
-
-  if (threw) {
-    passed++;
-  } else {
-    print(file + ":" + line + ": " + name + " failed, didn't throw");
-    failed++;
-  }
+function instance(bytes, imports = registry) {
+  return new WebAssembly.Instance(module(bytes), imports);
 }
 
-function invoke(module, name) {
-  try {
-    var invokeResult = module.exports[name]();
-  } catch(e) {
-    print(file + ":" + line + ": " + name + " unexpectedly threw: " + e);
-  }
-
-  if (!quiet)
-    print(name + " = " + invokeResult);
+function assert_malformed(bytes) {
+  try { module(bytes) } catch (e) { return }
+  throw new Error("Wasm decoding failure expected");
 }
 
-function end() {
-  if ((failed > 0) || !quiet)
-    print(passed + "/" + (passed + failed) + " tests passed.");
+function assert_invalid(bytes) {
+  try { module(bytes) } catch (e) { return }
+  throw new Error("Wasm validation failure expected");
 }
+
+function assert_unlinkable(bytes) {
+  let mod = module(bytes);
+  try { new WebAssembly.Instance(mod, registry) } catch (e) { return }
+  throw new Error("Wasm linking failure expected");
+}
+
+function assert_trap(action) {
+  try { action() } catch (e) { return }
+  throw new Error("Wasm trap expected");
+}
+
+function assert_return(action, expected) {
+  let actual = action();
+  if (actual !== expected) {
+    throw new Error("Wasm return value " + expected + " expected, got " + actual);
+  };
+}
+
+function assert_return_nan(action) {
+  let actual = action();
+  if (!Number.isNaN(actual)) {
+    throw new Error("Wasm return value NaN expected, got " + actual);
+  };
+}
+
+$$ = instance("\x00\x61\x73\x6d\x0c\x00\x00\x00\x01\x88\x80\x80\x80\x00\x02\x40\x00\x00\x40\x00\x01\x01\x03\x90\x80\x80\x80\x00\x0f\x00\x00\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x07\xbe\x81\x80\x80\x00\x0e\x05\x65\x6d\x70\x74\x79\x00\x01\x08\x73\x69\x6e\x67\x75\x6c\x61\x72\x00\x02\x05\x6d\x75\x6c\x74\x69\x00\x03\x06\x6e\x65\x73\x74\x65\x64\x00\x04\x04\x64\x65\x65\x70\x00\x05\x10\x61\x73\x2d\x75\x6e\x61\x72\x79\x2d\x6f\x70\x65\x72\x61\x6e\x64\x00\x06\x11\x61\x73\x2d\x62\x69\x6e\x61\x72\x79\x2d\x6f\x70\x65\x72\x61\x6e\x64\x00\x07\x0f\x61\x73\x2d\x74\x65\x73\x74\x2d\x6f\x70\x65\x72\x61\x6e\x64\x00\x08\x12\x61\x73\x2d\x63\x6f\x6d\x70\x61\x72\x65\x2d\x6f\x70\x65\x72\x61\x6e\x64\x00\x09\x0a\x62\x72\x65\x61\x6b\x2d\x62\x61\x72\x65\x00\x0a\x0b\x62\x72\x65\x61\x6b\x2d\x76\x61\x6c\x75\x65\x00\x0b\x0e\x62\x72\x65\x61\x6b\x2d\x72\x65\x70\x65\x61\x74\x65\x64\x00\x0c\x0b\x62\x72\x65\x61\x6b\x2d\x69\x6e\x6e\x65\x72\x00\x0d\x07\x65\x66\x66\x65\x63\x74\x73\x00\x0e\x0a\x99\x84\x80\x80\x00\x0f\x82\x80\x80\x80\x00\x00\x0f\x88\x80\x80\x80\x00\x00\x01\x00\x0f\x01\x00\x0f\x0f\x8b\x80\x80\x80\x00\x00\x01\x00\x0a\x0f\x01\x01\x10\x07\x0f\x0f\x98\x80\x80\x80\x00\x00\x01\x00\x16\x00\x16\x00\x16\x00\x16\x00\x0f\x01\x01\x16\x00\x16\x00\x16\x00\x10\x08\x0f\x0f\x95\x80\x80\x80\x00\x00\x01\x01\x01\x00\x16\x00\x01\x00\x0f\x0a\x0f\x01\x01\x16\x00\x10\x09\x0f\x0f\x0f\xf9\x80\x80\x80\x00\x00\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x16\x00\x10\x96\x01\x0f\x0f\x0f\x0f\x0f\x0f\x0f\x0f\x0f\x0f\x0f\x0f\x0f\x0f\x0f\x0f\x0f\x0f\x0f\x0f\x0f\x0f\x0f\x0f\x0f\x0f\x0f\x0f\x0f\x0f\x0f\x0f\x0f\x0f\x0f\x0f\x0f\x0f\x0f\x8a\x80\x80\x80\x00\x00\x01\x01\x16\x00\x10\x0d\x0f\x58\x0f\x91\x80\x80\x80\x00\x00\x01\x01\x16\x00\x10\x03\x0f\x01\x01\x16\x00\x10\x04\x0f\x42\x0f\x8a\x80\x80\x80\x00\x00\x01\x01\x16\x00\x10\x0d\x0f\x5a\x0f\x97\x80\x80\x80\x00\x00\x01\x03\x16\x00\x13\x00\x00\x40\x40\x0f\x01\x03\x16\x00\x13\x00\x00\x40\x40\x0f\x87\x0f\xa6\x80\x80\x80\x00\x00\x01\x00\x06\x00\x00\x0f\x01\x00\x10\x01\x07\x00\x00\x0f\x01\x00\x10\x00\x08\x00\x00\x00\x0f\x01\x00\x10\x01\x08\x02\x00\x00\x00\x00\x0f\x10\x13\x0f\x8b\x80\x80\x80\x00\x00\x01\x01\x10\x12\x06\x00\x10\x13\x0f\x0f\xb1\x80\x80\x80\x00\x00\x01\x01\x10\x12\x06\x00\x10\x13\x06\x00\x10\x14\x10\x00\x07\x00\x0b\x10\x14\x10\x01\x07\x00\x0b\x10\x15\x06\x00\x10\x16\x10\x04\x08\x00\x00\x10\x17\x10\x01\x08\x02\x00\x00\x00\x10\x15\x0f\x0f\xc5\x80\x80\x80\x00\x01\x01\x01\x10\x00\x15\x00\x14\x00\x01\x01\x01\x01\x10\x01\x06\x01\x0f\x0f\x40\x15\x00\x14\x00\x01\x01\x01\x00\x06\x00\x0f\x10\x02\x0f\x40\x15\x00\x14\x00\x01\x01\x10\x04\x06\x00\x58\x0f\x40\x15\x00\x14\x00\x01\x01\x01\x01\x10\x08\x06\x01\x0f\x58\x0f\x40\x15\x00\x14\x00\x0f\xaf\x80\x80\x80\x00\x01\x01\x01\x01\x00\x10\x01\x15\x00\x14\x00\x10\x03\x42\x15\x00\x14\x00\x10\x05\x41\x15\x00\x14\x00\x10\x07\x42\x15\x00\x06\x00\x14\x00\x10\xe4\x00\x42\x15\x00\x0f\x14\x00\x10\x72\x4d\x0f");
+assert_return(() => $$.exports["empty"]());
+assert_return(() => $$.exports["singular"](), 7);
+assert_return(() => $$.exports["multi"](), 8);
+assert_return(() => $$.exports["nested"](), 9);
+assert_return(() => $$.exports["deep"](), 150);
+assert_return(() => $$.exports["as-unary-operand"](), 0);
+assert_return(() => $$.exports["as-binary-operand"](), 12);
+assert_return(() => $$.exports["as-test-operand"](), 0);
+assert_return(() => $$.exports["as-compare-operand"](), 0);
+assert_return(() => $$.exports["break-bare"](), 19);
+assert_return(() => $$.exports["break-value"](), 18);
+assert_return(() => $$.exports["break-repeated"](), 18);
+assert_return(() => $$.exports["break-inner"](), 15);
+assert_return(() => $$.exports["effects"](), 1);
+assert_invalid("\x00\x61\x73\x6d\x0c\x00\x00\x00\x01\x85\x80\x80\x80\x00\x01\x40\x00\x01\x01\x03\x82\x80\x80\x80\x00\x01\x00\x0a\x8b\x80\x80\x80\x00\x01\x85\x80\x80\x80\x00\x00\x01\x00\x0f\x0f");
+assert_invalid("\x00\x61\x73\x6d\x0c\x00\x00\x00\x01\x85\x80\x80\x80\x00\x01\x40\x00\x01\x02\x03\x82\x80\x80\x80\x00\x01\x00\x0a\x8b\x80\x80\x80\x00\x01\x85\x80\x80\x80\x00\x00\x01\x00\x0f\x0f");
+assert_invalid("\x00\x61\x73\x6d\x0c\x00\x00\x00\x01\x85\x80\x80\x80\x00\x01\x40\x00\x01\x03\x03\x82\x80\x80\x80\x00\x01\x00\x0a\x8b\x80\x80\x80\x00\x01\x85\x80\x80\x80\x00\x00\x01\x00\x0f\x0f");
+assert_invalid("\x00\x61\x73\x6d\x0c\x00\x00\x00\x01\x85\x80\x80\x80\x00\x01\x40\x00\x01\x04\x03\x82\x80\x80\x80\x00\x01\x00\x0a\x8b\x80\x80\x80\x00\x01\x85\x80\x80\x80\x00\x00\x01\x00\x0f\x0f");
+assert_invalid("\x00\x61\x73\x6d\x0c\x00\x00\x00\x01\x84\x80\x80\x80\x00\x01\x40\x00\x00\x03\x82\x80\x80\x80\x00\x01\x00\x0a\x8d\x80\x80\x80\x00\x01\x87\x80\x80\x80\x00\x00\x01\x00\x10\x01\x0f\x0f");
+assert_invalid("\x00\x61\x73\x6d\x0c\x00\x00\x00\x01\x85\x80\x80\x80\x00\x01\x40\x00\x01\x01\x03\x82\x80\x80\x80\x00\x01\x00\x0a\x8c\x80\x80\x80\x00\x01\x86\x80\x80\x80\x00\x00\x01\x00\x0a\x0f\x0f");
+assert_invalid("\x00\x61\x73\x6d\x0c\x00\x00\x00\x01\x85\x80\x80\x80\x00\x01\x40\x00\x01\x01\x03\x82\x80\x80\x80\x00\x01\x00\x0a\x90\x80\x80\x80\x00\x01\x8a\x80\x80\x80\x00\x00\x01\x00\x13\x00\x00\x00\x00\x0f\x0f");
+assert_invalid("\x00\x61\x73\x6d\x0c\x00\x00\x00\x01\x85\x80\x80\x80\x00\x01\x40\x00\x01\x01\x03\x82\x80\x80\x80\x00\x01\x00\x0a\x8d\x80\x80\x80\x00\x01\x87\x80\x80\x80\x00\x00\x01\x01\x06\x00\x0f\x0f");
+assert_invalid("\x00\x61\x73\x6d\x0c\x00\x00\x00\x01\x85\x80\x80\x80\x00\x01\x40\x00\x01\x01\x03\x82\x80\x80\x80\x00\x01\x00\x0a\x8f\x80\x80\x80\x00\x01\x89\x80\x80\x80\x00\x00\x01\x01\x06\x00\x10\x01\x0f\x0f");
+assert_invalid("\x00\x61\x73\x6d\x0c\x00\x00\x00\x01\x85\x80\x80\x80\x00\x01\x40\x00\x01\x01\x03\x82\x80\x80\x80\x00\x01\x00\x0a\x90\x80\x80\x80\x00\x01\x8a\x80\x80\x80\x00\x00\x01\x00\x0a\x06\x00\x10\x01\x0f\x0f");
+assert_invalid("\x00\x61\x73\x6d\x0c\x00\x00\x00\x01\x85\x80\x80\x80\x00\x01\x40\x00\x01\x01\x03\x82\x80\x80\x80\x00\x01\x00\x0a\x91\x80\x80\x80\x00\x01\x8b\x80\x80\x80\x00\x00\x01\x00\x11\x01\x06\x00\x10\x01\x0f\x0f");
+assert_invalid("\x00\x61\x73\x6d\x0c\x00\x00\x00\x01\x85\x80\x80\x80\x00\x01\x40\x00\x01\x01\x03\x82\x80\x80\x80\x00\x01\x00\x0a\x92\x80\x80\x80\x00\x01\x8c\x80\x80\x80\x00\x00\x01\x00\x0a\x06\x00\x10\x01\x06\x00\x0f\x0f");
+assert_invalid("\x00\x61\x73\x6d\x0c\x00\x00\x00\x01\x85\x80\x80\x80\x00\x01\x40\x00\x01\x01\x03\x82\x80\x80\x80\x00\x01\x00\x0a\x93\x80\x80\x80\x00\x01\x8d\x80\x80\x80\x00\x00\x01\x00\x11\x01\x06\x00\x10\x01\x06\x00\x0f\x0f");
+assert_invalid("\x00\x61\x73\x6d\x0c\x00\x00\x00\x01\x84\x80\x80\x80\x00\x01\x40\x00\x00\x03\x82\x80\x80\x80\x00\x01\x00\x0a\x94\x80\x80\x80\x00\x01\x8e\x80\x80\x80\x00\x00\x01\x01\x01\x01\x10\x01\x06\x01\x0f\x06\x00\x0f\x0f");
+assert_invalid("\x00\x61\x73\x6d\x0c\x00\x00\x00\x01\x85\x80\x80\x80\x00\x01\x40\x00\x01\x01\x03\x82\x80\x80\x80\x00\x01\x00\x0a\x94\x80\x80\x80\x00\x01\x8e\x80\x80\x80\x00\x00\x01\x00\x01\x00\x06\x01\x0f\x10\x01\x06\x00\x0f\x0f");
+assert_invalid("\x00\x61\x73\x6d\x0c\x00\x00\x00\x01\x85\x80\x80\x80\x00\x01\x40\x00\x01\x01\x03\x82\x80\x80\x80\x00\x01\x00\x0a\x95\x80\x80\x80\x00\x01\x8f\x80\x80\x80\x00\x00\x01\x00\x01\x00\x0a\x06\x01\x0f\x10\x01\x06\x00\x0f\x0f");
+assert_invalid("\x00\x61\x73\x6d\x0c\x00\x00\x00\x01\x85\x80\x80\x80\x00\x01\x40\x00\x01\x01\x03\x82\x80\x80\x80\x00\x01\x00\x0a\x96\x80\x80\x80\x00\x01\x90\x80\x80\x80\x00\x00\x01\x00\x01\x00\x11\x01\x06\x01\x0f\x10\x01\x06\x00\x0f\x0f");
+assert_invalid("\x00\x61\x73\x6d\x0c\x00\x00\x00\x01\x85\x80\x80\x80\x00\x01\x40\x00\x01\x01\x03\x82\x80\x80\x80\x00\x01\x00\x0a\x8e\x80\x80\x80\x00\x01\x88\x80\x80\x80\x00\x00\x01\x00\x06\x00\x0f\x58\x0f");
+assert_invalid("\x00\x61\x73\x6d\x0c\x00\x00\x00\x01\x85\x80\x80\x80\x00\x01\x40\x00\x01\x01\x03\x82\x80\x80\x80\x00\x01\x00\x0a\x8f\x80\x80\x80\x00\x01\x89\x80\x80\x80\x00\x00\x01\x00\x0a\x06\x00\x0f\x73\x0f");
+assert_invalid("\x00\x61\x73\x6d\x0c\x00\x00\x00\x01\x85\x80\x80\x80\x00\x01\x40\x00\x01\x01\x03\x82\x80\x80\x80\x00\x01\x00\x0a\x90\x80\x80\x80\x00\x01\x8a\x80\x80\x80\x00\x00\x01\x00\x11\x09\x06\x00\x0f\x73\x0f");

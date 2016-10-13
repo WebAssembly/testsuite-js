@@ -1,162 +1,81 @@
-var passed = 0;
-var failed = 0;
-var quiet = false;
+'use strict';
 
-testModule0();
-testModule1();
-testModule2();
-testModule3();
-end();
+let spectest = {
+  print: print || ((...xs) => console.log(...xs)),
+  global: 666,
+  table: new WebAssembly.Table({initial: 10, maximum: 20, element: 'anyfunc'}),  memory: new WebAssembly.Memory({initial: 1, maximum: 2}),};
 
-function testModule0() {
-  var module = createModule([
-      0,  97, 115, 109,  11,   0,   0,   0,   4, 116, 121, 112, 101,   5,   1,  64,
-      0,   1,   1,   8, 102, 117, 110,  99, 116, 105, 111, 110,   3,   2,   0,   0,
-      6, 101, 120, 112, 111, 114, 116,  24,   2,   0,   3, 102, 111, 111,   1,  16,
-     36,  97, 115, 115, 101, 114, 116,  95, 114, 101, 116, 117, 114, 110,  95,  48,
-      4,  99, 111, 100, 101,  13,   2,   3,   0,  16,   0,   7,   0,  22,   0,   0,
-     16,   0,  77,
-  ]);
+let registry = {spectest};
+let $$;
 
-  assertReturn(module, '$assert_return_0', 'external/testsuite/names.wast', 9);
+function register(name, instance) {
+  registry[name] = instance.exports;
 }
 
-function testModule1() {
-  var module = createModule([
-      0,  97, 115, 109,  11,   0,   0,   0,   4, 116, 121, 112, 101,   5,   1,  64,
-      0,   1,   1,   8, 102, 117, 110,  99, 116, 105, 111, 110,   3,   2,   0,   0,
-      6, 101, 120, 112, 111, 114, 116,  24,   2,   0,   3, 102, 111, 111,   1,  16,
-     36,  97, 115, 115, 101, 114, 116,  95, 114, 101, 116, 117, 114, 110,  95,  48,
-      4,  99, 111, 100, 101,  13,   2,   3,   0,  16,   1,   7,   0,  22,   0,   0,
-     16,   1,  77,
-  ]);
-
-  assertReturn(module, '$assert_return_0', 'external/testsuite/names.wast', 18);
-}
-
-function testModule2() {
-  var module = createModule([
-      0,  97, 115, 109,  11,   0,   0,   0,   4, 116, 121, 112, 101,   9,   2,  64,
-      0,   1,   3,  64,   0,   1,   1,   8, 102, 117, 110,  99, 116, 105, 111, 110,
-     26,  25,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   1,
-      1,   1,   1,   1,   1,   1,   1,   1,   1,   1,   1,   6, 101, 120, 112, 111,
-    114, 116, 186,   2,  24,   0,   0,   1,   6, 109,  97, 108, 108, 111,  99,   2,
-      7,  95, 109,  97, 108, 108, 111,  99,   3,   8,  95,  95, 109,  97, 108, 108,
-    111,  99,   5,  33, 126,  33,  64,  35,  36,  37,  94,  38,  42,  40,  41,  95,
-     43,  96,  45,  61, 123, 125, 124,  91,  93,  92,  58,  34,  59,  39,  60,  62,
-     63,  44,  46,  47,  32,   6,   1,  48,   7,   1,  95,   8,   1,  36,   9,   1,
-     64,  10,   3,  78,  97,  78,  11,   8,  73, 110, 102, 105, 110, 105, 116, 121,
-     12,   2, 105, 102,  13,  16,  36,  97, 115, 115, 101, 114, 116,  95, 114, 101,
-    116, 117, 114, 110,  95,  48,  14,  16,  36,  97, 115, 115, 101, 114, 116,  95,
-    114, 101, 116, 117, 114, 110,  95,  49,  15,  16,  36,  97, 115, 115, 101, 114,
-    116,  95, 114, 101, 116, 117, 114, 110,  95,  50,  16,  16,  36,  97, 115, 115,
-    101, 114, 116,  95, 114, 101, 116, 117, 114, 110,  95,  51,  17,  16,  36,  97,
-    115, 115, 101, 114, 116,  95, 114, 101, 116, 117, 114, 110,  95,  52,  18,  16,
-     36,  97, 115, 115, 101, 114, 116,  95, 114, 101, 116, 117, 114, 110,  95,  53,
-     19,  16,  36,  97, 115, 115, 101, 114, 116,  95, 114, 101, 116, 117, 114, 110,
-     95,  54,  20,  16,  36,  97, 115, 115, 101, 114, 116,  95, 114, 101, 116, 117,
-    114, 110,  95,  55,  21,  16,  36,  97, 115, 115, 101, 114, 116,  95, 114, 101,
-    116, 117, 114, 110,  95,  56,  22,  16,  36,  97, 115, 115, 101, 114, 116,  95,
-    114, 101, 116, 117, 114, 110,  95,  57,  23,  17,  36,  97, 115, 115, 101, 114,
-    116,  95, 114, 101, 116, 117, 114, 110,  95,  49,  48,  24,  17,  36,  97, 115,
-    115, 101, 114, 116,  95, 114, 101, 116, 117, 114, 110,  95,  49,  49,   4,  99,
-    111, 100, 101, 248,   1,  25,   6,   0,  19,   0, 128, 200,  64,   6,   0,  19,
-      0,   0, 201,  64,   6,   0,  19,   0, 128, 201,  64,   6,   0,  19,   0,   0,
-    202,  64,   6,   0,  19,   0, 128, 202,  64,   6,   0,  19,   0,   0, 203,  64,
-      6,   0,  19,   0, 128, 203,  64,   6,   0,  19,   0,   0, 204,  64,   6,   0,
-     19,   0, 128, 204,  64,   6,   0,  19,   0,   0,   0,  65,   6,   0,  19,   0,
-     64,   0,  65,   6,   0,  19,   0, 128,   0,  65,   6,   0,  19,   0, 192,   0,
-     65,  12,   0,  22,   0,   0, 180,  19,   0, 128, 200,  64, 180,  77,  12,   0,
-     22,   0,   1, 180,  19,   0,   0, 201,  64, 180,  77,  12,   0,  22,   0,   2,
-    180,  19,   0, 128, 201,  64, 180,  77,  12,   0,  22,   0,   3, 180,  19,   0,
-      0, 202,  64, 180,  77,  12,   0,  22,   0,   5, 180,  19,   0,   0, 203,  64,
-    180,  77,  12,   0,  22,   0,   6, 180,  19,   0, 128, 203,  64, 180,  77,  12,
-      0,  22,   0,   7, 180,  19,   0,   0, 204,  64, 180,  77,  12,   0,  22,   0,
-      8, 180,  19,   0, 128, 204,  64, 180,  77,  12,   0,  22,   0,   9, 180,  19,
-      0,   0,   0,  65, 180,  77,  12,   0,  22,   0,  10, 180,  19,   0,  64,   0,
-     65, 180,  77,  12,   0,  22,   0,  11, 180,  19,   0, 128,   0,  65, 180,  77,
-     12,   0,  22,   0,  12, 180,  19,   0, 192,   0,  65, 180,  77,
-  ]);
-
-  assertReturn(module, '$assert_return_0', 'external/testsuite/names.wast', 66);
-  assertReturn(module, '$assert_return_1', 'external/testsuite/names.wast', 67);
-  assertReturn(module, '$assert_return_2', 'external/testsuite/names.wast', 68);
-  assertReturn(module, '$assert_return_3', 'external/testsuite/names.wast', 69);
-  assertReturn(module, '$assert_return_4', 'external/testsuite/names.wast', 70);
-  assertReturn(module, '$assert_return_5', 'external/testsuite/names.wast', 71);
-  assertReturn(module, '$assert_return_6', 'external/testsuite/names.wast', 72);
-  assertReturn(module, '$assert_return_7', 'external/testsuite/names.wast', 73);
-  assertReturn(module, '$assert_return_8', 'external/testsuite/names.wast', 74);
-  assertReturn(module, '$assert_return_9', 'external/testsuite/names.wast', 75);
-  assertReturn(module, '$assert_return_10', 'external/testsuite/names.wast', 76);
-  assertReturn(module, '$assert_return_11', 'external/testsuite/names.wast', 77);
-}
-
-function testModule3() {
-  var module = createModule([
-      0,  97, 115, 109,  11,   0,   0,   0,   4, 116, 121, 112, 101,  13,   3,  64,
-      1,   1,   0,  64,   2,   1,   1,   0,  64,   0,   0,   6, 105, 109, 112, 111,
-    114, 116,  33,   2,   0,   8, 115, 112, 101,  99, 116, 101, 115, 116,   5, 112,
-    114, 105, 110, 116,   0,   8, 115, 112, 101,  99, 116, 101, 115, 116,   5, 112,
-    114, 105, 110, 116,   8, 102, 117, 110,  99, 116, 105, 111, 110,   3,   2,   1,
-      2,   6, 101, 120, 112, 111, 114, 116,  21,   2,   0,   7, 112, 114, 105, 110,
-    116,  51,  50,   1,   9,  36, 105, 110, 118, 111, 107, 101,  95,  48,   4,  99,
-    111, 100, 101,  23,   2,  11,   0,  20,   0,  24,   1,   0,  20,   1,  24,   1,
-      1,   9,   0,  16,  42,  16, 251,   0,  22,   2,   0,
-  ]);
-
-  invoke(module, '$invoke_0');
-}
-
-function createModule(data) {
-  var u8a = new Uint8Array(data);
-  var ffi = {spectest: {print: print}};
-  return Wasm.instantiateModule(u8a, ffi);
-}
-
-function assertReturn(module, name, file, line) {
-  try {
-    var result = module.exports[name]();
-  } catch(e) {
-    print(file + ":" + line + ": " + name + " unexpectedly threw: " + e);
+function module(bytes) {
+  let buffer = new ArrayBuffer(bytes.length);
+  let view = new Uint8Array(buffer);
+  for (let i = 0; i < bytes.length; ++i) {
+    view[i] = bytes.charCodeAt(i);
   }
-
-  if (result == 1) {
-    passed++;
-  } else {
-    print(file + ":" + line + ": " + name + " failed.");
-    failed++;
-  }
+  return new WebAssembly.Module(buffer);
 }
 
-function assertTrap(module, name, file, line) {
-  var threw = false;
-  try {
-    module.exports[name]();
-  } catch (e) {
-    threw = true;
-  }
-
-  if (threw) {
-    passed++;
-  } else {
-    print(file + ":" + line + ": " + name + " failed, didn't throw");
-    failed++;
-  }
+function instance(bytes, imports = registry) {
+  return new WebAssembly.Instance(module(bytes), imports);
 }
 
-function invoke(module, name) {
-  try {
-    var invokeResult = module.exports[name]();
-  } catch(e) {
-    print(file + ":" + line + ": " + name + " unexpectedly threw: " + e);
-  }
-
-  if (!quiet)
-    print(name + " = " + invokeResult);
+function assert_malformed(bytes) {
+  try { module(bytes) } catch (e) { return }
+  throw new Error("Wasm decoding failure expected");
 }
 
-function end() {
-  if ((failed > 0) || !quiet)
-    print(passed + "/" + (passed + failed) + " tests passed.");
+function assert_invalid(bytes) {
+  try { module(bytes) } catch (e) { return }
+  throw new Error("Wasm validation failure expected");
 }
+
+function assert_unlinkable(bytes) {
+  let mod = module(bytes);
+  try { new WebAssembly.Instance(mod, registry) } catch (e) { return }
+  throw new Error("Wasm linking failure expected");
+}
+
+function assert_trap(action) {
+  try { action() } catch (e) { return }
+  throw new Error("Wasm trap expected");
+}
+
+function assert_return(action, expected) {
+  let actual = action();
+  if (actual !== expected) {
+    throw new Error("Wasm return value " + expected + " expected, got " + actual);
+  };
+}
+
+function assert_return_nan(action) {
+  let actual = action();
+  if (!Number.isNaN(actual)) {
+    throw new Error("Wasm return value NaN expected, got " + actual);
+  };
+}
+
+$$ = instance("\x00\x61\x73\x6d\x0c\x00\x00\x00\x01\x85\x80\x80\x80\x00\x01\x40\x00\x01\x01\x03\x82\x80\x80\x80\x00\x01\x00\x07\x87\x80\x80\x80\x00\x01\x03\x66\x6f\x6f\x00\x00\x0a\x8a\x80\x80\x80\x00\x01\x84\x80\x80\x80\x00\x00\x10\x00\x0f");
+assert_return(() => $$.exports["foo"](), 0);
+$$ = instance("\x00\x61\x73\x6d\x0c\x00\x00\x00\x01\x85\x80\x80\x80\x00\x01\x40\x00\x01\x01\x03\x82\x80\x80\x80\x00\x01\x00\x07\x87\x80\x80\x80\x00\x01\x03\x66\x6f\x6f\x00\x00\x0a\x8a\x80\x80\x80\x00\x01\x84\x80\x80\x80\x00\x00\x10\x01\x0f");
+assert_return(() => $$.exports["foo"](), 1);
+$$ = instance("\x00\x61\x73\x6d\x0c\x00\x00\x00\x01\x85\x80\x80\x80\x00\x01\x40\x00\x01\x03\x03\x8d\x80\x80\x80\x00\x0c\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x07\xec\x80\x80\x80\x00\x0c\x00\x00\x00\x01\x30\x00\x01\x01\x5f\x00\x02\x01\x24\x00\x03\x01\x40\x00\x04\x21\x7e\x21\x40\x23\x24\x25\x5e\x26\x2a\x28\x29\x5f\x2b\x60\x2d\x3d\x7b\x7d\x7c\x5b\x5d\x5c\x3a\x22\x3b\x27\x3c\x3e\x3f\x2c\x2e\x2f\x20\x00\x05\x03\x4e\x61\x4e\x00\x06\x08\x49\x6e\x66\x69\x6e\x69\x74\x79\x00\x07\x02\x69\x66\x00\x08\x06\x6d\x61\x6c\x6c\x6f\x63\x00\x09\x07\x5f\x6d\x61\x6c\x6c\x6f\x63\x00\x0a\x08\x5f\x5f\x6d\x61\x6c\x6c\x6f\x63\x00\x0b\x0a\x91\x81\x80\x80\x00\x0c\x87\x80\x80\x80\x00\x00\x13\x00\x80\xc8\x40\x0f\x87\x80\x80\x80\x00\x00\x13\x00\x80\xcb\x40\x0f\x87\x80\x80\x80\x00\x00\x13\x00\x00\xcc\x40\x0f\x87\x80\x80\x80\x00\x00\x13\x00\x80\xcc\x40\x0f\x87\x80\x80\x80\x00\x00\x13\x00\x00\x00\x41\x0f\x87\x80\x80\x80\x00\x00\x13\x00\x00\xcb\x40\x0f\x87\x80\x80\x80\x00\x00\x13\x00\x40\x00\x41\x0f\x87\x80\x80\x80\x00\x00\x13\x00\x80\x00\x41\x0f\x87\x80\x80\x80\x00\x00\x13\x00\xc0\x00\x41\x0f\x87\x80\x80\x80\x00\x00\x13\x00\x00\xc9\x40\x0f\x87\x80\x80\x80\x00\x00\x13\x00\x80\xc9\x40\x0f\x87\x80\x80\x80\x00\x00\x13\x00\x00\xca\x40\x0f");
+instance("\x00\x61\x73\x6d\x0c\x00\x00\x00\x01\x88\x80\x80\x80\x00\x02\x40\x00\x00\x40\x00\x01\x03\x02\x87\x80\x80\x80\x00\x01\x02\x24\x24\x00\x00\x01\x03\x82\x80\x80\x80\x00\x01\x00\x07\x87\x80\x80\x80\x00\x01\x03\x72\x75\x6e\x00\x01\x0a\x98\x80\x80\x80\x00\x01\x92\x80\x80\x80\x00\x00\x01\x00\x16\x00\x13\x00\x80\xc8\x40\x83\x5a\x07\x00\x09\x0f\x00\x0f", {$$: $$.exports}).exports.run();  // assert_return(() => $$.exports[""](), 6.265625)
+instance("\x00\x61\x73\x6d\x0c\x00\x00\x00\x01\x88\x80\x80\x80\x00\x02\x40\x00\x00\x40\x00\x01\x03\x02\x8d\x80\x80\x80\x00\x01\x02\x24\x24\x06\x6d\x61\x6c\x6c\x6f\x63\x00\x01\x03\x82\x80\x80\x80\x00\x01\x00\x07\x87\x80\x80\x80\x00\x01\x03\x72\x75\x6e\x00\x01\x0a\x98\x80\x80\x80\x00\x01\x92\x80\x80\x80\x00\x00\x01\x00\x16\x00\x13\x00\x00\xc9\x40\x83\x5a\x07\x00\x09\x0f\x00\x0f", {$$: $$.exports}).exports.run();  // assert_return(() => $$.exports["malloc"](), 6.28125)
+instance("\x00\x61\x73\x6d\x0c\x00\x00\x00\x01\x88\x80\x80\x80\x00\x02\x40\x00\x00\x40\x00\x01\x03\x02\x8e\x80\x80\x80\x00\x01\x02\x24\x24\x07\x5f\x6d\x61\x6c\x6c\x6f\x63\x00\x01\x03\x82\x80\x80\x80\x00\x01\x00\x07\x87\x80\x80\x80\x00\x01\x03\x72\x75\x6e\x00\x01\x0a\x98\x80\x80\x80\x00\x01\x92\x80\x80\x80\x00\x00\x01\x00\x16\x00\x13\x00\x80\xc9\x40\x83\x5a\x07\x00\x09\x0f\x00\x0f", {$$: $$.exports}).exports.run();  // assert_return(() => $$.exports["_malloc"](), 6.296875)
+instance("\x00\x61\x73\x6d\x0c\x00\x00\x00\x01\x88\x80\x80\x80\x00\x02\x40\x00\x00\x40\x00\x01\x03\x02\x8f\x80\x80\x80\x00\x01\x02\x24\x24\x08\x5f\x5f\x6d\x61\x6c\x6c\x6f\x63\x00\x01\x03\x82\x80\x80\x80\x00\x01\x00\x07\x87\x80\x80\x80\x00\x01\x03\x72\x75\x6e\x00\x01\x0a\x98\x80\x80\x80\x00\x01\x92\x80\x80\x80\x00\x00\x01\x00\x16\x00\x13\x00\x00\xca\x40\x83\x5a\x07\x00\x09\x0f\x00\x0f", {$$: $$.exports}).exports.run();  // assert_return(() => $$.exports["__malloc"](), 6.3125)
+instance("\x00\x61\x73\x6d\x0c\x00\x00\x00\x01\x88\x80\x80\x80\x00\x02\x40\x00\x00\x40\x00\x01\x03\x02\xa8\x80\x80\x80\x00\x01\x02\x24\x24\x21\x7e\x21\x40\x23\x24\x25\x5e\x26\x2a\x28\x29\x5f\x2b\x60\x2d\x3d\x7b\x7d\x7c\x5b\x5d\x5c\x3a\x22\x3b\x27\x3c\x3e\x3f\x2c\x2e\x2f\x20\x00\x01\x03\x82\x80\x80\x80\x00\x01\x00\x07\x87\x80\x80\x80\x00\x01\x03\x72\x75\x6e\x00\x01\x0a\x98\x80\x80\x80\x00\x01\x92\x80\x80\x80\x00\x00\x01\x00\x16\x00\x13\x00\x00\xcb\x40\x83\x5a\x07\x00\x09\x0f\x00\x0f", {$$: $$.exports}).exports.run();  // assert_return(() => $$.exports["~!@#$%^&*()_+`-={}|[]\\:\";'<>?,./ "](), 6.34375)
+instance("\x00\x61\x73\x6d\x0c\x00\x00\x00\x01\x88\x80\x80\x80\x00\x02\x40\x00\x00\x40\x00\x01\x03\x02\x88\x80\x80\x80\x00\x01\x02\x24\x24\x01\x30\x00\x01\x03\x82\x80\x80\x80\x00\x01\x00\x07\x87\x80\x80\x80\x00\x01\x03\x72\x75\x6e\x00\x01\x0a\x98\x80\x80\x80\x00\x01\x92\x80\x80\x80\x00\x00\x01\x00\x16\x00\x13\x00\x80\xcb\x40\x83\x5a\x07\x00\x09\x0f\x00\x0f", {$$: $$.exports}).exports.run();  // assert_return(() => $$.exports["0"](), 6.359375)
+instance("\x00\x61\x73\x6d\x0c\x00\x00\x00\x01\x88\x80\x80\x80\x00\x02\x40\x00\x00\x40\x00\x01\x03\x02\x88\x80\x80\x80\x00\x01\x02\x24\x24\x01\x5f\x00\x01\x03\x82\x80\x80\x80\x00\x01\x00\x07\x87\x80\x80\x80\x00\x01\x03\x72\x75\x6e\x00\x01\x0a\x98\x80\x80\x80\x00\x01\x92\x80\x80\x80\x00\x00\x01\x00\x16\x00\x13\x00\x00\xcc\x40\x83\x5a\x07\x00\x09\x0f\x00\x0f", {$$: $$.exports}).exports.run();  // assert_return(() => $$.exports["_"](), 6.375)
+instance("\x00\x61\x73\x6d\x0c\x00\x00\x00\x01\x88\x80\x80\x80\x00\x02\x40\x00\x00\x40\x00\x01\x03\x02\x88\x80\x80\x80\x00\x01\x02\x24\x24\x01\x24\x00\x01\x03\x82\x80\x80\x80\x00\x01\x00\x07\x87\x80\x80\x80\x00\x01\x03\x72\x75\x6e\x00\x01\x0a\x98\x80\x80\x80\x00\x01\x92\x80\x80\x80\x00\x00\x01\x00\x16\x00\x13\x00\x80\xcc\x40\x83\x5a\x07\x00\x09\x0f\x00\x0f", {$$: $$.exports}).exports.run();  // assert_return(() => $$.exports["$"](), 6.390625)
+instance("\x00\x61\x73\x6d\x0c\x00\x00\x00\x01\x88\x80\x80\x80\x00\x02\x40\x00\x00\x40\x00\x01\x03\x02\x88\x80\x80\x80\x00\x01\x02\x24\x24\x01\x40\x00\x01\x03\x82\x80\x80\x80\x00\x01\x00\x07\x87\x80\x80\x80\x00\x01\x03\x72\x75\x6e\x00\x01\x0a\x98\x80\x80\x80\x00\x01\x92\x80\x80\x80\x00\x00\x01\x00\x16\x00\x13\x00\x00\x00\x41\x83\x5a\x07\x00\x09\x0f\x00\x0f", {$$: $$.exports}).exports.run();  // assert_return(() => $$.exports["@"](), 8.)
+instance("\x00\x61\x73\x6d\x0c\x00\x00\x00\x01\x88\x80\x80\x80\x00\x02\x40\x00\x00\x40\x00\x01\x03\x02\x8a\x80\x80\x80\x00\x01\x02\x24\x24\x03\x4e\x61\x4e\x00\x01\x03\x82\x80\x80\x80\x00\x01\x00\x07\x87\x80\x80\x80\x00\x01\x03\x72\x75\x6e\x00\x01\x0a\x98\x80\x80\x80\x00\x01\x92\x80\x80\x80\x00\x00\x01\x00\x16\x00\x13\x00\x40\x00\x41\x83\x5a\x07\x00\x09\x0f\x00\x0f", {$$: $$.exports}).exports.run();  // assert_return(() => $$.exports["NaN"](), 8.015625)
+instance("\x00\x61\x73\x6d\x0c\x00\x00\x00\x01\x88\x80\x80\x80\x00\x02\x40\x00\x00\x40\x00\x01\x03\x02\x8f\x80\x80\x80\x00\x01\x02\x24\x24\x08\x49\x6e\x66\x69\x6e\x69\x74\x79\x00\x01\x03\x82\x80\x80\x80\x00\x01\x00\x07\x87\x80\x80\x80\x00\x01\x03\x72\x75\x6e\x00\x01\x0a\x98\x80\x80\x80\x00\x01\x92\x80\x80\x80\x00\x00\x01\x00\x16\x00\x13\x00\x80\x00\x41\x83\x5a\x07\x00\x09\x0f\x00\x0f", {$$: $$.exports}).exports.run();  // assert_return(() => $$.exports["Infinity"](), 8.03125)
+instance("\x00\x61\x73\x6d\x0c\x00\x00\x00\x01\x88\x80\x80\x80\x00\x02\x40\x00\x00\x40\x00\x01\x03\x02\x89\x80\x80\x80\x00\x01\x02\x24\x24\x02\x69\x66\x00\x01\x03\x82\x80\x80\x80\x00\x01\x00\x07\x87\x80\x80\x80\x00\x01\x03\x72\x75\x6e\x00\x01\x0a\x98\x80\x80\x80\x00\x01\x92\x80\x80\x80\x00\x00\x01\x00\x16\x00\x13\x00\xc0\x00\x41\x83\x5a\x07\x00\x09\x0f\x00\x0f", {$$: $$.exports}).exports.run();  // assert_return(() => $$.exports["if"](), 8.046875)
+$$ = instance("\x00\x61\x73\x6d\x0c\x00\x00\x00\x01\x8a\x80\x80\x80\x00\x02\x40\x01\x01\x00\x40\x02\x01\x01\x00\x02\xa3\x80\x80\x80\x00\x02\x08\x73\x70\x65\x63\x74\x65\x73\x74\x05\x70\x72\x69\x6e\x74\x00\x00\x08\x73\x70\x65\x63\x74\x65\x73\x74\x05\x70\x72\x69\x6e\x74\x00\x00\x03\x82\x80\x80\x80\x00\x01\x01\x07\x8b\x80\x80\x80\x00\x01\x07\x70\x72\x69\x6e\x74\x33\x32\x00\x02\x0a\x90\x80\x80\x80\x00\x01\x8a\x80\x80\x80\x00\x00\x14\x00\x16\x00\x14\x01\x16\x01\x0f");
+$$.exports["print32"](42, 123);

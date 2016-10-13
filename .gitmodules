@@ -1,6 +1,6 @@
-[submodule "external/sexpr-wasm"]
-	path = external/sexpr-wasm
-	url = https://github.com/WebAssembly/sexpr-wasm-prototype
 [submodule "external/testsuite"]
 	path = external/testsuite
 	url = https://github.com/WebAssembly/testsuite
+[submodule "external/spec"]
+	path = external/spec
+	url = https://github.com/WebAssembly/spec

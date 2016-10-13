@@ -1,109 +1,76 @@
-var passed = 0;
-var failed = 0;
-var quiet = false;
+'use strict';
 
-testModule0();
-end();
+let spectest = {
+  print: print || ((...xs) => console.log(...xs)),
+  global: 666,
+  table: new WebAssembly.Table({initial: 10, maximum: 20, element: 'anyfunc'}),  memory: new WebAssembly.Memory({initial: 1, maximum: 2}),};
 
-function testModule0() {
-  var module = createModule([
-      0,  97, 115, 109,  11,   0,   0,   0,   4, 116, 121, 112, 101,  23,   5,  64,
-      0,   1,   1,  64,   2,   1,   1,   1,   1,  64,   1,   1,   1,   1,  64,   1,
-      1,   0,  64,   0,   0,   8, 102, 117, 110,  99, 116, 105, 111, 110,  18,  17,
-      0,   1,   2,   3,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,
-      4,   6, 109, 101, 109, 111, 114, 121,   3,   1,   1,   0,   6, 101, 120, 112,
-    111, 114, 116, 242,   1,  16,   1,   5, 115, 116, 111, 114, 101,   2,   4, 108,
-    111,  97, 100,   3,  11, 103, 114, 111, 119,  95, 109, 101, 109, 111, 114, 121,
-      4,  16,  36,  97, 115, 115, 101, 114, 116,  95, 114, 101, 116, 117, 114, 110,
-     95,  48,   5,  16,  36,  97, 115, 115, 101, 114, 116,  95, 114, 101, 116, 117,
-    114, 110,  95,  49,   6,  14,  36,  97, 115, 115, 101, 114, 116,  95, 116, 114,
-     97, 112,  95,  50,   7,  14,  36,  97, 115, 115, 101, 114, 116,  95, 116, 114,
-     97, 112,  95,  51,   8,  14,  36,  97, 115, 115, 101, 114, 116,  95, 116, 114,
-     97, 112,  95,  52,   9,  14,  36,  97, 115, 115, 101, 114, 116,  95, 116, 114,
-     97, 112,  95,  53,  10,  14,  36,  97, 115, 115, 101, 114, 116,  95, 116, 114,
-     97, 112,  95,  54,  11,  14,  36,  97, 115, 115, 101, 114, 116,  95, 116, 114,
-     97, 112,  95,  55,  12,  14,  36,  97, 115, 115, 101, 114, 116,  95, 116, 114,
-     97, 112,  95,  56,  13,  14,  36,  97, 115, 115, 101, 114, 116,  95, 116, 114,
-     97, 112,  95,  57,  14,  15,  36,  97, 115, 115, 101, 114, 116,  95, 116, 114,
-     97, 112,  95,  49,  48,  15,  15,  36,  97, 115, 115, 101, 114, 116,  95, 116,
-    114,  97, 112,  95,  49,  49,  16,  15,  36,  97, 115, 115, 101, 114, 116,  95,
-    116, 114,  97, 112,  95,  49,  50,   4,  99, 111, 100, 101, 159,   1,  17,   7,
-      0,  59,  16, 128, 128,   4,  66,  12,   0,  22,   0,   0,  20,   0,  64,  20,
-      1,  51,   2,   0,  10,   0,  22,   0,   0,  20,   0,  64,  42,   2,   0,   4,
-      0,  20,   0,  57,  11,   0,  16, 124,  16,  42,  22,   2,   1,  16,  42,  77,
-      9,   0,  16, 124,  22,   1,   2,  16,  42,  77,   8,   0,  16, 125,  16,  13,
-     22,   2,   1,   6,   0,  16, 125,  22,   1,   2,   8,   0,  16, 126,  16,  13,
-     22,   2,   1,   6,   0,  16, 126,  22,   1,   2,   8,   0,  16, 127,  16,  13,
-     22,   2,   1,   6,   0,  16, 127,  22,   1,   2,   8,   0,  16,   0,  16,  13,
-     22,   2,   1,   6,   0,  16,   0,  22,   1,   2,  12,   0,  16, 128, 128, 128,
-    128, 120,  16,  13,  22,   2,   1,  10,   0,  16, 128, 128, 128, 128, 120,  22,
-      1,   2,  10,   0,  16, 128, 128, 128, 128, 120,  22,   1,   3,
-  ]);
+let registry = {spectest};
+let $$;
 
-  assertReturn(module, '$assert_return_0', 'external/testsuite/memory_trap.wast', 24);
-  assertReturn(module, '$assert_return_1', 'external/testsuite/memory_trap.wast', 25);
-  assertTrap(module, '$assert_trap_2', 'external/testsuite/memory_trap.wast', 26);
-  assertTrap(module, '$assert_trap_3', 'external/testsuite/memory_trap.wast', 27);
-  assertTrap(module, '$assert_trap_4', 'external/testsuite/memory_trap.wast', 28);
-  assertTrap(module, '$assert_trap_5', 'external/testsuite/memory_trap.wast', 29);
-  assertTrap(module, '$assert_trap_6', 'external/testsuite/memory_trap.wast', 30);
-  assertTrap(module, '$assert_trap_7', 'external/testsuite/memory_trap.wast', 31);
-  assertTrap(module, '$assert_trap_8', 'external/testsuite/memory_trap.wast', 32);
-  assertTrap(module, '$assert_trap_9', 'external/testsuite/memory_trap.wast', 33);
-  assertTrap(module, '$assert_trap_10', 'external/testsuite/memory_trap.wast', 34);
-  assertTrap(module, '$assert_trap_11', 'external/testsuite/memory_trap.wast', 35);
-  assertTrap(module, '$assert_trap_12', 'external/testsuite/memory_trap.wast', 36);
+function register(name, instance) {
+  registry[name] = instance.exports;
 }
 
-function createModule(data) {
-  var u8a = new Uint8Array(data);
-  var ffi = {spectest: {print: print}};
-  return Wasm.instantiateModule(u8a, ffi);
-}
-
-function assertReturn(module, name, file, line) {
-  try {
-    var result = module.exports[name]();
-  } catch(e) {
-    print(file + ":" + line + ": " + name + " unexpectedly threw: " + e);
+function module(bytes) {
+  let buffer = new ArrayBuffer(bytes.length);
+  let view = new Uint8Array(buffer);
+  for (let i = 0; i < bytes.length; ++i) {
+    view[i] = bytes.charCodeAt(i);
   }
-
-  if (result == 1) {
-    passed++;
-  } else {
-    print(file + ":" + line + ": " + name + " failed.");
-    failed++;
-  }
+  return new WebAssembly.Module(buffer);
 }
 
-function assertTrap(module, name, file, line) {
-  var threw = false;
-  try {
-    module.exports[name]();
-  } catch (e) {
-    threw = true;
-  }
-
-  if (threw) {
-    passed++;
-  } else {
-    print(file + ":" + line + ": " + name + " failed, didn't throw");
-    failed++;
-  }
+function instance(bytes, imports = registry) {
+  return new WebAssembly.Instance(module(bytes), imports);
 }
 
-function invoke(module, name) {
-  try {
-    var invokeResult = module.exports[name]();
-  } catch(e) {
-    print(file + ":" + line + ": " + name + " unexpectedly threw: " + e);
-  }
-
-  if (!quiet)
-    print(name + " = " + invokeResult);
+function assert_malformed(bytes) {
+  try { module(bytes) } catch (e) { return }
+  throw new Error("Wasm decoding failure expected");
 }
 
-function end() {
-  if ((failed > 0) || !quiet)
-    print(passed + "/" + (passed + failed) + " tests passed.");
+function assert_invalid(bytes) {
+  try { module(bytes) } catch (e) { return }
+  throw new Error("Wasm validation failure expected");
 }
+
+function assert_unlinkable(bytes) {
+  let mod = module(bytes);
+  try { new WebAssembly.Instance(mod, registry) } catch (e) { return }
+  throw new Error("Wasm linking failure expected");
+}
+
+function assert_trap(action) {
+  try { action() } catch (e) { return }
+  throw new Error("Wasm trap expected");
+}
+
+function assert_return(action, expected) {
+  let actual = action();
+  if (actual !== expected) {
+    throw new Error("Wasm return value " + expected + " expected, got " + actual);
+  };
+}
+
+function assert_return_nan(action) {
+  let actual = action();
+  if (!Number.isNaN(actual)) {
+    throw new Error("Wasm return value NaN expected, got " + actual);
+  };
+}
+
+$$ = instance("\x00\x61\x73\x6d\x0c\x00\x00\x00\x01\x8f\x80\x80\x80\x00\x03\x40\x00\x01\x01\x40\x02\x01\x01\x00\x40\x01\x01\x01\x01\x03\x85\x80\x80\x80\x00\x04\x00\x01\x02\x02\x05\x83\x80\x80\x80\x00\x01\x00\x01\x07\x9e\x80\x80\x80\x00\x03\x05\x73\x74\x6f\x72\x65\x00\x01\x04\x6c\x6f\x61\x64\x00\x02\x0b\x67\x72\x6f\x77\x5f\x6d\x65\x6d\x6f\x72\x79\x00\x03\x0a\xb8\x80\x80\x80\x00\x04\x88\x80\x80\x80\x00\x00\x3b\x10\x80\x80\x04\x42\x0f\x8c\x80\x80\x80\x00\x00\x16\x00\x14\x00\x40\x14\x01\x33\x02\x00\x0f\x8a\x80\x80\x80\x00\x00\x16\x00\x14\x00\x40\x2a\x02\x00\x0f\x85\x80\x80\x80\x00\x00\x14\x00\x39\x0f");
+assert_return(() => $$.exports["store"](-4, 42));
+assert_return(() => $$.exports["load"](-4), 42);
+assert_trap(() => $$.exports["store"](-3, 13));
+assert_trap(() => $$.exports["load"](-3));
+assert_trap(() => $$.exports["store"](-2, 13));
+assert_trap(() => $$.exports["load"](-2));
+assert_trap(() => $$.exports["store"](-1, 13));
+assert_trap(() => $$.exports["load"](-1));
+assert_trap(() => $$.exports["store"](0, 13));
+assert_trap(() => $$.exports["load"](0));
+assert_trap(() => $$.exports["store"](-2147483648, 13));
+assert_trap(() => $$.exports["load"](-2147483648));
+assert_return(() => $$.exports["grow_memory"](65537), -1);
