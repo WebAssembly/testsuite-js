@@ -1,5 +1,7 @@
 'use strict';
 
+let soft_validate = true;
+
 let spectest = {
   print: print || ((...xs) => console.log(...xs)),
   global: 666,
@@ -26,29 +28,54 @@ function instance(bytes, imports = registry) {
 }
 
 function assert_malformed(bytes) {
-  try { module(bytes) } catch (e) { return }
+  try { module(bytes) } catch (e) {
+    if (e instanceof WebAssembly.CompileError) return;
+  }
   throw new Error("Wasm decoding failure expected");
 }
 
 function assert_invalid(bytes) {
-  try { module(bytes) } catch (e) { return }
+  try { module(bytes) } catch (e) {
+    if (e instanceof WebAssembly.CompileError) return;
+  }
   throw new Error("Wasm validation failure expected");
+}
+
+function assert_soft_invalid(bytes) {
+  try { module(bytes) } catch (e) {
+    if (e instanceof WebAssembly.CompileError) return;
+    throw new Error("Wasm validation failure expected");
+  }
+  if (soft_validate)
+    throw new Error("Wasm validation failure expected");
 }
 
 function assert_unlinkable(bytes) {
   let mod = module(bytes);
-  try { new WebAssembly.Instance(mod, registry) } catch (e) { return }
+  try { new WebAssembly.Instance(mod, registry) } catch (e) {
+    if (e instanceof TypeError) return;
+  }
   throw new Error("Wasm linking failure expected");
 }
 
+function assert_uninstantiable(bytes) {
+  let mod = module(bytes);
+  try { new WebAssembly.Instance(mod, registry) } catch (e) {
+    if (e instanceof WebAssembly.RuntimeError) return;
+  }
+  throw new Error("Wasm trap expected");
+}
+
 function assert_trap(action) {
-  try { action() } catch (e) { return }
+  try { action() } catch (e) {
+    if (e instanceof WebAssembly.RuntimeError) return;
+  }
   throw new Error("Wasm trap expected");
 }
 
 function assert_return(action, expected) {
   let actual = action();
-  if (actual !== expected) {
+  if (!Object.is(actual, expected)) {
     throw new Error("Wasm return value " + expected + " expected, got " + actual);
   };
 }
@@ -60,7 +87,7 @@ function assert_return_nan(action) {
   };
 }
 
-$$ = instance("\x00\x61\x73\x6d\x0c\x00\x00\x00\x01\x8f\x80\x80\x80\x00\x03\x40\x00\x01\x01\x40\x02\x01\x01\x00\x40\x01\x01\x01\x01\x03\x85\x80\x80\x80\x00\x04\x00\x01\x02\x02\x05\x83\x80\x80\x80\x00\x01\x00\x01\x07\x9e\x80\x80\x80\x00\x03\x05\x73\x74\x6f\x72\x65\x00\x01\x04\x6c\x6f\x61\x64\x00\x02\x0b\x67\x72\x6f\x77\x5f\x6d\x65\x6d\x6f\x72\x79\x00\x03\x0a\xb8\x80\x80\x80\x00\x04\x88\x80\x80\x80\x00\x00\x3b\x10\x80\x80\x04\x42\x0f\x8c\x80\x80\x80\x00\x00\x16\x00\x14\x00\x40\x14\x01\x33\x02\x00\x0f\x8a\x80\x80\x80\x00\x00\x16\x00\x14\x00\x40\x2a\x02\x00\x0f\x85\x80\x80\x80\x00\x00\x14\x00\x39\x0f");
+$$ = instance("\x00\x61\x73\x6d\x0d\x00\x00\x00\x01\x8f\x80\x80\x80\x00\x03\x60\x00\x01\x7f\x60\x02\x7f\x7f\x00\x60\x01\x7f\x01\x7f\x03\x85\x80\x80\x80\x00\x04\x00\x01\x02\x02\x05\x83\x80\x80\x80\x00\x01\x00\x01\x07\x9e\x80\x80\x80\x00\x03\x05\x73\x74\x6f\x72\x65\x00\x01\x04\x6c\x6f\x61\x64\x00\x02\x0b\x67\x72\x6f\x77\x5f\x6d\x65\x6d\x6f\x72\x79\x00\x03\x0a\xba\x80\x80\x80\x00\x04\x89\x80\x80\x80\x00\x00\x3f\x00\x41\x80\x80\x04\x6c\x0b\x8c\x80\x80\x80\x00\x00\x10\x00\x20\x00\x6a\x20\x01\x36\x02\x00\x0b\x8a\x80\x80\x80\x00\x00\x10\x00\x20\x00\x6a\x28\x02\x00\x0b\x86\x80\x80\x80\x00\x00\x20\x00\x40\x00\x0b");
 assert_return(() => $$.exports["store"](-4, 42));
 assert_return(() => $$.exports["load"](-4), 42);
 assert_trap(() => $$.exports["store"](-3, 13));

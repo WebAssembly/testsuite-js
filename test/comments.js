@@ -1,5 +1,7 @@
 'use strict';
 
+let soft_validate = true;
+
 let spectest = {
   print: print || ((...xs) => console.log(...xs)),
   global: 666,
@@ -26,29 +28,54 @@ function instance(bytes, imports = registry) {
 }
 
 function assert_malformed(bytes) {
-  try { module(bytes) } catch (e) { return }
+  try { module(bytes) } catch (e) {
+    if (e instanceof WebAssembly.CompileError) return;
+  }
   throw new Error("Wasm decoding failure expected");
 }
 
 function assert_invalid(bytes) {
-  try { module(bytes) } catch (e) { return }
+  try { module(bytes) } catch (e) {
+    if (e instanceof WebAssembly.CompileError) return;
+  }
   throw new Error("Wasm validation failure expected");
+}
+
+function assert_soft_invalid(bytes) {
+  try { module(bytes) } catch (e) {
+    if (e instanceof WebAssembly.CompileError) return;
+    throw new Error("Wasm validation failure expected");
+  }
+  if (soft_validate)
+    throw new Error("Wasm validation failure expected");
 }
 
 function assert_unlinkable(bytes) {
   let mod = module(bytes);
-  try { new WebAssembly.Instance(mod, registry) } catch (e) { return }
+  try { new WebAssembly.Instance(mod, registry) } catch (e) {
+    if (e instanceof TypeError) return;
+  }
   throw new Error("Wasm linking failure expected");
 }
 
+function assert_uninstantiable(bytes) {
+  let mod = module(bytes);
+  try { new WebAssembly.Instance(mod, registry) } catch (e) {
+    if (e instanceof WebAssembly.RuntimeError) return;
+  }
+  throw new Error("Wasm trap expected");
+}
+
 function assert_trap(action) {
-  try { action() } catch (e) { return }
+  try { action() } catch (e) {
+    if (e instanceof WebAssembly.RuntimeError) return;
+  }
   throw new Error("Wasm trap expected");
 }
 
 function assert_return(action, expected) {
   let actual = action();
-  if (actual !== expected) {
+  if (!Object.is(actual, expected)) {
     throw new Error("Wasm return value " + expected + " expected, got " + actual);
   };
 }
@@ -60,7 +87,7 @@ function assert_return_nan(action) {
   };
 }
 
-$$ = instance("\x00\x61\x73\x6d\x0c\x00\x00\x00");
-$$ = instance("\x00\x61\x73\x6d\x0c\x00\x00\x00");
-$$ = instance("\x00\x61\x73\x6d\x0c\x00\x00\x00");
-$$ = instance("\x00\x61\x73\x6d\x0c\x00\x00\x00");
+$$ = instance("\x00\x61\x73\x6d\x0d\x00\x00\x00");
+$$ = instance("\x00\x61\x73\x6d\x0d\x00\x00\x00");
+$$ = instance("\x00\x61\x73\x6d\x0d\x00\x00\x00");
+$$ = instance("\x00\x61\x73\x6d\x0d\x00\x00\x00");

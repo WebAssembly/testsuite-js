@@ -29,10 +29,10 @@ fi
 
 cd "${ROOT_DIR}"
 
-ML_PROTO_DIR=external/spec/ml-proto
+INTERPRETER_DIR=external/spec/interpreter
 TESTSUITE_DIR=external/testsuite
 
-(cd ${ML_PROTO_DIR} && make)
+(cd ${INTERPRETER_DIR} && make)
 
 rm -f test/*.js
 
@@ -45,5 +45,5 @@ for TEST_FILE in `ls ${TESTSUITE_DIR}/*.wast`; do
   echo "Processing ${TEST_FILE}..."
   BASENAME_NOEXT=$(basename ${TEST_FILE%.*})
   JS_FILE=test/${BASENAME_NOEXT}.js
-  ${ML_PROTO_DIR}/wasm ${TEST_FILE} -o ${JS_FILE}
+  ${INTERPRETER_DIR}/wasm ${TEST_FILE} -o ${JS_FILE}
 done

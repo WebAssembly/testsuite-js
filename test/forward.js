@@ -1,5 +1,7 @@
 'use strict';
 
+let soft_validate = true;
+
 let spectest = {
   print: print || ((...xs) => console.log(...xs)),
   global: 666,
@@ -26,29 +28,54 @@ function instance(bytes, imports = registry) {
 }
 
 function assert_malformed(bytes) {
-  try { module(bytes) } catch (e) { return }
+  try { module(bytes) } catch (e) {
+    if (e instanceof WebAssembly.CompileError) return;
+  }
   throw new Error("Wasm decoding failure expected");
 }
 
 function assert_invalid(bytes) {
-  try { module(bytes) } catch (e) { return }
+  try { module(bytes) } catch (e) {
+    if (e instanceof WebAssembly.CompileError) return;
+  }
   throw new Error("Wasm validation failure expected");
+}
+
+function assert_soft_invalid(bytes) {
+  try { module(bytes) } catch (e) {
+    if (e instanceof WebAssembly.CompileError) return;
+    throw new Error("Wasm validation failure expected");
+  }
+  if (soft_validate)
+    throw new Error("Wasm validation failure expected");
 }
 
 function assert_unlinkable(bytes) {
   let mod = module(bytes);
-  try { new WebAssembly.Instance(mod, registry) } catch (e) { return }
+  try { new WebAssembly.Instance(mod, registry) } catch (e) {
+    if (e instanceof TypeError) return;
+  }
   throw new Error("Wasm linking failure expected");
 }
 
+function assert_uninstantiable(bytes) {
+  let mod = module(bytes);
+  try { new WebAssembly.Instance(mod, registry) } catch (e) {
+    if (e instanceof WebAssembly.RuntimeError) return;
+  }
+  throw new Error("Wasm trap expected");
+}
+
 function assert_trap(action) {
-  try { action() } catch (e) { return }
+  try { action() } catch (e) {
+    if (e instanceof WebAssembly.RuntimeError) return;
+  }
   throw new Error("Wasm trap expected");
 }
 
 function assert_return(action, expected) {
   let actual = action();
-  if (actual !== expected) {
+  if (!Object.is(actual, expected)) {
     throw new Error("Wasm return value " + expected + " expected, got " + actual);
   };
 }
@@ -60,7 +87,7 @@ function assert_return_nan(action) {
   };
 }
 
-$$ = instance("\x00\x61\x73\x6d\x0c\x00\x00\x00\x01\x86\x80\x80\x80\x00\x01\x40\x01\x01\x01\x01\x03\x83\x80\x80\x80\x00\x02\x00\x00\x07\x8e\x80\x80\x80\x00\x02\x04\x65\x76\x65\x6e\x00\x00\x03\x6f\x64\x64\x00\x01\x0a\xb3\x80\x80\x80\x00\x02\x94\x80\x80\x80\x00\x00\x14\x00\x10\x00\x4d\x03\x01\x10\x01\x04\x14\x00\x10\x01\x41\x16\x01\x0f\x0f\x94\x80\x80\x80\x00\x00\x14\x00\x10\x00\x4d\x03\x01\x10\x00\x04\x14\x00\x10\x01\x41\x16\x00\x0f\x0f");
+$$ = instance("\x00\x61\x73\x6d\x0d\x00\x00\x00\x01\x86\x80\x80\x80\x00\x01\x60\x01\x7f\x01\x7f\x03\x83\x80\x80\x80\x00\x02\x00\x00\x07\x8e\x80\x80\x80\x00\x02\x04\x65\x76\x65\x6e\x00\x00\x03\x6f\x64\x64\x00\x01\x0a\xb3\x80\x80\x80\x00\x02\x94\x80\x80\x80\x00\x00\x20\x00\x41\x00\x46\x04\x7f\x41\x01\x05\x20\x00\x41\x01\x6b\x10\x01\x0b\x0b\x94\x80\x80\x80\x00\x00\x20\x00\x41\x00\x46\x04\x7f\x41\x00\x05\x20\x00\x41\x01\x6b\x10\x00\x0b\x0b");
 assert_return(() => $$.exports["even"](13), 0);
 assert_return(() => $$.exports["even"](20), 1);
 assert_return(() => $$.exports["odd"](13), 1);

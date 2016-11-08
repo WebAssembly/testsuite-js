@@ -1,7 +1,7 @@
 # testsuite-js
 
 This repository contains the tests from [the spec
-testsuite](https://github.com/WebAssembly/spec/tree/master/ml-proto/test),
+testsuite](https://github.com/WebAssembly/spec/tree/master/interpreter/test),
 converted to JavaScript via
 [the spec tool](https://github.com/WebAssembly/spec).
 
