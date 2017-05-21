@@ -18,7 +18,7 @@
 set -o nounset
 set -o errexit
 
-SCRIPT_FILE="$(python -c 'import os,sys; print os.path.abspath(sys.argv[1])' "$0")"
+SCRIPT_FILE="$(python -c 'import os,sys; print(os.path.abspath(sys.argv[1]))' "$0")"
 SCRIPT_DIR="$(dirname "${SCRIPT_FILE}")"
 ROOT_DIR="$(dirname "${SCRIPT_DIR}")"
 
