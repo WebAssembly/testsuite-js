@@ -29,7 +29,7 @@ $ (cd external/testsuite && git fetch origin && git checkout origin/master)
 Then run the generator script:
 
 ```
-$ scripts/generator.sh
+$ scripts/generate.sh
 ...
 ```
 
